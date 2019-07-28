@@ -4,15 +4,13 @@
 	box-sizing: border-box;
 }
 
+.section-devis {
+	margin-left: 50px;
+}
+
 .container {
 
 
-}
-
-header {
-	position: sticky;
-	overflow: visible;
-	z-index: 1000;
 }
 
 .txt-r {
@@ -20,12 +18,20 @@ header {
 }
 
 h1 {
-	padding-right: 25px;
+	padding-right: 65px;
 	padding-top: 45px;
+	font-size: 1.6rem;
 }
 
+.p-banner {
+	padding-right: 55px;
+	padding-top: 25px;
+	font-size: 1.4rem;
+
+
+}
 .bannerstart {
-	background-image: url('img/geek.jpg');
+	background-image: url('../img/logodevis/geek.jpg');
 	height: 100vh;
 	background-size: cover;
 	color: white;
@@ -36,67 +42,118 @@ h1 {
 	background-color: white;
 	width: 40px;
 	height: 40px;
-	
+}
 
+.q-global {
+	text-align: center;
+}
 
+article {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 100px;
 }
 
 .black {
 	color: black;
 	padding-right: 15px;
-	padding-top: 5px;
+	padding-top: 9px;
 	font-size: 1.2rem;
 
 }
 
+
 .Q {
 	display: flex;
-	margin-top: 65px;
+	margin-top: 85px;
 	padding-left: 42%;
 }
 
 .p-t {
-	padding-top: 4px;
+	padding-top: 6px;
 	padding-left: 15px;
 	font-size: 1.4rem;
 }
 
 .btn-ready {
-	background-color: #575757;
+	 background-color: #8A5633;
+	 border: none;
+	 color: white;
+	 padding: 15px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+	 font-size: 16px;
+	 cursor: pointer;
+	 border-radius: 35px;
+	 margin-top: 60px;
+	 margin-left: 275px;
+ }
+
+.btn-estim {
+	background-color: #4F298D;
+	border: none;
 	color: white;
-	border-radius: 25px;
-	height: 40px;
-	width: 110px;
-	margin-left: 55%;
-	margin-top: 50px;
-	text-align: center;
-	padding-top: 6px;
+	padding: 15px 32px;
 	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 35px;
+	margin-top: 20px;
+	margin-left: 45px;
+
+}
+
+.btn-ready:hover {
+	background-color: #AE7D4A;
+}
+
+.txt-purple {
+	color: #4F298D;
 }
 
 .casecontexte {
-	background-color: lightgrey;
+	background-color: gainsboro;
 	height: 150px;
 	width: 220px;
 	margin-left: 75px;
 	text-align: center;
+	margin-top: 25px;
+	border: none;
+}
+
+
+.casecontexte:focus {
+	border: #4F298D solid 1px;
+}
+
+.y-n {
+	width: 50px;
+	height: 30px;
+}
+
+.padd-t {
+	padding-top: 5px;
+}
+
+.m-l {
+	margin-left: 15px;
 }
 
 .caseimg {
 	height: 75px;
 	width: 75px;
-	margin-top: 20px;
 }
 
 .avancement {
-	background-color: lightgrey;
+	background-color: gainsboro;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 15px;
-	height: 500px;
-	text-align: center;
+	height: 400px;
 	margin: 15px;
-
+	border-radius: 3px;
+	font-family: 'Roboto', sans-serif;
 }
 
 .margin-top {
@@ -107,19 +164,22 @@ h1 {
 	position: sticky;
 }
 
-.casetxt {
-
-}
-
 .topaside {
 	width: 100%;
 	background-color: #4F298D;
 	color: white;
 	height: 35px;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.aside-txt {
+	padding-top: 4px;
+	padding-left: 6px;
 }
 
 .asideH {
 	padding-top: 7px;
+	text-align: center;
 }
 
 .asidecontent {

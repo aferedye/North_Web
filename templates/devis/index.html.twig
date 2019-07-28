@@ -1,26 +1,15 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style_devis.css') }}">{% endblock %}
-{% block title %}Hello DevisController!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_devis.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+{% endblock %}
+{% block title %}Mon Devis{% endblock %}
 {% block body %}
-    <body>
     <main>
-        <header>
-            <div>
-                <img src="" alt=""/>
-            </div>
-            <nav>
-                <ul class="flex">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="">Devis</a></li>
-                    <li><a href="">Référence</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
         <section class="col-12 flex-shrink-1 flex-grow-1 bannerstart">
             <article class="txt-r">
                 <h1 class="txt-r">Estimez le prix de votre projet internet</h1>
-                <p>Obtenez une estimation personalisée de votre projet web en quelques minutes</p>
+                <p class="p-banner">Obtenez une estimation personalisée de votre projet web en quelques minutes</p>
                 <div class="q-global">
                     <div class="Q">
                         <div class="circle">
@@ -40,10 +29,8 @@
                         </div>
                         <p class="txt-r p-t">Demandez un devis seulement si vous le souhaitez</p>
                     </div>
-                    <a href="#">
-                        <div class="btn-ready">
-                            <p class="txt-btn">Commencer</p>
-                        </div>
+                    <a href="#" class="btn-ready">
+                        <p class="txt-btn">Commencer</p>
                     </a>
                 </div>
             </article>
@@ -57,54 +44,59 @@
                 <div class="asidecontent">
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-contexte_du_projet.png') }}" alt="Avancement contexte du projet"/>
-                        <p>Contexte du projet</p>
+                        <p class="aside-txt">Contexte du projet</p>
                     </div>
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-objectifs_du_site.png') }}" alt="Avancement objectifs du site"/>
-                        <p>Objectifs du site</p>
+                        <p class="aside-txt">Objectifs du site</p>
                     </div>
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-suivi_et_referencement.png') }}" alt="Avancement suivi et referencement"/>
-                        <p>Suivi et référencement</p>
+                        <p class="aside-txt">Suivi et référencement</p>
                     </div>
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-graphisme.png') }}" alt="Avancement graphisme"/>
-                        <p>Graphisme</p>
+                        <p class="aside-txt">Graphisme</p>
                     </div>
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-contenu.png') }}" alt="Avancement contenu"/>
-                        <p>Contenu</p>
+                        <p class="aside-txt">Contenu</p>
                     </div>
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-fonctionnalites_generales.png') }}" alt="Avancement fonctionnalites generales"/>
-                        <p>Fonctionnalités générales</p>
+                        <p class="aside-txt">Fonctionnalités générales</p>
                     </div>
                     <div class="flex margin-top">
                         <img src="{{ asset('img/logodevis/menu-vous.png') }}" alt="Avancement vous"/>
-                        <p>Vous</p>
+                        <p class="aside-txt">Vous</p>
                     </div>
+                    <a href="#" class="btn-estim">
+                        <p class="txt-btn">ESTIMER</p>
+                    </a>
                 </div>
             </aside>
-            <section class="col-10">
+            <section class="col-10 section-devis">
                 <article class="context">
                     <h2>Contexte du Projet</h2>
-                    <p>Quel est l'objet de votre projet</p>
-                    <p>La création d'un site Internet : Vous souhaitez créer le site / service(s) de votre entreprise.<br />
-                        Un site Internet existant : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
+                    <p class="margin-top">Quel est l'objet de votre projet ?</p>
+                    <p class="margin-top"><span class="txt-purple">La création d'un site Internet</span> : Vous souhaitez créer le site / service(s) de votre entreprise.<br />
+                        <span class="txt-purple">Un site Internet existant</span> : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
                     <div class="flex">
-                        <button class="casecontexte">
-                            <img src="{{ asset('img/logodevis/croix (1).png') }}" height="74" width="75" class="caseimg"/>
-                            <p class="casetxt">La création d'un site internet</p>
+                        <button class="casecontexte" type="submit">
+                            <img src="{{ asset('img/logodevis/croix (1).png') }}" height="74" width="75" class="caseimg" alt="Créer un site web ?"/>
+                            <p>La création d'un site internet</p>
                         </button>
                         <button class="casecontexte">
-                            <img src="{{ asset('img/logodevis/amelioration-NW.png') }}" class="caseimg">
-                            <p class="casetxt">Un site internet existant</p>
+                            <img src="{{ asset('img/logodevis/amelioration-NW.png') }}" class="caseimg" alt="Utiliser un site web existant ?">
+                            <p>Un site internet existant</p>
                         </button>
                     </div>
-                    <p>S'agit-il d'une refonte du site internet</p>
-                    <div>
-                        <button>Oui</button>
-                        <button>Non</button>
+                    <div class="flex">
+                        <p class="margin-top padd-t">S'agit-il d'une refonte du site internet ?</p>
+                        <div class="margin-top">
+                            <button class="y-n m-l">Oui</button>
+                            <button class="y-n m-l">Non</button>
+                        </div>
                     </div>
                 </article>
                 <article class="objectif">
@@ -251,21 +243,21 @@
                         </button>
                     </div>
                     <h3>Vous êtes ?</h3>
-                    <button>
+                    <div>
                         <button>
-                            <img src="{{ asset('img/logodevis/particulier.png') }}" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/particulier.png') }}" height="202" width="202" alt="êtes-vous un particulier ?"/>
                             <p>Un particulier</p>
                         </button>
                         <button>
-                            <img src="{{ asset('img/logodevis/association.png') }}" height="202" width="202"/>
-                            <p>Une association</p>
+                            <img src="{{ asset('img/logodevis/association.png') }}" height="202" width="202" alt="êtes-vous une association ?"/>
+                            Une association
                         </button>
                         <button>
-                            <img src="{{ asset('img/logodevis/institution.png') }}" height="202" width="202"/>
-                            <p>Une administration</p>
+                            <img src="{{ asset('img/logodevis/institution.png') }}" height="202" width="202" alt="êtes-vous une administration ?"/>
+                            Une administration
                         </button>
                         <button>
-                            <img src="{{ asset('img/logodevis/entreprise.png') }}" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/entreprise.png') }}" height="202" width="202" alt="êtes-vous un entreprise ?"/>
                             <p>Une entreprise</p>
                         </button>
                     </div>
@@ -285,20 +277,19 @@
                         </div>
                         <table>
                             <tr>
-                                <td><p>Nom</p></td>
-                                <td><input type="text" name="nom"/></td>
+                                <td><label for="nom"><input type="text" name="nom" placeholder="Nom"/></label></td>
                             </tr>
                             <tr>
-                                <td><p>Prénom</p></td>
-                                <td><input type="text" name="prenom"/></td>
+                                <td><label for="prenom"><input type="text" name="prenom" placeholder="Prénom"/></label></td>
                             </tr>
                             <tr>
-                                <td><p>Email</p></td>
-                                <td><input type="email" name="Email"/></td>
+                                <td><label for="email"><input type="email" name="email" placeholder="E-mail"/></label></td>
                             </tr>
                             <tr>
-                                <td><p>Téléphone</p></td>
-                                <td><input type="text" name="tel"/></td>
+                                <td><label for="email"><input type="email" name="email" placeholder="Confirmez votre e-mail"/></label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="tel"><input type="text" name="tel" placeholder="Téléphone"/></label></td>
                             </tr>
                         </table>
                         <input type="submit" value="Valider">
@@ -307,5 +298,4 @@
             </section>
         </div>
     </main>
-    </body>
 {% endblock %}
