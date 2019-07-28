@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+
+
+}
+
+header {
+	position: sticky;
+	overflow: visible;
+	z-index: 1000;
+}
+
+.txt-r {
+	text-align: right;
+}
+
+h1 {
+	padding-right: 25px;
+	padding-top: 45px;
+}
+
+.bannerstart {
+	background-image: url('img/geek.jpg');
+	height: 100vh;
+	background-size: cover;
+	color: white;
+}
+
+.circle {
+	border-radius: 25px;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	
+
+
+}
+
+.black {
+	color: black;
+	padding-right: 15px;
+	padding-top: 5px;
+	font-size: 1.2rem;
+
+}
+
+.Q {
+	display: flex;
+	margin-top: 65px;
+	padding-left: 42%;
+}
+
+.p-t {
+	padding-top: 4px;
+	padding-left: 15px;
+	font-size: 1.4rem;
+}
+
+.btn-ready {
+	background-color: #575757;
+	color: white;
+	border-radius: 25px;
+	height: 40px;
+	width: 110px;
+	margin-left: 55%;
+	margin-top: 50px;
+	text-align: center;
+	padding-top: 6px;
+	text-decoration: none;
+}
+
+.casecontexte {
+	background-color: lightgrey;
+	height: 150px;
+	width: 220px;
+	margin-left: 75px;
+	text-align: center;
+}
+
+.caseimg {
+	height: 75px;
+	width: 75px;
+	margin-top: 20px;
+}
+
+.avancement {
+	background-color: lightgrey;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 15px;
+	height: 500px;
+	text-align: center;
+	margin: 15px;
+
+}
+
+.margin-top {
+	margin-top: 15px;
+}
+
+.devis {
+	position: sticky;
+}
+
+.casetxt {
+
+}
+
+.topaside {
+	width: 100%;
+	background-color: #4F298D;
+	color: white;
+	height: 35px;
+}
+
+.asideH {
+	padding-top: 7px;
+}
+
+.asidecontent {
+	margin-left: 20px;
+}
+
+.flex {
+	display: flex;
+}
+.col-1 {
+	flex-basis: calc(100% / 12);
+	max-width: calc(100% / 12);
+}
+
+.col-2 {
+	flex-basis: calc(100% * 2 / 12);
+	max-width: calc(100% * 2 / 12);
+}
+
+.col-3 {
+	flex-basis: calc(100% * 3 / 12);
+	max-width: calc(100% * 3 / 12);
+}
+
+.col-4 {
+	flex-basis: calc(100% * 4 / 12);
+	max-width: calc(100% * 4 / 12);
+}
+
+.col-5 {
+	flex-basis: calc(100% * 5 / 12);
+	max-width: calc(100% * 5 / 12);
+}
+
+.col-6 {
+	flex-basis: 50%;
+	max-width: 50%;
+}
+
+.col-7 {
+	flex-basis: calc(100% * 7 / 12);
+	max-width: calc(100% * 7 / 12);
+}
+
+.col-8 {
+	flex-basis: calc(100% * 8 / 12);
+	max-width: calc(100% * 8 / 12);
+}
+
+.col-9 {
+	flex-basis: calc(100% * 9 / 12);
+	max-width: calc(100% * 9 / 12);
+}
+
+.col-10 {
+	flex-basis: calc(100% * 10 / 12);
+	max-width: calc(100% * 10 / 12);
+}
+
+.col-11 {
+	flex-basis: calc(100% * 11 / 12);
+	max-width: calc(100% * 11 / 12);
+}
+
+.col-12 {
+	flex-basis: 100%;
+	max-width: 100%;
+}
