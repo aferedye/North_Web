@@ -29,7 +29,7 @@
                         </div>
                         <p class="txt-r p-t">Demandez un devis seulement si vous le souhaitez</p>
                     </div>
-                    <a href="#" class="btn-ready">
+                    <a href="#debut-devis" class="btn-ready">
                         <p class="txt-btn">Commencer</p>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
         <div class="flex devis flex-shrink-1 flex-grow-1">
             <aside class="col-2 avancement">
                 <div class="topaside">
-                    <h4 class="asideH">Avancement</h4>
+                    <h4 class="asideH" id="debut-devis">Avancement</h4>
                 </div>
                 <div class="asidecontent">
                     <div class="flex margin-top">
@@ -77,7 +77,7 @@
             </aside>
             <section class="col-10 section-devis">
                 <article class="context">
-                    <h2>Contexte du Projet</h2>
+                    <h2 >Contexte du Projet</h2>
                     <p class="margin-top">Quel est l'objet de votre projet ?</p>
                     <p class="margin-top"><span class="txt-purple">La création d'un site Internet</span> : Vous souhaitez créer le site / service(s) de votre entreprise.<br />
                         <span class="txt-purple">Un site Internet existant</span> : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
@@ -87,7 +87,7 @@
                             <p>La création d'un site internet</p>
                         </button>
                         <button class="casecontexte">
-                            <img src="{{ asset('img/logodevis/amelioration-NW.png') }}" class="caseimg" alt="Utiliser un site web existant ?">
+                            <img src="{{ asset('img/logodevis/amelioration.png') }}" class="caseimg" alt="Utiliser un site web existant ?">
                             <p>Un site internet existant</p>
                         </button>
                     </div>
@@ -101,11 +101,11 @@
                 </article>
                 <article class="objectif">
                     <h2>Objectifs du site</h2>
-                    <p>Plusieurs réponses possibles.</p>
-                    <p><span class="form-color">Vendre et/ou mettre en relation</span> : vous vendez des produits / des services ou mettez
-                        en relation des tiers (crowdfunding, etc.) grâce à un système de paiement en ligne.
-                        <span class="form-color">Présenter mon activité</span> : votre objectif est de présenter de l'information.</p>
-                    <button>
+                    <p class="margin-top">Plusieurs réponses possibles.</p>
+                    <p class="margin-top"><span class="txt-purple">Vendre et/ou mettre en relation</span> : vous vendez des produits / des services ou mettez
+                        en relation des tiers (crowdfunding, etc.) grâce à un système de paiement en ligne<br />
+                        <span class="txt-purple">Présenter mon activité</span> : votre objectif est de présenter de l'information.</p>
+                    <button class="margin-top">
                         <img src="{{ asset('img/logodevis/vendre.png') }}"/>
                         <p>Vendre et/ou mettre en relation</p>
                     </button>
@@ -113,37 +113,39 @@
                         <img src="{{ asset('img/logodevis/communiquer.png') }}"/>
                         <p>Présenter mon activité</p>
                     </button>
-                    <h3>Sur quel modèle économique vous basez-vous ?</h3>
-                    <p>Cocher la ou les réponses qui se rapprochent le plus du projet que vous souhaitez réaliser.
-                        Vente de produits: Les internautes peuvent acheter des produits sur le site.
-                        Vente de prestations: Les internautes peuvent commander des services sur le site.
+                    <h3 class="margin-top">Sur quel modèle économique vous basez-vous ?</h3>
+                    <p class="margin-top">Cocher la ou les réponses qui se rapprochent le plus du projet que vous souhaitez réaliser.<br />
+                        Vente de produits: Les internautes peuvent acheter des produits sur le site.<br />
+                        Vente de prestations: Les internautes peuvent commander des services sur le site.<br />
                         Place de marché: Plusieurs acteurs différents peuvent
                         vendre des biens ou des services sur le site.
                     </p>
-                    <button>
-                        <img src="{{ asset('img/logodevis/produits.png') }}" height="202" width="202"/>
-                        <p>Vente de produit</p>
-                    </button>
-                    <button>
-                        <img src="{{ asset('img/logodevis/prestations.png') }}" height="202" width="202"/>
-                        <p>Ventes de prestations</p>
-                    </button>
-                    <button>
-                        <img src="{{ asset('img/logodevis/place_de_marche.png') }}" height="202" width="202"/>
-                        <p>Place de marché</p>
-                    </button>
-                    <button>
-                        <img src="{{ asset('img/logodevis/formation.png') }}" height="202" width="202"/>
-                        <p>Formation</p>
-                    </button>
+                    <div class="margin-top">
+                        <button>
+                            <img src="{{ asset('img/logodevis/produits.png') }}" height="202" width="202"/>
+                            <p>Vente de produit</p>
+                        </button>
+                        <button>
+                            <img src="{{ asset('img/logodevis/prestations.png') }}" height="202" width="202"/>
+                            <p>Ventes de prestations</p>
+                        </button>
+                        <button>
+                            <img src="{{ asset('img/logodevis/place_de_marche.png') }}" height="202" width="202"/>
+                            <p>Place de marché</p>
+                        </button>
+                        <button>
+                            <img src="{{ asset('img/logodevis/formation.png') }}" height="202" width="202"/>
+                            <p>Formation</p>
+                        </button>
+                    </div>
                 </article>
                 <article>
                     <h2>Graphisme</h2>
-                    <h3>Fournissez-vous des instructions graphiques détaillées ?</h3>
-                    <p>Zoning: Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.
-                        Maquette: Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).
+                    <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
+                    <p class="margin-top">Zoning : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
+                        Maquette : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).
                     </p>
-                    <div class="choix">
+                    <div class="choix margin-top">
                         <button>
                             <img src="{{ asset('img/logodevis/maquette.png') }}" height="114" width="114"/>
                             <p>Maquette</p>
@@ -157,41 +159,45 @@
                             <p>Non</p>
                         </button>
                     </div>
-                    <h3>Niveau de graphisme attendu</h3>
-                    <p>
-                        Normal: Vous souhaitez un bon rendu graphique. Avancé: Vous souhaitez un rendu graphique avancé
-                        (Plus coûteux que Normal). Sur-mesure: Vous serez intraitable sur la qualité du rendu graphique
+                    <h3  class="margin-top">Niveau de graphisme attendu</h3>
+                    <p  class="margin-top">
+                        Normal : Vous souhaitez un bon rendu graphique.<br /> Avancé : Vous souhaitez un rendu graphique avancé
+                        (Plus coûteux que Normal).<br /> Sur-mesure : Vous serez intraitable sur la qualité du rendu graphique
                         (Plus coûteux que Avancé).
                     </p>
-                    <!-- SLIDER DE SELECTION A AJOUTER -->
+                    <div class="slider-block">
+                        <label><input max="3" min="1" step="1" type="range" class="margin-top"></label>
+                    </div>
+                    <div class="flex margin-left-slider1"><p>|</p><p class="margin-left-slider">|</p><p class="margin-left-slider2">|</p></div>
+                    <div class="flex margin-block-txt"><p>Normal</p><p class="margin-slider-txt">Avancé</p><p class="margin-slider-txt2">Sur-mesure</p></div>
                 </article>
                 <article>
                     <h2>Contenu</h2>
-                    <h3>Dans combien de langues le contenu sera-t-il consultable?</h3>
+                    <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable?</h3>
                     <!-- SLIDER DE SELECTION A AJOUTER -->
                 </article>
                 <article>
                     <h2>Fonctionalités générales</h2>
-                    <h3>Partie Actualité / Blog ?</h3>
-                    <p>Fonctionnalité qui permet d'ajouter des articles.</p>
-                    <div>
+                    <h3 class="margin-top">Partie Actualité / Blog ?</h3>
+                    <p class="margin-top">Fonctionnalité qui permet d'ajouter des articles.</p>
+                    <div class="margin-top">
                         <button><p>Oui</p></button>
                         <button><p>Non</p></button>
                     </div>
                 </article>
                 <article>
                     <h2>Domaines et hébergement</h2>
-                    <h3>Qui dépose les noms de domaines ?</h3>
-                    <p>Le nom de domaine est l'adresse correspondant au site. Ex: votre-nom.fr,...</p>
-                    <div>
+                    <h3 class="margin-top">Qui dépose les noms de domaines ?</h3>
+                    <p class="margin-top">Le nom de domaine est l'adresse correspondant au site. Ex: votre-nom.fr,...</p>
+                    <div class="margin-top">
                         <button><p>Le prestataire</p></button>
                         <button><p>Moi</p></button>
                     </div>
-                    <h3>Vous souhaitez une offre d'hébergement ?</h3>
-                    <p>L'hébergement correspond au serveur sur lequel sera stocké votre site (Elément indispensable pour la mise en ligne d'un site).
+                    <h3 class="margin-top">Vous souhaitez une offre d'hébergement ?</h3>
+                    <p class="margin-top">L'hébergement correspond au serveur sur lequel sera stocké votre site (Elément indispensable pour la mise en ligne d'un site).
                         Niveau 1: Offre de base. Niveau 2: Pour les sites Internet devant supporter plus de 10 000 visites/mois.
                         Niveau 3: Offre haut de gamme pour site Internet avec fort trafic visiteur intégrant un forfait d'intervention mensuel.</p>
-                    <div>
+                    <div class="margin-top">
                         <button>
                             <img src="{{ asset('img/logodevis/simple.png') }}" height="202" width="202"/>
                             <p>Niveau 1</p>
@@ -212,23 +218,23 @@
                 </article>
                 <article>
                     <h2>Suivi et Référencement</h2>
-                    <h3>Rapport mensuel sur les statistiques du site ?</h3>
-                    <p>Le prestataires vous fera un rapport régulier sur l'évolution des statistiques de votre site.</p>
-                    <div>
+                    <h3 class="margin-top">Rapport mensuel sur les statistiques du site ?</h3>
+                    <p class="margin-top">Le prestataires vous fera un rapport régulier sur l'évolution des statistiques de votre site.</p>
+                    <div class="margin-top">
                         <button><p>Oui</p></button>
                         <button><p>Non</p></button>
                     </div>
-                    <h3>Offre d'assistance mensuelle ?</h3>
-                    <p>Le prestataire vous assiste en cas de problème technique sur le site.</p>
-                    <div>
+                    <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
+                    <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
+                    <div class="margin-top">
                         <button><p>Oui</p></button>
                         <button><p>Non</p></button>
                     </div>
                 </article>
                 <article>
                     <h2>Vous</h2>
-                    <h3>Maturité du projet ?</h3>
-                    <div>
+                    <h3 class="margin-top">Maturité du projet ?</h3>
+                    <div class="margin-top">
                         <button>
                             <img src="{{ asset('img/logodevis/multi-devis.png') }}" height="202" width="202"/>
                             <p>Je me renseigne et j'ai déjà des devis</p>
@@ -242,8 +248,8 @@
                             <p>Je me renseigne par curiosité</p>
                         </button>
                     </div>
-                    <h3>Vous êtes ?</h3>
-                    <div>
+                    <h3 class="margin-top">Vous êtes ?</h3>
+                    <div class="margin-top">
                         <button>
                             <img src="{{ asset('img/logodevis/particulier.png') }}" height="202" width="202" alt="êtes-vous un particulier ?"/>
                             <p>Un particulier</p>
@@ -261,15 +267,13 @@
                             <p>Une entreprise</p>
                         </button>
                     </div>
-                    <p>En utilisant cet outil d'estimation gratuit, vous acceptez de recevoir la newsletter de North Web.</p>
-                    <form action="*" method="POST" >
+                    <p class="margin-top">En utilisant cet outil d'estimation gratuit, vous acceptez de recevoir la newsletter de North Web.</p>
+                    <form action="*" method="POST" class="margin-top form">
                         <div>
                             <div>
                                 <label for="mme">Mme
                                     <input type="checkbox" name="mme" />
                                 </label>
-                            </div>
-                            <div>
                                 <label for="mr">M.
                                     <input type="checkbox" name="mr">
                                 </label>
@@ -277,19 +281,19 @@
                         </div>
                         <table>
                             <tr>
-                                <td><label for="nom"><input type="text" name="nom" placeholder="Nom"/></label></td>
+                                <td><label for="nom"><input type="text" name="nom" placeholder="Nom" class="form-fields"/></label></td>
                             </tr>
                             <tr>
-                                <td><label for="prenom"><input type="text" name="prenom" placeholder="Prénom"/></label></td>
+                                <td><label for="prenom"><input type="text" name="prenom" placeholder="Prénom" class="form-fields"/></label></td>
                             </tr>
                             <tr>
-                                <td><label for="email"><input type="email" name="email" placeholder="E-mail"/></label></td>
+                                <td><label for="email"><input type="email" name="email" placeholder="E-mail" class="form-fields"/></label></td>
                             </tr>
                             <tr>
-                                <td><label for="email"><input type="email" name="email" placeholder="Confirmez votre e-mail"/></label></td>
+                                <td><label for="email"><input type="email" name="email" placeholder="Confirmez votre e-mail" class="form-fields"/></label></td>
                             </tr>
                             <tr>
-                                <td><label for="tel"><input type="text" name="tel" placeholder="Téléphone"/></label></td>
+                                <td><label for="tel"><input type="text" name="tel" placeholder="Téléphone" class="form-fields"/></label></td>
                             </tr>
                         </table>
                         <input type="submit" value="Valider">
