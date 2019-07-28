@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello DevisController!{% endblock %}
-
 {% block body %}
     <body>
     <main>
@@ -57,31 +56,31 @@
                 </div>
                 <div class="asidecontent">
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-contexte_du_projet.png" alt="Avancement contexte du projet"/>
+                        <img src="{{ asset('img/logodevis/menu-contexte_du_projet.png') }}" alt="Avancement contexte du projet"/>
                         <p>Contexte du projet</p>
                     </div>
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-objectifs_du_site.png" alt="Avancement objectifs du site"/>
+                        <img src="{{ asset('img/logodevis/menu-objectifs_du_site.png') }}" alt="Avancement objectifs du site"/>
                         <p>Objectifs du site</p>
                     </div>
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-suivi_et_referencement.png" alt="Avancement suivi et referencement"/>
+                        <img src="{{ asset('img/logodevis/menu-suivi_et_referencement.png') }}" alt="Avancement suivi et referencement"/>
                         <p>Suivi et référencement</p>
                     </div>
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-graphisme.png" alt="Avancement graphisme"/>
+                        <img src="{{ asset('img/logodevis/menu-graphisme.png') }}" alt="Avancement graphisme"/>
                         <p>Graphisme</p>
                     </div>
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-contenu.png" alt="Avancement contenu"/>
+                        <img src="{{ asset('img/logodevis/menu-contenu.png') }}" alt="Avancement contenu"/>
                         <p>Contenu</p>
                     </div>
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-fonctionnalites_generales.png" alt="Avancement fonctionnalites generales"/>
+                        <img src="{{ asset('img/logodevis/menu-fonctionnalites_generales.png') }}" alt="Avancement fonctionnalites generales"/>
                         <p>Fonctionnalités générales</p>
                     </div>
                     <div class="flex margin-top">
-                        <img src="img/logodevis/menu-vous.png" alt="Avancement vous"/>
+                        <img src="{{ asset('img/logodevis/menu-vous.png') }}" alt="Avancement vous"/>
                         <p>Vous</p>
                     </div>
                 </div>
@@ -94,11 +93,11 @@
                         Un site Internet existant : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
                     <div class="flex">
                         <div class="casecontexte">
-                            <img src="img/logodevis/croix (1).png" height="74" width="75" class="caseimg"/>
+                            <img src="{{ asset('img/logodevis/croix (1).png') }}" height="74" width="75" class="caseimg"/>
                             <p class="casetxt">La création d'un site internet</p>
                         </div>
                         <div class="casecontexte">
-                            <img src="img/logodevis/amelioration-NW.png" class="caseimg">
+                            <img src="{{ asset('img/logodevis/amelioration-NW.png') }}" class="caseimg">
                             <p class="casetxt">Un site internet existant</p>
                         </div>
                     </div>
@@ -115,11 +114,11 @@
                         en relation des tiers (crowdfunding, etc.) grâce à un système de paiement en ligne.
                         <span class="form-color">Présenter mon activité</span> : votre objectif est de présenter de l'information.</p>
                     <div>
-                        <img src="img/logodevis/vendre.png"/>
+                        <img src="{{ asset('img/logodevis/vendre.png') }}"/>
                         <p>Vendre et/ou mettre en relation</p>
                     </div>
                     <div>
-                        <img src="img/logodevis/communiquer.png"/>
+                        <img src="{{ asset('img/logodevis/communiquer.png') }}"/>
                         <p>Présenter mon activité</p>
                     </div>
                     <h3>Sur quel modèle économique vous basez-vous ?</h3>
@@ -130,19 +129,19 @@
                         vendre des biens ou des services sur le site.
                     </p>
                     <div>
-                        <img src="img/logodevis/produits.png" height="202" width="202"/>
+                        <img src="{{ asset('img/logodevis/produits.png') }}" height="202" width="202"/>
                         <p>Vente de produit</p>
                     </div>
                     <div>
-                        <img src="img/logodevis/prestations.png" height="202" width="202"/>
+                        <img src="{{ asset('img/logodevis/prestations.png') }}" height="202" width="202"/>
                         <p>Ventes de prestations</p>
                     </div>
                     <div>
-                        <img src="img/logodevis/place_de_marche.png" height="202" width="202"/>
+                        <img src="{{ asset('img/logodevis/place_de_marche.png') }}" height="202" width="202"/>
                         <p>Place de marché</p>
                     </div>
                     <div>
-                        <img src="img/logodevis/formation.png" height="202" width="202"/>
+                        <img src="{{ asset('img/logodevis/formation.png') }}" height="202" width="202"/>
                         <p>Formation</p>
                     </div>
                 </article>
@@ -154,17 +153,17 @@
                     </p>
                     <div class="choix">
                         <div>
-                            <img src="img/logodevis/maquette.png" height="114" width="114"/>
+                            <img src="{{ asset('img/logodevis/maquette.png') }}" height="114" width="114"/>
                             <p>Maquette</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/zoning.png" height="114" width="114"/>
+                            <img src="{{ asset('img/logodevis/zoning.png') }}" height="114" width="114"/>
                             <p>Zoning</p>
                         </div>
-                        <div>
-                            <img src="img/logodevis/non.png" height="114" width="114"/>
+                        <button>
+                            <img src="{{ asset('img/logodevis/non.png') }}" height="114" width="114"/>
                             <p>Non</p>
-                        </div>
+                        </button>
                     </div>
                     <h3>Niveau de graphisme attendu</h3>
                     <p>
@@ -202,19 +201,19 @@
                         Niveau 3: Offre haut de gamme pour site Internet avec fort trafic visiteur intégrant un forfait d'intervention mensuel.</p>
                     <div>
                         <div>
-                            <img src="img/logodevis/simple.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/simple.png') }}" height="202" width="202"/>
                             <p>Niveau 1</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/intermediaire.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/intermediaire.png') }}" height="202" width="202"/>
                             <p>Niveau 2</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/avancee.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/avancee.png') }}" height="202" width="202"/>
                             <p>Niveau 3</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/non.png" height="114" width="114"/>
+                            <img src="{{ asset('img/logodevis/non.png')}}" height="114" width="114"/>
                             <p>Non</p>
                         </div>
                     </div>
@@ -239,34 +238,34 @@
                     <h3>Maturité du projet ?</h3>
                     <div>
                         <div>
-                            <img src="img/logodevis/multi-devis.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/multi-devis.png') }}" height="202" width="202"/>
                             <p>Je me renseigne et j'ai déjà des devis</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/devis.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/devis.png') }}" height="202" width="202"/>
                             <p>J'ai un projet mais je n'ai pas encore de devis</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/curiosite.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/curiosite.png') }}" height="202" width="202"/>
                             <p>Je me renseigne par curiosité</p>
                         </div>
                     </div>
                     <h3>Vous êtes ?</h3>
                     <div>
                         <div>
-                            <img src="img/logodevis/particulier.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/particulier.png') }}" height="202" width="202"/>
                             <p>Un particulier</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/association.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/association.png') }}" height="202" width="202"/>
                             <p>Une association</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/institution.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/institution.png') }}" height="202" width="202"/>
                             <p>Une administration</p>
                         </div>
                         <div>
-                            <img src="img/logodevis/entreprise.png" height="202" width="202"/>
+                            <img src="{{ asset('img/logodevis/entreprise.png') }}" height="202" width="202"/>
                             <p>Une entreprise</p>
                         </div>
                     </div>
