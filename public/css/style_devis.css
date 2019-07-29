@@ -98,7 +98,7 @@ article {
 	cursor: pointer;
 	border-radius: 35px;
 	margin-top: 20px;
-	margin-left: 45px;
+	margin-left: 30px;
 
 }
 
@@ -115,6 +115,16 @@ article {
 	height: 130px;
 	width: 200px;
 	margin-left: 75px;
+	text-align: center;
+	margin-top: 25px;
+	border: none;
+}
+
+.casecontexte-sm {
+	background-color: gainsboro;
+	height: 130px;
+	width: 150px;
+	margin-left: 45px;
 	text-align: center;
 	margin-top: 25px;
 	border: none;
@@ -148,7 +158,7 @@ article {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 15px;
-	height: 400px;
+	height: 415px;
 	margin: 15px;
 	border-radius: 3px;
 	font-family: 'Roboto', sans-serif;
@@ -273,6 +283,8 @@ article {
 	max-width: 100%;
 }
 
+/* -------------- SLIDER NIVEAU DE GRAPHISME --------------*/
+
 .slider-block {
 	margin-left: 150px;
 	margin-top: 25px;
@@ -363,7 +375,11 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
 	background: #ffffff;
 }
+/*-------------------------------------------------------------------*/
 
+/* -------------- SLIDER nombre de langue --------------*/
+
+/* Formulaire de demande de devis */
 
 .form-fields {
 	margin-top: 10px;
