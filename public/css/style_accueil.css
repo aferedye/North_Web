@@ -1,6 +1,10 @@
 
 
 /**général */
+
+.overflow{
+    overflow: scroll;
+}
 * {
     box-sizing: border-box;
     margin :0;
@@ -66,7 +70,7 @@ header {
     position: sticky;
     position: -webkit-sticky;
     z-index: 1000;
-    overflow: visible;
+
 }
 
 .logo {
@@ -90,6 +94,7 @@ header {
 }
 
 .article2 {
+
     background-image:url('../img/images_accueil/modeledevis.jpg');
     background-size: cover;
     background-position: center;
@@ -127,26 +132,29 @@ header {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
 }
+.flex{
+    display: flex;
+    justify-content: space-between}
 
 /** ------ article 1 position texte ------  **/
 .besoin1{
 
-    margin-left: 20px;
+    text-align: center;
     padding-top: 25px;
     font-family: 'awesome_season_personal_useRg';
-    font-size: 1.8rem;
+    font-size: 3.5rem;
 }
 .nosequipes{
-    margin-left: 30px;
+    text-align: center;
     margin-top: 25px;
     font-family: 'awesome_season_personal_useRg';
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .sommes {
     text-align: center;
     font-family: 'awesome_season_personal_useRg';
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-top: 150px;
     padding-left: 20px;
     padding-right: 20px;
@@ -154,26 +162,45 @@ header {
 
 .scroll {
     display: block;
-    height: 70px;
+    height: 120px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
 }
-/**-----------------------------------------**/
+
+.btn-article1{
+    background-color: #7B8515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+    margin: auto;
+}
+/** ------ article 2 position texte ------  **/
 
 .besoin2{
-    padding-top: 60px;
-    padding-left: 70px;
+    padding-top: 250px;
+    padding-left: 50px;
+    font-size: 5rem;
 }
 
 .dun{
-    padding-left: 78px;
+    padding-left: 80px;
+    font-size: 4rem;
 }
 
 .devis{
-    padding-left: 83px;
+    padding-left: 110px;
+    font-size: 4rem;
 }
 
-/** article2 position texte  **/
+/** article 3 position texte  **/
+
+
 .perdu{
     padding-top: 10px;
     padding-left: 15px;
@@ -202,19 +229,7 @@ header {
     border-radius: 35px;
 }
 
-.btn-article1{
-    background-color: #7B8515;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 35px;
-    margin: auto;
-}
+
 .btn-article2{
     background-color: #7B8515;
     border: none;
@@ -228,11 +243,25 @@ header {
     border-radius: 35px;
     margin: auto;
 }
-
+.btn-article1{
+    background-color: #7B8515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+    margin: auto;
+}
 
 .pos-btn {
     text-align: center;
-    margin-top: 350px;
+    padding-top: 350px;
+    padding-right: 280px;
+
 }
 
 .pos-btn-conseil {
@@ -243,9 +272,30 @@ header {
 
 .fond-txt-conseil {
     background-color: #7B8515;
-    height: 100px;
-    width: 60%;
+    height: 72px;
+    width: 33%;
     border-radius:  0px 0px 70px 0px ;
+}
+.pos-btn2 {
+    text-align: center;
+    padding-top: 200px;
+    padding-right: 200px;
+    margin-left: 1200px;
+
+}
+
+.fond-txt-projet {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 2rem;
+    background-color: gray;
+    height: 90px;
+    width: 25%;
+    border-radius:  0px 0px 70px 0px ;
+}
+
+.offre{
+    padding-left: 40px;
 }
 
 
@@ -255,21 +305,26 @@ header {
 
 .north{
     color: black;
-    padding-top: 10px;
-    padding-left: 15px;
+    padding-top: 120px;
+    padding-left: 100px;
+    font-size: 3rem;
 }
 
 .nous{
     text-align: justify;
     color: black;
-    font-size: 8px ;
-    padding-top: 20px;
-    padding-left: 85px;
-    margin-right: 25px;
+    font-size: 2rem;
+    padding-top: 25px;
+    padding-left: 500px;
+    margin-right: 300px;
 
 }
 
 /* Classe générique */
+.overflow{
+overflow: clip;
+}
+
 .col-1 {
     flex-basis: calc(100% / 12);
     max-width: calc(100% / 12);
