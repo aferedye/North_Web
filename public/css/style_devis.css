@@ -48,6 +48,10 @@ h1 {
 	text-align: center;
 }
 
+output {
+	margin-left: 10px;
+}
+
 article {
 	font-family: 'Roboto', sans-serif;
 	margin-top: 70px;
