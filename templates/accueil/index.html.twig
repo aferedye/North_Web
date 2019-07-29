@@ -2,19 +2,82 @@
 
 {% block title %}Hello AccueilController!{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset ('css/style_accueil.css') }}">
+{% endblock  %}
+
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<body>
+<section class="container col-12">
+    <article class="article1">
+        <p class="besoin1">
+            Besoin de visibilité sur le web ?
+        </p>
+        <p class="nosequipes">
+            Nos équipes sont là pour forger votre identité graphique
+        </p>
+        <p class="sommes">
+            Nous sommes capables de répondre à tout vos types de projets
+            du site vitrine au site ecommerce
+        </p>
+        <img src="../images/mouse-scroll-500.png" class="scroll"/>
+    </article>
+    <article class="article2">
+        <p class="besoin2">
+            BESOIN
+        </p>
+        <p class="dun">
+            d'un
+        </p>
+        <p class="devis">
+            devis ?
+        </p>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/North_Web/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/North_Web/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <div class="pos-btn">
+            <a href="#" class="btn-article">
+                <p class="btn-article2-txt">C'est parti !</p>
+            </a>
+        </div>
+    </article>
+    <article class="article3">
+        <div class="fond-txt-conseil">
+            <p class="perdu">
+                Perdu à travers toutes nos offres ?
+            </p>
+            <p class="nos">
+                Nos conseilles sont là pour défénir vos besoins !
+            </p>
+        </div>
+        <div class="pos-btn-conseil">
+            <a href="#" class="btn-article1">
+                <p class="btn-article2-txt">Je prend RDV !</p>
+            </a>
+            <a href="#" class="btn-article2">
+                <p class="btn-article2-txt">Nous appeller !</p>
+            </a>
+        </div>
+    </article>
+
+    <article class="article4">
+        <p class="north">
+            North web en quelques lignes
+        </p>
+        <p class="nous">
+            Nous adorons faire de belles choses.
+            <br>
+            Notre but est de vous fournir tout ce dont vous avez besoin pour une communication digitale réussie.
+        </p>
+    </article>
+
+    <article class="article5">
+        <p>
+            Découvrez
+        </p>
+        <p>
+            Nos réalisations !
+        </p>
+    </article>
+</section>
+</body>
 {% endblock %}

@@ -82,7 +82,7 @@ header {
 /**body */
 
 .article1 {
-    background-image:url(../images/web.jpg);
+    background-image:url('../img/images_accueil/web.jpg');
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -90,7 +90,7 @@ header {
 }
 
 .article2 {
-    background-image:url(../images/modeledevis.jpg);
+    background-image:url('../img/images_accueil/modeledevis.jpg');
     background-size: cover;
     background-position: center;
     height:100vh;
@@ -99,7 +99,7 @@ header {
 }
 
 .article3 {
-    background-image:url(../images/assistance.jpg);
+    background-image:url('../img/images_accueil/assistance.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -107,7 +107,7 @@ header {
 }
 
 .article4 {
-    background-image:url(../images/lille.jpg);
+    background-image:url('../img/images_accueil/lille.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -116,7 +116,7 @@ header {
 }
 
 .article5 {
-    background-image:url(../images/bureau.jpg);
+    background-image:url(../img/images_accueil/bureau.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
