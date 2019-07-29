@@ -8,11 +8,6 @@
 	margin-left: 30px;
 }
 
-.container {
-
-
-}
-
 .txt-r {
 	text-align: right;
 }
@@ -27,9 +22,8 @@ h1 {
 	padding-right: 55px;
 	padding-top: 25px;
 	font-size: 1.4rem;
-
-
 }
+
 .bannerstart {
 	background-image: url('../img/logodevis/geek.jpg');
 	height: 100vh;
@@ -118,7 +112,7 @@ article {
 	background-color: gainsboro;
 	height: 130px;
 	width: 200px;
-	margin-left: 75px;
+	margin-left: 50px;
 	text-align: center;
 	margin-top: 25px;
 	border: none;
@@ -134,14 +128,18 @@ article {
 	border: none;
 }
 
-
-.casecontexte:focus {
-	border: #428BCA solid 1px;
-}
-
 .y-n {
 	width: 50px;
 	height: 30px;
+	background-color: gainsboro;
+	border: none;
+}
+
+.btn-prestataire {
+	width: 90px;
+	height: 30px;
+	background-color: gainsboro;
+	border: none;
 }
 
 .padd-t {
@@ -166,6 +164,17 @@ article {
 	margin: 15px;
 	border-radius: 3px;
 	font-family: 'Roboto', sans-serif;
+}
+
+.submit {
+	width: 75px;
+	height: 25px;
+	border-radius: 35px;
+	background-color: #4C7FA8;
+	color: #FFFFFF;
+	border: none;
+	margin-top: 10px;
+	margin-left: 100px;
 }
 
 .margin-top {
