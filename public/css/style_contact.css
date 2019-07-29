@@ -75,7 +75,7 @@
 }
 
 .banniere{
-    background: url(images_contact/contact_mobile/contact320.jpg);
+    background: url(../img/imgContact/contact1280.jpg);
     background-size: cover no-repeat;
     height: 100px;
     width: 100%;  
@@ -83,7 +83,7 @@
 
 
 .bannierebleu {
-    background: url(images_contact/contact_mobile/header320.jpg);
+    background: url(../img/imgContact/banner1280.jpg);
     background-size: cover no-repeat;
     height: 400px;
     width: 100%;
@@ -106,7 +106,7 @@
 }
 
 .banniereagenda{
-    background: url(images_contact/contact_mobile/agenda320.jpg);
+    background: url(../img/imgContact/agenda1280.jpg);
     background-size: cover no-repeat;
     height: 425px;
     width: 100%;
@@ -166,7 +166,7 @@ footer {
 .banniere { 
         width: 768px; 
         height: 240px;   
-        background: url(images_contact/contact_tablette/contact_banner768.jpg) }
+        background: url(../img/imgContact/contact1280.jpg) }
     
 .bannierebleu { 
         width: 768px }
@@ -188,12 +188,12 @@ footer {
         margin-top: 100px}
     
 .bannierebleu { 
-        background: url(images_contact/contact_tablette/contact_header768.jpg);
+        background: url(../img/imgContact/banner1280.jpg);
         width: 768px;
         height: 500px }
     
 .banniereagenda{
-        background: url(images_contact/contact_tablette/agenda768.jpg);}
+        background: url(../img/imgContact/banner1280.jpg);}
 
 .telephone{
         margin-top: 125px;
@@ -273,16 +273,16 @@ nav {
 .banniere { 
         width: 1280px; 
         height: 240px;   
-        background: url(images_contact/contact_pc/contact1280.jpg) }
+        background: url(../img/imgContact/contact1280.jpg) }
 
     
 .bannierebleu { 
-        background: url(images_contact/contact_pc/banner1280.jpg);
+        background: url(../img/imgContact/banner1280.jpg);
         width: 1280px;
         height: 500px }
 
 .banniereagenda{
-        background: url(images_contact/contact_pc/agenda1280.jpg);
+        background: url(../img/imgContact/agenda1280.jpg);
         width: 1280px;
         height: 600px;
         }
