@@ -1,0 +1,464 @@
+
+
+/**général */
+
+
+
+.test{
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+    margin :0;
+    padding: 0;
+    flex-shrink: 1;
+}
+
+nav{
+    display: none;
+}
+
+/**Polices */
+@font-face {
+    font-family: 'awesome_season_personal_useRg';
+    src: url('../polices/awesome_season_personal_use-webfont.woff2') format('woff2'),
+    url('../polices/awesome_season_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'la_palomaregular';
+    src: url('../polices/la_paloma-webfont.woff2') format('woff2'),
+    url('../polices/la_paloma-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mathilderegular';
+    src: url('../polices/mathilde-webfont.woff2') format('woff2'),
+    url('../polices/mathilde-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mf_really_awesomeregular';
+    src: url('../polices/mf_really_awesome-webfont.woff2') format('woff2'),
+    url('../polices/mf_really_awesome-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/**header */
+
+header {
+    height: 10vh;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 1000;
+
+}
+
+.logo {
+    height: 100%;
+    padding: 10px;
+}
+
+.boutonnav {
+    height: 100%;
+    padding: 10px;
+}
+
+/**body */
+
+.article1 {
+    background-image:url('../img/images_accueil/web.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: black;
+}
+
+.article2 {
+
+    background-image:url('../img/images_accueil/modeledevis.jpg');
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    color: white;
+    font-size: 2rem;
+}
+
+.article3 {
+    background-image:url('../img/images_accueil/assistance.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+.article4 {
+    background-image:url('../img/images_accueil/lille.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+
+}
+
+.article5 {
+    background-image:url(../img/images_accueil/bureau.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.flex{
+    display: flex;
+    justify-content: space-between}
+
+/** ------ article 1 position texte ------  **/
+.besoin1{
+
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'awesome_season_personal_useRg';
+    font-size: 3.5rem;
+}
+.nosequipes{
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'awesome_season_personal_useRg';
+    font-size: 2rem;
+}
+
+.sommes {
+    text-align: center;
+    font-family: 'awesome_season_personal_useRg';
+    font-size: 1.8rem;
+    margin-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.scroll {
+    display: block;
+    height: 120px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.btn-article1{
+    background-color: #7B8515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+    margin: auto;
+}
+/** ------ article 2 position texte ------  **/
+
+.besoin2{
+    padding-top: 250px;
+    padding-left: 50px;
+    font-size: 5rem;
+}
+
+.dun{
+    padding-left: 80px;
+    font-size: 4rem;
+}
+
+.devis{
+    padding-left: 110px;
+    font-size: 4rem;
+}
+
+/** article 3 position texte  **/
+
+
+.perdu{
+    padding-top: 10px;
+    padding-left: 15px;
+    color: ghostwhite;
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.nos{
+    padding-left: 50px;
+    color:ghostwhite;
+    font-size: 1.2rem;
+
+}
+
+.btn-article{
+    background-color: #CB7030;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+
+.btn-article2{
+    background-color: #7B8515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+    margin: auto;
+}
+.btn-article1{
+    background-color: #7B8515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+    margin: auto;
+}
+
+.pos-btn {
+    text-align: center;
+    padding-top: 350px;
+    padding-right: 280px;
+
+}
+
+.pos-btn-conseil {
+    text-align: center;
+    margin-top: 300px;
+    display: flex;
+}
+
+.fond-txt-conseil {
+    background-color: #7B8515;
+    height: 72px;
+    width: 33%;
+    border-radius:  0px 0px 70px 0px ;
+}
+.pos-btn2 {
+    text-align: center;
+    padding-top: 200px;
+    padding-right: 200px;
+    margin-left: 1200px;
+}
+
+.fond-txt-projet {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 2rem;
+    background-color: gray;
+    height: 90px;
+    width: 25%;
+    border-radius:  0px 0px 70px 0px ;
+}
+
+.offre{
+    padding-left: 40px;
+}
+
+
+
+
+/** article3 position texte  **/
+
+.north{
+    color: black;
+    padding-top: 120px;
+    padding-left: 100px;
+    font-size: 3rem;
+}
+
+.nous{
+    text-align: justify;
+    color: black;
+    font-size: 2rem;
+    padding-top: 25px;
+    padding-left: 500px;
+    margin-right: 300px;
+}
+
+/* Classe générique */
+
+
+
+
+
+.col-1 {
+    flex-basis: calc(100% / 12);
+    max-width: calc(100% / 12);
+}
+
+.col-2 {
+    flex-basis: calc(100% * 2 / 12);
+    max-width: calc(100% * 2 / 12);
+}
+
+.col-3 {
+    flex-basis: calc(100% * 3 / 12);
+    max-width: calc(100% * 3 / 12);
+}
+
+.col-4 {
+    flex-basis: calc(100% * 4 / 12);
+    max-width: calc(100% * 4 / 12);
+}
+
+.col-5 {
+    flex-basis: calc(100% * 5 / 12);
+    max-width: calc(100% * 5 / 12);
+}
+
+.col-6 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col-7 {
+    flex-basis: calc(100% * 7 / 12);
+    max-width: calc(100% * 7 / 12);
+}
+
+.col-8 {
+    flex-basis: calc(100% * 8 / 12);
+    max-width: calc(100% * 8 / 12);
+}
+
+.col-9 {
+    flex-basis: calc(100% * 9 / 12);
+    max-width: calc(100% * 9 / 12);
+}
+
+.col-10 {
+    flex-basis: calc(100% * 10 / 12);
+    max-width: calc(100% * 10 / 12);
+}
+
+.col-11 {
+    flex-basis: calc(100% * 11 / 12);
+    max-width: calc(100% * 11 / 12);
+}
+
+.col-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 320px
+.container { width: 730px}
+
+.col-sm-33 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%
+}
+
+.col-sm-50 {
+    flex-basis: 50%;
+    max-width: 50%
+}
+
+.col-sm-50 {
+    flex-basis: 66.66666%;
+    max-width: 66.66666%;
+}
+
+.col-sm-100 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+}
+
+@media (min-width: 992px){
+
+    .container { width: 970px}
+
+    .col-sm-33 {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%
+    }
+
+    .col-sm-50 {
+        flex-basis: 50%;
+        max-width: 50%
+    }
+
+    .col-sm-50 {
+        flex-basis: 66.66666%;
+        max-width: 66.66666%;
+    }
+
+    .col-sm-100 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: 1200px){
+
+    .container { width: 1170px}
+
+    .col-sm-33 {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%
+    }
+
+    .col-sm-50 {
+        flex-basis: 50%;
+        max-width: 50%
+    }
+
+    .col-sm-50 {
+        flex-basis: 66.66666%;
+        max-width: 66.66666%;
+    }
+
+    .col-sm-100 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+*----------------------------
