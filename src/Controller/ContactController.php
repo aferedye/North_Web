@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Form\Handler\ContactHandler;
 
 class ContactController extends AbstractController
 {
@@ -15,56 +16,70 @@ class ContactController extends AbstractController
     /**
      * @Route("/contact", name="contact_index")
      */
-
-    public function index()
+    public function index(Request $request, \Swift_Mailer $mailer)
     {
 
-        $em = $this->getDoctrine()->getRepository(Contact::class);
-        $contacts = $em->findAll();
-
-        return $this->render('contact/index.html.twig', [
-            "controller_name" => 'ContactController'
-        ]);
-    }
-
-
-    /**
-     * @Route("/contact/datauser", name="contact_data")
-     */
-    public function datauser(Request $request){
-        $contact = new Contact();
-        $form = $this->createForm(ContactType::class, $contact);
-        $form->add("add", SubmitType::class);
-
+     /*   $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
+        $this->addFlash('info', 'Test number 1' );
+
         if ($form->isSubmitted() && $form->isValid()){
-            $contact = $form->getData();
+            $contactFormData = $form->getData();
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush();
+            $message = (new \Swift_Message('Vous avez des messages'))
+                ->setFrom($contactFormData['from'])
+                ->setTo('contact.northweb@gmail.com')
+                ->setBody(
+                    $contactFormData['message'],
+                    'text/plain'
+                );
 
-            $this->addFlash("success", "Votre message a bien été envoyé :)");
+            $mailer->send($message);
+            $this->addFlash('succes', 'Message envoyé !');
+            return $this->redirectToRoute('contact');
 
-            return $this->redirectToRoute("contact_index");
         }
 
         return $this->render('contact/index.html.twig', [
-            'form' => $form->createView()
+                'our_form' => $form->createView(),
+        ]); */
+
+
+        $response = $request->request->get("prenom");
+        $response1 = $request->request->get('nom');
+        $response2 = $request->request->get("email");
+        $response3 = $request->request->get("telephone");
+        $response4 = $request->request->get("message");
+
+        dump($response, $response1, $response2, $response3, $response4);
+
+
+
+        //return $this->redirectToRoute("contact_index");
+        return $this->render('contact/index.html.twig', [
+            "controller_name" => 'ContactController'
         ]);
 
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $mailer->send($message);
+            $this->addFlash("success", "Votre message a bien été envoyé :)");
+            return $this->redirectToRoute('index.html.twig');
+        }
+
+
+
+
     }
 
 
 
-
-
-    public function mail(){
-
-
-
+    protected function addFlash(string $type, string $message)
+    {
     }
+
 
 }
 

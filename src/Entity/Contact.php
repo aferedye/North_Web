@@ -37,13 +37,17 @@ class Contact
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string")
+     * @Assert\Regex (
+     *     pattern = "[0-9] {10}/"
      */
 
     private $phone;
 
     /**
      * @ORM\Column(type="string", length=200)
+     *
+     *
      */
 
     private $message;
