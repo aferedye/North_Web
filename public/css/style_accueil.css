@@ -1,18 +1,71 @@
+/*---GENERAL---*/
 
-
-/**général */
 * {
-    box-sizing: border-box;
-    margin :0;
-    padding: 0;
-    flex-shrink: 1;
+    margin: 0px;
+    padding: 0px;
 }
 
-nav{
-    display: none;
+#corps {
+
 }
 
-/**Polices */
+
+#corps container-fluid {
+
+}
+
+/*---Background---*/
+
+#corps .row article {
+    width: 100%;
+    height: 90vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../img/images_accueil/web.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+#corps .row article:nth-child(2) {
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../img/images_accueil/modeledevis.jpg);
+    background-position: center;
+    background-size: cover;
+
+}#corps .row article:nth-child(3) {
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../img/images_accueil/assistance.jpg);
+    background-position: center;
+    background-size: cover;
+
+}#corps .row article:nth-child(4) {
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../img/images_accueil/lille.jpg);
+    background-position: center;
+    background-size: cover;
+
+}#corps .row article:nth-child(5) {
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../img/images_accueil/bureau.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+/*---------------Polices----------------- */
 @font-face {
     font-family: 'awesome_season_personal_useRg';
     src: url('../polices/awesome_season_personal_use-webfont.woff2') format('woff2'),
@@ -58,122 +111,95 @@ nav{
 
 }
 
-
-/**header */
-
-header {
-    height: 10vh;
-    position: sticky;
-    position: -webkit-sticky;
-    z-index: 1000;
-    overflow: visible;
-}
-
-.logo {
-    height: 100%;
-    padding: 10px;
-}
-
-.boutonnav {
-    height: 100%;
-    padding: 10px;
-}
-
-/**body */
-
-.article1 {
-    background-image:url(../images/web.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    color: black;
-}
-
-.article2 {
-    background-image:url(../images/modeledevis.jpg);
-    background-size: cover;
-    background-position: center;
-    height:100vh;
-    color: white;
-    font-size: 2rem;
-}
-
-.article3 {
-    background-image:url(../images/assistance.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
-}
-
-.article4 {
-    background-image:url(../images/lille.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
-
-}
-
-.article5 {
-    background-image:url(../images/bureau.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
-}
-
-.container {
-    width: 100%;
-    font-family: 'Open Sans', sans-serif;
-}
-
 /** ------ article 1 position texte ------  **/
 .besoin1{
 
-    margin-left: 20px;
+    text-align: center;
     padding-top: 25px;
     font-family: 'awesome_season_personal_useRg';
-    font-size: 1.8rem;
+    font-size: 3.5rem;
 }
 .nosequipes{
-    margin-left: 30px;
+    text-align: center;
     margin-top: 25px;
     font-family: 'awesome_season_personal_useRg';
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .sommes {
     text-align: center;
     font-family: 'awesome_season_personal_useRg';
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-top: 150px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.scroll {
+#corps img:nth-child(3){
     display: block;
-    height: 70px;
+    height: 120px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
 }
-/**-----------------------------------------**/
+
+/** ------ article 2 position texte / bouton ------  **/
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .besoin2{
-    padding-top: 60px;
-    padding-left: 70px;
+    padding-top: 250px;
+    padding-left: 50px;
+    font-size: 5rem;
+    color: white;
 }
 
 .dun{
-    padding-left: 78px;
+    padding-left: 80px;
+    font-size: 4rem;
+    color: white;
 }
 
 .devis{
-    padding-left: 83px;
+    padding-left: 110px;
+    font-size: 4rem;
+    color: white;
 }
 
-/** article2 position texte  **/
+.pos-btn {
+    text-align: center;
+    padding-top: 350px;
+    padding-right: 280px;
+}
+
+.btn-article{
+    background-color: #CB7030;
+    border: none;
+    color: white;
+    margin-top: 50px;
+    padding: 0px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+.btn-article-txt{
+    padding-top: 10px;
+    font-size: 20px;
+}
+/** ------ article 3 position texte / bouton ------  **/
+
+.fond-txt-conseil {
+    background-color: #7B8515;
+    height: 100px;
+    width: 100%;
+    border-radius:  0px 0px 70px 0px ;
+}
 .perdu{
     padding-top: 10px;
     padding-left: 15px;
@@ -186,6 +212,152 @@ header {
     padding-left: 50px;
     color:ghostwhite;
     font-size: 1.2rem;
+}
+
+.flex2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pos-btn-conseil {
+    display: flex;
+    text-align: center;
+    margin-top: 45vh;
+
+}
+
+.btn-article2{
+    background-color: #7B8515;
+    border: none;
+    color: white;
+    padding: 0px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 35px;
+    margin: auto;
+
+}
+
+.btn-article2-txt{
+
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/** ------ article 4 position texte / bouton ------  **/
+
+.north{
+    color: black;
+    padding-top: 100px;
+    padding-left: 100px;
+    font-size: 2rem;
+}
+
+.nous{
+    text-align: justify;
+    color: black;
+    font-size: 1.5rem;
+    padding-top: 25px;
+    padding-left: 500px;
+    margin-right: 400px;
+}
+
+.pos-btn2 {
+    text-align: center;
+    padding-top: 200px;
+    padding-right: 200px;
+    margin-left: 1200px;
+}
+
+/** ------ article 5 position texte / bouton ------  **/
+
+.fond-txt-projet {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 2rem;
+    background-color: gray;
+    height: 100px;
+    width: 20%;
+    border-radius:  0px 0px 70px 0px ;
+}
+
+.decouvrez{
+    font-size: 1.5rem;
+}
+
+.rea{
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
+
+/*------responsive 320px -------------*/
+
+/*------responsive 320px-Article 1 -------------*/
+
+
+@media (max-width: 760px){
+    .besoin1 {
+
+        text-align: center;
+        padding-top: 25px;
+        font-family: 'awesome_season_personal_useRg';
+        font-size: 1.4rem;
+    }
+
+    .nosequipes {
+        text-align: center;
+        margin-top: 25px;
+        font-family: 'awesome_season_personal_useRg';
+        font-size: 1rem;
+    }
+
+    .sommes {
+        text-align: center;
+        font-family: 'awesome_season_personal_useRg';
+        font-size: 1rem;
+        margin-top: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #corps img:nth-child(3) {
+        display: block;
+        height: 100px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+
+/*------responsive 320px-Article 2 -------------*/
+
+.flex{
+    display: flex;
+}
+
+.besoin2{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 2rem;
+    color: white;
+}
+
+.dun{
+    padding-left: 100px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.devis{
+    padding-left: 150px;
+    font-size: 2rem;
+    color: white;
+}
+
+.pos-btn {
+    text-align: center;
+    padding-bottom: 500px;
 
 }
 
@@ -193,139 +365,18 @@ header {
     background-color: #CB7030;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 0px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     cursor: pointer;
     border-radius: 35px;
+    margin-right: 0;
 }
 
-.btn-article1{
-    background-color: #7B8515;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 35px;
-    margin: auto;
-}
-.btn-article2{
-    background-color: #7B8515;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 35px;
-    margin: auto;
-}
-
-
-.pos-btn {
-    text-align: center;
-    margin-top: 350px;
-}
-
-.pos-btn-conseil {
-    text-align: center;
-    margin-top: 300px;
-    display: flex;
-}
-
-.fond-txt-conseil {
-    background-color: #7B8515;
-    height: 100px;
-    width: 60%;
-    border-radius:  0px 0px 70px 0px ;
-}
-
-
-
-
-/** article3 position texte  **/
-
-.north{
-    color: black;
+.btn-article-txt{
     padding-top: 10px;
-    padding-left: 15px;
-}
-
-.nous{
-    text-align: justify;
-    color: black;
-    font-size: 8px ;
-    padding-top: 20px;
-    padding-left: 85px;
-    margin-right: 25px;
+    font-size: 10px;
 
 }
-
-/* Classe générique */
-.col-1 {
-    flex-basis: calc(100% / 12);
-    max-width: calc(100% / 12);
-}
-
-.col-2 {
-    flex-basis: calc(100% * 2 / 12);
-    max-width: calc(100% * 2 / 12);
-}
-
-.col-3 {
-    flex-basis: calc(100% * 3 / 12);
-    max-width: calc(100% * 3 / 12);
-}
-
-.col-4 {
-    flex-basis: calc(100% * 4 / 12);
-    max-width: calc(100% * 4 / 12);
-}
-
-.col-5 {
-    flex-basis: calc(100% * 5 / 12);
-    max-width: calc(100% * 5 / 12);
-}
-
-.col-6 {
-    flex-basis: 50%;
-    max-width: 50%;
-}
-
-.col-7 {
-    flex-basis: calc(100% * 7 / 12);
-    max-width: calc(100% * 7 / 12);
-}
-
-.col-8 {
-    flex-basis: calc(100% * 8 / 12);
-    max-width: calc(100% * 8 / 12);
-}
-
-.col-9 {
-    flex-basis: calc(100% * 9 / 12);
-    max-width: calc(100% * 9 / 12);
-}
-
-.col-10 {
-    flex-basis: calc(100% * 10 / 12);
-    max-width: calc(100% * 10 / 12);
-}
-
-.col-11 {
-    flex-basis: calc(100% * 11 / 12);
-    max-width: calc(100% * 11 / 12);
-}
-
-.col-12 {
-    flex-basis: 100%;
-    max-width: 100%;
 }
