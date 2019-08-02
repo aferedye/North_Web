@@ -8,7 +8,7 @@
     <head>
         <meta name="viewport" content="width=device-width=device-width, initial-scale=1">
         <meta charset="utf-8" />
-         <link rel="stylesheet" href="{{ style_contact.css }}" />
+         <link rel="stylesheet" href="{{ asset('css/style_contact.css') }}" />
          <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     </head>
@@ -44,19 +44,19 @@
             <p class=" margetitre texteblanc titreespace ">Une question, un avis, un besoin spécifique ? </p>
            <br />
 
-        <form method="post" action="traitement.php">
+        <form method="post" action="">
 
-            <input class= " taillechamp " type="text" name="prenom" id="pseudo" placeholder="Prénom"/>
-            <input class= " taillechamp" type="text" name="nom" id="nom" placeholder="Nom" />
+            <input class= " taillechamp " type="text" name="prenom" id="pseudo" placeholder="Prénom*" required/>
+            <input class= " taillechamp" type="text" name="nom" id="nom" placeholder="Nom*" required/>
 
              <br />
 
-            <input class= " taillechamp " type="email" name="email" id="email" placeholder="Email"/>
-            <input class= " taillechamp " type="tel" name="telephone" id="telephone" placeholder="Téléphone"/>
+            <input class= " taillechamp " type="email" name="email" id="email" placeholder="Email*" required/>
+            <input class= " taillechamp " type="tel" name="telephone" id="telephone" placeholder="Téléphone*" required/>
 
             <br />
 
-            <textarea class="message" name="message" id="message" placeholder="Ici écrivez votre message :" rows="10" cols="30" ></textarea>
+            <textarea class="message" name="message" id="message" placeholder="Ici écrivez votre message :" rows="10" cols="30" required></textarea>
                 <br />
             <input class="boutonbleu" type="submit" value="Envoyer"  />
 
@@ -66,15 +66,15 @@
 
 
          <article class="banniereagenda">
-         <form method="post" action="traitement.php">
+         <form method="post" action="">
              <p class="margetitre nongras titreespace">Vous préférez nous rencontrer ? </p>
 
-             <input class="taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom"/>
-             <input class="taillechamp" type="text" name="nom" id="nom" placeholder="Nom"/>
+             <input class="taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*" required/>
+             <input class="taillechamp" type="text" name="nom" id="nom" placeholder="Nom*" required/>
 
              <br />
-            <input class="taillechamp" type="email" name="email" id="email" placeholder="Email"/>
-            <input class="taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone"/>
+            <input class="taillechamp" type="email" name="email" id="email" placeholder="Email*" required/>
+            <input class="taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone*" required/>
 
              <br />
             <p class="margetitre titreespace">Renseignez vos disponibilités</p>
