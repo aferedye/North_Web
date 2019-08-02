@@ -2,10 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('css/style_base.css') }}">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+   <!-- <header class="row">
+        <img src="{{ asset('img/logo.png') }}" alt="Logo north web" class="logo">
+        <nav>
+            <ul class="row">
+                <li><a href="{{ path('accueil') }}">Accueil</a></li>
+                <li><a href="{{ path('qui_sommes_nous') }}">Présentations</a></li>
+                <li><a href="{{ path('devis') }}">Devis</a></li>
+                <li><a href="">Nos références</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>-->
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

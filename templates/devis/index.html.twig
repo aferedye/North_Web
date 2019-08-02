@@ -82,11 +82,11 @@
                     <p class="margin-top"><span class="txt-purple">La création d'un site Internet</span> : Vous souhaitez créer le site / service(s) de votre entreprise.<br />
                         <span class="txt-purple">Un site Internet existant</span> : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
                     <div class="flex">
-                        <button class="casecontexte" data-choisi="false"  id="creation">
+                        <button class="casecontexte" data-choisi="false" data-group="1"  id="creation">
                             <img src="{{ asset('img/logodevis/croix (1).png') }}" height="74" width="75" class="caseimg" alt="Créer un site web ?"/>
                             <p>La création d'un site internet</p>
                         </button>
-                        <button class="casecontexte" data-choisi="false"  id="reprise">
+                        <button class="casecontexte" data-choisi="false" data-group="1"  id="reprise">
                             <img src="{{ asset('img/logodevis/amelioration.png') }}" class="caseimg" alt="Utiliser un site web existant ?">
                             <p>Un site internet existant</p>
                         </button>
@@ -317,6 +317,8 @@
         function choiceButton() {
             this.dataset.choisi = this.dataset.choisi === "true" ? "false" : "true";
         }
+        
+        
 
 
     </script>
