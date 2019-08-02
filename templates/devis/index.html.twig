@@ -82,11 +82,11 @@
                     <p class="margin-top"><span class="txt-purple">La création d'un site Internet</span> : Vous souhaitez créer le site / service(s) de votre entreprise.<br />
                         <span class="txt-purple">Un site Internet existant</span> : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
                     <div class="flex">
-                        <button class="casecontexte" type="submit">
+                        <button class="casecontexte" data-choisi="false"  id="creation">
                             <img src="{{ asset('img/logodevis/croix (1).png') }}" height="74" width="75" class="caseimg" alt="Créer un site web ?"/>
                             <p>La création d'un site internet</p>
                         </button>
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false"  id="reprise">
                             <img src="{{ asset('img/logodevis/amelioration.png') }}" class="caseimg" alt="Utiliser un site web existant ?">
                             <p>Un site internet existant</p>
                         </button>
@@ -105,11 +105,11 @@
                     <p><span class="txt-purple">Vendre et/ou mettre en relation</span> : vous vendez des produits / des services ou mettez
                         en relation des tiers (crowdfunding, etc.) grâce à un système de paiement en ligne<br />
                         <span class="txt-purple">Présenter mon activité</span> : votre objectif est de présenter de l'information.</p>
-                    <button class="margin-top casecontexte">
+                    <button class="margin-top casecontexte" data-choisi="false">
                         <img src="{{ asset('img/logodevis/vendre.png') }}" class="caseimg"/>
                         <p>Vendre et/ou mettre en relation</p>
                     </button>
-                    <button class="casecontexte">
+                    <button class="casecontexte" data-choisi="false">
                         <img src="{{ asset('img/logodevis/communiquer.png') }}" class="caseimg"/>
                         <p>Présenter mon activité</p>
                     </button>
@@ -121,19 +121,19 @@
                         vendre des biens ou des services sur le site.
                     </p>
                     <div class="margin-top">
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/produits.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Vente de produit</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/prestations.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Ventes de prestations</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/place_de_marche.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Place de marché</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/formation.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Formation</p>
                         </button>
@@ -146,15 +146,15 @@
                         <span class="txt-purple">Maquette</span> : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).
                     </p>
                     <div class="choix margin-top">
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false">
                             <img src="{{ asset('img/logodevis/maquette.png') }}" height="114" width="114" class="caseimg"/>
                             <p>Maquette</p>
                         </button>
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false">
                             <img src="{{ asset('img/logodevis/zoning.png') }}" height="114" width="114" class="caseimg"/>
                             <p>Zoning</p>
                         </button>
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false">
                             <img src="{{ asset('img/logodevis/non.png') }}" height="114" width="114" class="caseimg"/>
                             <p>Non</p>
                         </button>
@@ -186,8 +186,8 @@
                     <h3 class="margin-top">Partie Actualité / Blog ?</h3>
                     <p class="margin-top">Fonctionnalité qui permet d'ajouter des articles.</p>
                     <div class="margin-top">
-                        <button class="y-n m-l">Oui</button>
-                        <button class="y-n m-l">Non</button>
+                        <button class="y-n m-l" data-choisi="false">Oui</button>
+                        <button class="y-n m-l" data-choisi="false">Non</button>
                     </div>
                 </article>
                 <article>
@@ -195,27 +195,27 @@
                     <h3 class="margin-top">Qui dépose les noms de domaines ?</h3>
                     <p class="margin-top">Le nom de domaine est l'adresse correspondant au site. Ex: votre-nom.fr,...</p>
                     <div class="margin-top">
-                        <button class="btn-prestataire">Le prestataire</button>
-                        <button class="y-n m-l">Moi</button>
+                        <button class="btn-prestataire" data-choisi="false">Le prestataire</button>
+                        <button class="y-n m-l" data-choisi="false">Moi</button>
                     </div>
                     <h3 class="margin-top">Vous souhaitez une offre d'hébergement ?</h3>
                     <p class="margin-top">L'hébergement correspond au serveur sur lequel sera stocké votre site (Elément indispensable pour la mise en ligne d'un site).<br />
                         <span class="txt-purple">Niveau 1</span> : Offre de base.<br /> <span class="txt-purple">Niveau 2</span> : Pour les sites Internet devant supporter plus de 10 000 visites/mois.<br />
                         <span class="txt-purple">Niveau 3</span> : Offre haut de gamme pour site Internet avec fort trafic visiteur intégrant un forfait d'intervention mensuel.</p>
                     <div class="margin-top">
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/simple.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Niveau 1</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/intermediaire.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Niveau 2</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/avancee.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Niveau 3</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/non.png')}}" height="114" width="114" class="caseimg"/>
                             <p>Non</p>
                         </button>
@@ -226,48 +226,48 @@
                     <h3 class="margin-top">Rapport mensuel sur les statistiques du site ?</h3>
                     <p class="margin-top">Le prestataires vous fera un rapport régulier sur l'évolution des statistiques de votre site.</p>
                     <div class="margin-top">
-                        <button class="y-n m-l">Oui</button>
-                        <button class="y-n m-l">Non</button>
+                        <button class="y-n m-l" data-choisi="false">Oui</button>
+                        <button class="y-n m-l" data-choisi="false">Non</button>
                     </div>
                     <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
                     <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
                     <div class="margin-top">
-                        <button class="y-n m-l">Oui</button>
-                        <button class="y-n m-l">Non</button>
+                        <button class="y-n m-l" data-choisi="false">Oui</button>
+                        <button class="y-n m-l" data-choisi="false">Non</button>
                     </div>
                 </article>
                 <article>
                     <h2>Vous</h2>
                     <h3 class="margin-top">Maturité du projet ?</h3>
                     <div class="margin-top">
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false">
                             <img src="{{ asset('img/logodevis/multi-devis.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Je me renseigne et j'ai déjà des devis</p>
                         </button>
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false">
                             <img src="{{ asset('img/logodevis/devis.png') }}" height="202" width="202" class="caseimg"/>
                             <p>J'ai un projet mais je n'ai pas encore de devis</p>
                         </button>
-                        <button class="casecontexte">
+                        <button class="casecontexte" data-choisi="false">
                             <img src="{{ asset('img/logodevis/curiosite.png') }}" height="202" width="202" class="caseimg"/>
                             <p>Je me renseigne par curiosité</p>
                         </button>
                     </div>
                     <h3 class="margin-top">Vous êtes ?</h3>
                     <div class="margin-top">
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/particulier.png') }}" height="202" width="202" alt="êtes-vous un particulier ?" class="caseimg"/>
                             <p>Un particulier</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/association.png') }}" height="202" width="202" alt="êtes-vous une association ?" class="caseimg"/>
                             <p>Une association</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/institution.png') }}" height="202" width="202" alt="êtes-vous une administration ?" class="caseimg"/>
                             <p>Une administration</p>
                         </button>
-                        <button class="casecontexte-sm">
+                        <button class="casecontexte-sm" data-choisi="false">
                             <img src="{{ asset('img/logodevis/entreprise.png') }}" height="202" width="202" alt="êtes-vous un entreprise ?" class="caseimg"/>
                             <p>Une entreprise</p>
                         </button>
@@ -307,4 +307,17 @@
             </section>
         </div>
     </main>
+    <script>
+        const choices = document.querySelectorAll('button');
+
+        choices.forEach(choice => {
+            choice.addEventListener('click', choiceButton);
+        });
+
+        function choiceButton() {
+            this.dataset.choisi = this.dataset.choisi === "true" ? "false" : "true";
+        }
+
+
+    </script>
 {% endblock %}
