@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Contact;
+use App\Entity\Utilisateur;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -18,7 +18,12 @@ class ContactType extends AbstractType
             ->add('name', TextType::class)
             ->add('lastname', TextType::class)
             ->add('email', EmailType::class)
-            ->add('phone', TextType::class)
+
+            ->add('phone', TextType::class, [
+                'label' => 'phone number',
+                'attr' => ['id' => 'phone', 'placeholder' => 'Saisir votre numéro']
+            ])
+
             ->add('message', TextareaType::class)
         ;
     }
@@ -26,8 +31,8 @@ class ContactType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Contact::class,
-            'required' => true,
+            'data_class' => Utilisateur::class,
+        //    'required' => true,
         ]);
     }
 }

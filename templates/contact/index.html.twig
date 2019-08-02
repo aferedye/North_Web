@@ -44,7 +44,9 @@
             <p class=" margetitre texteblanc titreespace ">Une question, un avis, un besoin spécifique ? </p>
            <br />
 
-        <form method="post" action="">
+
+            {#   =======> partie html
+        <form method="POST" action="">
 
             <input class= " taillechamp " type="text" name="prenom" id="pseudo" placeholder="Prénom*" required/>
             <input class= " taillechamp" type="text" name="nom" id="nom" placeholder="Nom*" required/>
@@ -60,13 +62,49 @@
                 <br />
             <input class="boutonbleu" type="submit" value="Envoyer"  />
 
-        </form>
+        </form> #}
+
+            {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+            <div>
+                {{ form_row(form.name) }}
+                {{ form_row(form.lastname) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.phone) }}
+                {{ form_row(form.message) }}
+
+            </div>
+
+            <button type="submit" value="Send" class="btn btn-success text-white">Envoyer</button>
+            {{ form_end(form) }}
+
+
+
+
+
+
         </article>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
          <article class="banniereagenda">
-         <form method="post" action="">
+         <form method="POST" action="">
              <p class="margetitre nongras titreespace">Vous préférez nous rencontrer ? </p>
 
              <input class="taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*" required/>
