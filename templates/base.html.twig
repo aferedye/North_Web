@@ -7,6 +7,13 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
+
+    <main role="main" class="container main">
+        {% include 'flash_messages.html.twig' %}
+
+        {% block main %}{% endblock %}
+    </main>
+
     <body>
    <!-- <header class="row">
         <img src="{{ asset('img/logo.png') }}" alt="Logo north web" class="logo">

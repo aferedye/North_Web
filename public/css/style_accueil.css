@@ -1,19 +1,14 @@
 /*---GENERAL---*/
-
 * {
     margin: 0px;
     padding: 0px;
 }
-
 #corps {
 
 }
-
-
 #corps container-fluid {
 
 }
-
 /*---Background---*/
 
 #corps .row article {
@@ -63,8 +58,6 @@
     background-size: cover;
 
 }
-
-
 /*---------------Polices----------------- */
 @font-face {
     font-family: 'awesome_season_personal_useRg';
@@ -74,46 +67,29 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'la_palomaregular';
     src: url('../polices/la_paloma-webfont.woff2') format('woff2'),
     url('../polices/la_paloma-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
-
 @font-face {
     font-family: 'mathilderegular';
     src: url('../polices/mathilde-webfont.woff2') format('woff2'),
     url('../polices/mathilde-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
-
 @font-face {
     font-family: 'mf_really_awesomeregular';
     src: url('../polices/mf_really_awesome-webfont.woff2') format('woff2'),
     url('../polices/mf_really_awesome-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
 /** ------ article 1 position texte ------  **/
 .besoin1{
-
     text-align: center;
     padding-top: 25px;
     font-family: 'awesome_season_personal_useRg';
@@ -125,7 +101,6 @@
     font-family: 'awesome_season_personal_useRg';
     font-size: 2rem;
 }
-
 .sommes {
     text-align: center;
     font-family: 'awesome_season_personal_useRg';
@@ -134,47 +109,41 @@
     padding-left: 20px;
     padding-right: 20px;
 }
-
 #corps img:nth-child(3){
     display: block;
     height: 120px;
     margin: auto;
     margin-top: 100px;
 }
-
 /** ------ article 2 position texte / bouton ------  **/
-
 .flex{
     display: flex;
     justify-content: space-between;
 }
-
-
 .besoin2{
     padding-top: 250px;
     padding-left: 50px;
     font-size: 5rem;
     color: white;
+    font-family: 'mf_really_awesomeregular';
 }
-
 .dun{
     padding-left: 80px;
     font-size: 4rem;
     color: white;
+    font-family: 'mf_really_awesomeregular';
 }
-
 .devis{
     padding-left: 110px;
     font-size: 4rem;
     color: white;
+    font-family: 'mf_really_awesomeregular';
 }
-
 .pos-btn {
     text-align: center;
     padding-top: 350px;
     padding-right: 280px;
 }
-
 .btn-article{
     background-color: #CB7030;
     border: none;
@@ -187,13 +156,11 @@
     cursor: pointer;
     border-radius: 35px;
 }
-
 .btn-article-txt{
     padding-top: 10px;
     font-size: 20px;
 }
 /** ------ article 3 position texte / bouton ------  **/
-
 .fond-txt-conseil {
     background-color: #7B8515;
     height: 100px;
@@ -213,19 +180,15 @@
     color:ghostwhite;
     font-size: 1.2rem;
 }
-
 .flex2{
     display: flex;
     justify-content: space-between;
 }
-
 .pos-btn-conseil {
     display: flex;
     text-align: center;
     margin-top: 45vh;
-
 }
-
 .btn-article2{
     background-color: #7B8515;
     border: none;
@@ -237,24 +200,18 @@
     cursor: pointer;
     border-radius: 35px;
     margin: auto;
-
 }
-
 .btn-article2-txt{
-
     padding-top: 10px;
     font-size: 20px;
 }
-
 /** ------ article 4 position texte / bouton ------  **/
-
 .north{
     color: black;
     padding-top: 100px;
     padding-left: 100px;
     font-size: 2rem;
 }
-
 .nous{
     text-align: justify;
     color: black;
@@ -263,16 +220,13 @@
     padding-left: 500px;
     margin-right: 400px;
 }
-
 .pos-btn2 {
     text-align: center;
     padding-top: 200px;
     padding-right: 200px;
     margin-left: 1200px;
 }
-
 /** ------ article 5 position texte / bouton ------  **/
-
 .fond-txt-projet {
     padding-left: 20px;
     padding-top: 10px;
@@ -282,101 +236,148 @@
     width: 20%;
     border-radius:  0px 0px 70px 0px ;
 }
-
 .decouvrez{
     font-size: 1.5rem;
 }
-
 .rea{
     padding-left: 1rem;
     font-size: 1.5rem;
 }
-
 /*------responsive 320px -------------*/
-
 /*------responsive 320px-Article 1 -------------*/
-
-
-@media (max-width: 760px){
-    .besoin1 {
-
-        text-align: center;
-        padding-top: 25px;
-        font-family: 'awesome_season_personal_useRg';
-        font-size: 1.4rem;
-    }
-
-    .nosequipes {
-        text-align: center;
-        margin-top: 25px;
-        font-family: 'awesome_season_personal_useRg';
-        font-size: 1rem;
-    }
-
-    .sommes {
-        text-align: center;
-        font-family: 'awesome_season_personal_useRg';
-        font-size: 1rem;
-        margin-top: 150px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #corps img:nth-child(3) {
-        display: block;
-        height: 100px;
-        margin: auto;
-        margin-top: 100px;
-    }
-
-
+@media  (max-width: 768px) {
+.besoin1 {
+    padding-top: 25px;
+    font-size: 1.4rem;
+}
+.nosequipes {
+    margin-top: 25px;
+    font-size: 1rem;
+}
+.sommes {
+    font-size: 1rem;
+    margin-top: 150px;
+}
+#corps img:nth-child(3) {
+    height: 100px;
+    margin-top: 100px;
+}
 /*------responsive 320px-Article 2 -------------*/
-
 .flex{
     display: flex;
+    flex-direction: column;
 }
-
 .besoin2{
     padding-top: 50px;
     padding-left: 50px;
     font-size: 2rem;
-    color: white;
 }
-
 .dun{
     padding-left: 100px;
     font-size: 1.5rem;
-    color: white;
 }
-
 .devis{
     padding-left: 150px;
     font-size: 2rem;
-    color: white;
 }
-
 .pos-btn {
-    text-align: center;
-    padding-bottom: 500px;
-
+    padding-right: 0px;
+    padding-top: 0px;
+    margin-top: 200px;
 }
-
-.btn-article{
-    background-color: #CB7030;
-    border: none;
-    color: white;
-    padding: 0px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 35px;
-    margin-right: 0;
+/*------responsive 320px-Article 3 -------------*/
+.fond-txt-conseil {
+    height: 100px;
 }
-
-.btn-article-txt{
-    padding-top: 10px;
-    font-size: 10px;
-
+.perdu{
+    font-size: 1rem;
+}
+.nos{
+    padding-left: 10px;
+    font-size: 0.9rem;
+}
+.btn-article2-txt{
+    font-size: 13px;
+}
+/*------responsive 320px-Article 4 -------------*/
+.north{
+    padding-top: 30px;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+.nous{
+    font-size: 1rem;
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-right: 30px;
+}
+.pos-btn2 {
+    padding-top: 200px;
+    padding-right: 20px;
+    margin-left: 15px;
+}
+/*------responsive 320px-Article 5 -------------*/
+.fond-txt-projet {
+    width: 100%;
+}
+}
+/*------responsive de 768px à 1280px -------------*/
+/*------responsive 768px à 1280px-Article 1 -------------*/
+@media (min-width: 768px) and (max-width: 1280px) {
+.besoin1 {
+    font-size: 2rem;
+}
+.nosequipes {
+    font-size: 1.8rem;
+}
+.sommes {
+    font-size: 1.5rem;
+}
+/*------responsive 768px à 1280px-Article 2 -------------*/
+.besoin2{
+    font-size: 4rem;
+}
+.dun{
+    padding-left: 100px;
+    font-size: 3rem;
+}
+.devis{
+    padding-left: 150px;
+    font-size: 3rem;
+}
+/*------responsive 768px à 1280px-Article 3 -------------*/
+.fond-txt-conseil {
+    height: 100px;
+}
+.perdu{
+    font-size: 1rem;
+}
+.nos{
+    padding-left: 10px;
+    font-size: 0.9rem;
+}
+.btn-article2-txt{
+    font-size: 13px;
+}
+/*------responsive 768px à 1280px-Article 4 -------------*/
+.north{
+    padding-top: 30px;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+.nous{
+    font-size: 1rem;
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-right: 30px;
+}
+.pos-btn2 {
+    padding-top: 200px;
+    padding-right: 20px;
+    margin-left: 15px;
+}
+/*------responsive 768px à 1280px-Article 5 -------------*/
+.fond-txt-projet {
+    width: 33%;
 }
 }
