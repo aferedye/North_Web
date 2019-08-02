@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset ('css/style_projet.css') }}">
+{% endblock  %}
+{% block body %}
+    <body class="bg">
+    <section id="corps">
+        <h4 class="titre">Réalisations</h4>
+        <div class="container-fluid">
+            <div class="row zoom">
+                <article >
+                    <a href="#" >
+                        <img class="image " src="{{ asset ('img/images_projet/resto3.png') }}"/>
+                        <span>Ton texte</span>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img class="image " src="{{ asset ('img/images_projet/resto1.jpg') }}"/>
+                    </a>
+                </article>
+                <article class="zoom" >
+                    <a href="#" >
+                        <img class="image" src="{{ asset ('img/images_projet/resto2.jpg') }}"/>
+                    </a>
+                </article>
+                <article >
+                    <a href="#" >
+                    <img  class="image" src="{{ asset ('img/images_projet/vit1.jpg') }}"/>
+                    </a>
+                </article>
+                <article >
+                    <a href="#">
+                        <img class="image" src="{{ asset ('img/images_projet/vit2.png') }}"/>
+                    </a>
+                </article>
+                <article >
+                    <a href="#" >
+                        <img class="image" src="{{ asset ('img/images_projet/vit3.jpg') }}"/>
+                    </a>
+                </article>
+                <article>
+                    <a href="#" >
+                        <img class="image" src="{{ asset ('img/images_projet/vet1.png') }}"/>
+                    </a>
+                </article>
+                <article >
+                    <a href="#" >
+                        <img class="image" src="{{ asset ('img/images_projet/vet2.png') }}"/>
+                    </a>
+                </article>
+                <article >
+                    <a href="#" >
+                        <img class="image" src="{{ asset ('img/images_projet/vet3.png') }}"/>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+    </body>
+{% endblock %}
