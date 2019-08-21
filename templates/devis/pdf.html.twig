@@ -1,0 +1,197 @@
+{% set prixmaquette = 150 %}
+{% set prixgraphisme = 150 %}
+{% set prixpage = 150 %}
+{% set prixblog = 150 %}
+{% set prixinscription = 150 %}
+{% set prixforum = 150 %}
+{% set prixmembre = 150 %}
+{% set prixfichier = 150 %}
+{% set prixcarte = 150 %}
+{% set prixvideo = 150 %}
+{% set prixlangue = 150 %}
+{% set prixassistance = 150 %}
+{% set totalmaquette = prixmaquette * maquette %}
+{% set totallangue = prixlangue * nbrlangue %}
+{% set totalgraphisme = prixgraphisme * lvlgraphisme %}
+{% set totalpage = prixpage * nbrpage %}
+{% set totalblog = prixblog * partieblog %}
+{% set totalinscription = prixinscription * forminscription %}
+{% set totalforum = prixforum * forum %}
+{% set totalmembre = prixmembre * accesmembre %}
+{% set totalfichier = prixfichier * gestionfichiers %}
+{% set totalcarte = prixcarte * cartedynamique %}
+{% set totalvideo = prixvideo * integrationvideo %}
+{% set totalassistance = prixassistance * assistance %}
+{% set totalHT = totalmaquette +  totalgraphisme + totalpage + totallangue + totalblog + totalinscription +
+                totalforum + totalmembre + totalfichier + totalcarte + totalvideo + totalassistance %}
+{% set totalTVA = totalHT / 100 * 20 %}
+{% set totalTTC = totalHT + totalTVA %}
+
+<html lang="fr">
+<style>
+    .txt-center { text-align: center; }
+    .container { width:870px; margin: auto; }
+    .border { border: 1px solid #D3D3D3; padding: 10px; }
+    .border-r { border-right: 1px solid #D3D3D3; padding: 10px; }
+    .floatl { float: left }
+    .abs { position: absolute; top: 137px; left: 460px; }
+    .30p { width: 30%; }
+    .75p { width: 75%; }
+    .50p { width: 49.5%; }
+    .m-l { margin-left: 30px;}
+    .m-t { margin-top: 25px; }
+    table {
+        width: 100%;
+        color: #717375;
+        line-height: 5mm;
+        border-collapse: collapse;
+        margin-top: 25px;
+        margin-left: 30px;
+    }
+    h1{ padding-top: 10px; }
+
+</style>
+<body>
+<div class="container">
+    <img src="C:\wamp64\www\NorthWeb\public\img\logo.png" alt="Logo North Web" width="100" class="floatl m-l">
+    <h1 class="txt-center">Devis</h1>
+    <p class="txt-center">Ce devis est à titre indicatif et ne constitue en aucun cas un acte de vente.<br/> Veuillez vous rapprochez de nos équipes afin d'obtenir un devis final.</p>
+    <div class="border 30p m-l m-t">
+        <strong>Détails de l'entreprise :</strong><br /><br />
+        Société North Web<br />
+        06.20.76.34.48<br />
+        contact.northweb@gmail.com
+    </div>
+    <div class="border abs 30p m-t">
+        <strong>Coordonnées du client :</strong><br /><br />
+        {{ nom | capitalize }} {{ prenom | capitalize }}<br />
+        {{ tel }}<br />
+        {{ email }}
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th class="border">Désignation</th>
+            <th class="border">Quantité</th>
+            <th class="border">Prix Unitaire</th>
+            <th class="border">Prix Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if maquette > 0 %}
+        <tr>
+            <td class="border">Maquette graphique</td>
+            <td class="border">{{ maquette }}</td>
+            <td class="border">{{ prixmaquette }}</td>
+            <td class="border">{{ totalmaquette }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td class="border">Niveau de graphisme</td>
+            <td class="border">{{ lvlgraphisme }}</td>
+            <td class="border">{{ prixgraphisme }}</td>
+            <td class="border">{{ totalgraphisme }}</td>
+        </tr>
+        <tr>
+            <td class="border">Nombre de page(s)</td>
+            <td class="border">{{ nbrpage }}</td>
+            <td class="border">{{ prixpage }}</td>
+            <td class="border">{{ totalpage }}</td>
+        </tr>
+        <tr>
+            <td class="border">Nombre de langue(s)</td>
+            <td class="border">{{ nbrlangue }}</td>
+            <td class="border">{{ prixlangue }}</td>
+            <td class="border">{{ totallangue }}</td>
+        </tr>
+        {% if partieblog > 0 %}
+        <tr>
+            <td class="border">Partie actualité / blog</td>
+            <td class="border">{{ partieblog }}</td>
+            <td class="border">{{ prixblog }}</td>
+            <td class="border">{{ totalblog }}</td>
+        </tr>
+        {% endif %}
+        {% if forminscription > 0 %}
+        <tr>
+            <td class="border">Formulaire Inscription / Devis</td>
+            <td class="border">{{ forminscription }}</td>
+            <td class="border">{{ prixinscription }}</td>
+            <td class="border">{{ totalinscription }}</td>
+        </tr>
+        {% endif %}
+        {% if forum > 0 %}
+        <tr>
+            <td class="border">Forum de discussions</td>
+            <td class="border">{{ forum }}</td>
+            <td class="border">{{ prixforum }}</td>
+            <td class="border">{{ totalforum }}</td>
+        </tr>
+        {% endif %}
+        {% if accesmembre > 0 %}
+        <tr>
+            <td class="border">Accès membres</td>
+            <td class="border">{{ accesmembre }}</td>
+            <td class="border">{{ prixmembre }}</td>
+            <td class="border">{{ totalmembre }}</td>
+        </tr>
+        {% endif %}
+        {% if gestionfichiers > 0 %}
+        <tr>
+            <td class="border">Gestion des fichiers</td>
+            <td class="border">{{ gestionfichiers }}</td>
+            <td class="border">{{ prixfichier }}</td>
+            <td class="border">{{ totalfichier }}</td>
+        </tr>
+        {% endif %}
+        {% if cartedynamique > 0 %}
+        <tr>
+            <td class="border">Carte dynamique</td>
+            <td class="border">{{ cartedynamique }}</td>
+            <td class="border">{{ prixcarte }}</td>
+            <td class="border">{{ totalcarte }}</td>
+        </tr>
+        {% endif %}
+        {% if integrationvideo > 0 %}
+        <tr>
+            <td class="border">Intégration vidéo</td>
+            <td class="border">{{ integrationvideo }}</td>
+            <td class="border">{{ prixvideo }}</td>
+            <td class="border">{{ totalvideo }}</td>
+        </tr>
+        {% endif %}
+        {% if assistance > 0 %}
+        <tr>
+            <td class="border">Offre d'assistance mensuelle</td>
+            <td class="border">{{ assistance }}</td>
+            <td class="border">{{ prixassistance }} / mois</td>
+            <td class="border">{{ totalassistance }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td></td>
+            <td class="border-r"></td>
+            <td class="border"><strong>Prix H.T</strong></td>
+            <td class="border">{{ totalHT }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="border-r"></td>
+            <td class="border"><strong>TVA 20%</strong></td>
+            <td class="border">{{ totalTVA }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="border-r"></td>
+            <td class="border"><strong>Prix TTC</strong></td>
+            <td class="border">{{ totalTTC }} €</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+
