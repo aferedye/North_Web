@@ -38,8 +38,6 @@ class Contact
 
     /**
      * @ORM\Column(type="string")
-     * @Assert\Regex (
-     *     pattern = "[0-9] {10}/"
      */
 
     private $phone;

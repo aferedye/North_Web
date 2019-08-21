@@ -5,321 +5,79 @@
 {% endblock %}
 {% block title %}Mon Devis{% endblock %}
 {% block body %}
-    <main>
-        <section class="col-12 flex-shrink-1 flex-grow-1 bannerstart">
-            <article class="txt-r">
-                <h1 class="txt-r">Estimez le prix de votre projet internet</h1>
-                <p class="p-banner">Obtenez une estimation personalisée de votre projet web en quelques minutes</p>
-                <div class="q-global">
-                    <div class="Q">
-                        <div class="circle">
-                            <p class="black txt-r">1</p>
-                        </div>
-                        <p class="txt-r p-t">Répondez aux questions en 5min</p>
-                    </div>
-                    <div class="Q">
-                        <div class="circle">
-                            <p class="black txt-r">2</p>
-                        </div>
-                        <p class="txt-r p-t">Obtenez instantanément une estimation du prix</p>
-                    </div>
-                    <div class="Q">
-                        <div class="circle">
-                            <p class="black txt-r">3</p>
-                        </div>
-                        <p class="txt-r p-t">Demandez un devis seulement si vous le souhaitez</p>
-                    </div>
-                    <a href="#debut-devis" class="btn-ready">
-                        <p class="txt-btn">Commencer</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <!-- DEBUT DU DEVIS -->
-        <div class="flex devis flex-shrink-1 flex-grow-1">
-            <aside class="col-2 avancement">
-                <div class="topaside">
-                    <h4 class="asideH" id="debut-devis">Avancement</h4>
-                </div>
-                <div class="asidecontent">
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-contexte_du_projet.png') }}" alt="Avancement contexte du projet"/>
-                        <p class="aside-txt">Contexte du projet</p>
-                    </div>
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-objectifs_du_site.png') }}" alt="Avancement objectifs du site"/>
-                        <p class="aside-txt">Objectifs du site</p>
-                    </div>
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-suivi_et_referencement.png') }}" alt="Avancement suivi et referencement"/>
-                        <p class="aside-txt">Suivi et référencement</p>
-                    </div>
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-graphisme.png') }}" alt="Avancement graphisme"/>
-                        <p class="aside-txt">Graphisme</p>
-                    </div>
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-contenu.png') }}" alt="Avancement contenu"/>
-                        <p class="aside-txt">Contenu</p>
-                    </div>
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-fonctionnalites_generales.png') }}" alt="Avancement fonctionnalites generales"/>
-                        <p class="aside-txt">Fonctionnalités générales</p>
-                    </div>
-                    <div class="flex margin-top">
-                        <img src="{{ asset('img/logodevis/menu-vous.png') }}" alt="Avancement vous"/>
-                        <p class="aside-txt">Vous</p>
-                    </div>
-                    <a href="#" class="btn-estim">
-                        <p class="txt-btn">ESTIMER</p>
-                    </a>
-                </div>
-            </aside>
-            <section class="col-7 section-devis">
-                <article class="context">
-                    <h2 >Contexte du Projet</h2>
-                    <p class="margin-top">Quel est l'objet de votre projet ?</p>
-                    <p class="margin-top"><span class="txt-purple">La création d'un site Internet</span> : Vous souhaitez créer le site / service(s) de votre entreprise.<br />
-                        <span class="txt-purple">Un site Internet existant</span> : Vous souhaitez refondre, améliorer ou optimiser un service existant.</p>
-                    <div class="flex">
-                        <button class="casecontexte" data-choisi="false" data-group="1"  id="creation">
-                            <img src="{{ asset('img/logodevis/croix (1).png') }}" height="74" width="75" class="caseimg" alt="Créer un site web ?"/>
-                            <p>La création d'un site internet</p>
-                        </button>
-                        <button class="casecontexte" data-choisi="false" data-group="1"  id="reprise">
-                            <img src="{{ asset('img/logodevis/amelioration.png') }}" class="caseimg" alt="Utiliser un site web existant ?">
-                            <p>Un site internet existant</p>
-                        </button>
-                    </div>
-                    <div class="flex">
-                        <p class="margin-top padd-t">S'agit-il d'une refonte du site internet ?</p>
-                        <div class="margin-top">
-                            <button class="y-n m-l">Oui</button>
-                            <button class="y-n m-l">Non</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="objectif">
-                    <h2>Objectifs du site</h2>
-                    <p class="margin-top">Plusieurs réponses possibles.</p>
-                    <p><span class="txt-purple">Vendre et/ou mettre en relation</span> : vous vendez des produits / des services ou mettez
-                        en relation des tiers (crowdfunding, etc.) grâce à un système de paiement en ligne<br />
-                        <span class="txt-purple">Présenter mon activité</span> : votre objectif est de présenter de l'information.</p>
-                    <button class="margin-top casecontexte" data-choisi="false">
-                        <img src="{{ asset('img/logodevis/vendre.png') }}" class="caseimg"/>
-                        <p>Vendre et/ou mettre en relation</p>
-                    </button>
-                    <button class="casecontexte" data-choisi="false">
-                        <img src="{{ asset('img/logodevis/communiquer.png') }}" class="caseimg"/>
-                        <p>Présenter mon activité</p>
-                    </button>
-                    <h3 class="margin-top">Sur quel modèle économique vous basez-vous ?</h3>
-                    <p class="margin-top">Cocher la ou les réponses qui se rapprochent le plus du projet que vous souhaitez réaliser.<br />
-                        <span class="txt-purple">Vente de produits</span> : Les internautes peuvent acheter des produits sur le site.<br />
-                            <span class="txt-purple">Vente de prestations</span> : Les internautes peuvent commander des services sur le site.<br />
-                            <span class="txt-purple">Place de marché</span> : Plusieurs acteurs différents peuvent
-                        vendre des biens ou des services sur le site.
-                    </p>
-                    <div class="margin-top">
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/produits.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Vente de produit</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/prestations.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Ventes de prestations</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/place_de_marche.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Place de marché</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/formation.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Formation</p>
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <h2>Graphisme</h2>
-                    <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
-                    <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
-                        <span class="txt-purple">Maquette</span> : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).
-                    </p>
-                    <div class="choix margin-top">
-                        <button class="casecontexte" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/maquette.png') }}" height="114" width="114" class="caseimg"/>
-                            <p>Maquette</p>
-                        </button>
-                        <button class="casecontexte" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/zoning.png') }}" height="114" width="114" class="caseimg"/>
-                            <p>Zoning</p>
-                        </button>
-                        <button class="casecontexte" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/non.png') }}" height="114" width="114" class="caseimg"/>
-                            <p>Non</p>
-                        </button>
-                    </div>
-                    <h3  class="margin-top">Niveau de graphisme attendu</h3>
-                    <p  class="margin-top">
-                        <span class="txt-purple">Normal</span> : Vous souhaitez un bon rendu graphique.<br /> <span class="txt-purple">Avancé</span> : Vous souhaitez un rendu graphique avancé
-                        (Plus coûteux que Normal).<br /> <span class="txt-purple">Sur-mesure</span> : Vous serez intraitable sur la qualité du rendu graphique
-                        (Plus coûteux que Avancé).
-                    </p>
-                    <div class="slider-block">
-                        <label><input max="3" min="1" step="1" type="range" value="1" class="margin-top"></label>
-                    </div>
-                    <div class="flex margin-left-slider1"><p>|</p><p class="margin-left-slider">|</p><p class="margin-left-slider2">|</p></div>
-                    <div class="flex margin-block-txt"><p>Normal</p><p class="margin-slider-txt">Avancé</p><p class="margin-slider-txt2">Sur-mesure</p></div>
-                </article>
-                <article>
-                    <h2>Contenu</h2>
-                    <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable?</h3>
-                    <div class="slider-block">
-                        <form>
-                                <input type="range" name="d" min="1" max="20" step="1" value="1" oninput="result4.value=parseInt(d.value)"/>
-                                <output name="result4">1</output>
-                        </form>
-                    </div>
-                </article>
-                <article>
-                    <h2>Fonctionalités générales</h2>
-                    <h3 class="margin-top">Partie Actualité / Blog ?</h3>
-                    <p class="margin-top">Fonctionnalité qui permet d'ajouter des articles.</p>
-                    <div class="margin-top">
-                        <button class="y-n m-l" data-choisi="false">Oui</button>
-                        <button class="y-n m-l" data-choisi="false">Non</button>
-                    </div>
-                </article>
-                <article>
-                    <h2>Domaines et hébergement</h2>
-                    <h3 class="margin-top">Qui dépose les noms de domaines ?</h3>
-                    <p class="margin-top">Le nom de domaine est l'adresse correspondant au site. Ex: votre-nom.fr,...</p>
-                    <div class="margin-top">
-                        <button class="btn-prestataire" data-choisi="false">Le prestataire</button>
-                        <button class="y-n m-l" data-choisi="false">Moi</button>
-                    </div>
-                    <h3 class="margin-top">Vous souhaitez une offre d'hébergement ?</h3>
-                    <p class="margin-top">L'hébergement correspond au serveur sur lequel sera stocké votre site (Elément indispensable pour la mise en ligne d'un site).<br />
-                        <span class="txt-purple">Niveau 1</span> : Offre de base.<br /> <span class="txt-purple">Niveau 2</span> : Pour les sites Internet devant supporter plus de 10 000 visites/mois.<br />
-                        <span class="txt-purple">Niveau 3</span> : Offre haut de gamme pour site Internet avec fort trafic visiteur intégrant un forfait d'intervention mensuel.</p>
-                    <div class="margin-top">
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/simple.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Niveau 1</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/intermediaire.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Niveau 2</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/avancee.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Niveau 3</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/non.png')}}" height="114" width="114" class="caseimg"/>
-                            <p>Non</p>
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <h2>Suivi et Référencement</h2>
-                    <h3 class="margin-top">Rapport mensuel sur les statistiques du site ?</h3>
-                    <p class="margin-top">Le prestataires vous fera un rapport régulier sur l'évolution des statistiques de votre site.</p>
-                    <div class="margin-top">
-                        <button class="y-n m-l" data-choisi="false">Oui</button>
-                        <button class="y-n m-l" data-choisi="false">Non</button>
-                    </div>
-                    <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
-                    <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
-                    <div class="margin-top">
-                        <button class="y-n m-l" data-choisi="false">Oui</button>
-                        <button class="y-n m-l" data-choisi="false">Non</button>
-                    </div>
-                </article>
-                <article>
-                    <h2>Vous</h2>
-                    <h3 class="margin-top">Maturité du projet ?</h3>
-                    <div class="margin-top">
-                        <button class="casecontexte" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/multi-devis.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Je me renseigne et j'ai déjà des devis</p>
-                        </button>
-                        <button class="casecontexte" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/devis.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>J'ai un projet mais je n'ai pas encore de devis</p>
-                        </button>
-                        <button class="casecontexte" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/curiosite.png') }}" height="202" width="202" class="caseimg"/>
-                            <p>Je me renseigne par curiosité</p>
-                        </button>
-                    </div>
-                    <h3 class="margin-top">Vous êtes ?</h3>
-                    <div class="margin-top">
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/particulier.png') }}" height="202" width="202" alt="êtes-vous un particulier ?" class="caseimg"/>
-                            <p>Un particulier</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/association.png') }}" height="202" width="202" alt="êtes-vous une association ?" class="caseimg"/>
-                            <p>Une association</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/institution.png') }}" height="202" width="202" alt="êtes-vous une administration ?" class="caseimg"/>
-                            <p>Une administration</p>
-                        </button>
-                        <button class="casecontexte-sm" data-choisi="false">
-                            <img src="{{ asset('img/logodevis/entreprise.png') }}" height="202" width="202" alt="êtes-vous un entreprise ?" class="caseimg"/>
-                            <p>Une entreprise</p>
-                        </button>
-                    </div>
-                    <p class="margin-top">En utilisant cet outil d'estimation gratuit, vous acceptez de recevoir la newsletter de North Web.</p>
-                    <form action="*" method="POST" class="margin-top form">
-                        <div>
-                            <div>
-                                <label for="mme">Mme
-                                    <input type="checkbox" name="mme" />
-                                </label>
-                                <label for="mr">M.
-                                    <input type="checkbox" name="mr">
-                                </label>
-                            </div>
-                        </div>
-                        <table>
-                            <tr>
-                                <td><label for="nom"><input type="text" name="nom" placeholder="Nom" class="form-fields"/></label></td>
-                            </tr>
-                            <tr>
-                                <td><label for="prenom"><input type="text" name="prenom" placeholder="Prénom" class="form-fields"/></label></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email"><input type="email" name="email" placeholder="E-mail" class="form-fields"/></label></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email"><input type="email" name="email" placeholder="Confirmez votre e-mail" class="form-fields"/></label></td>
-                            </tr>
-                            <tr>
-                                <td><label for="tel"><input type="text" name="tel" placeholder="Téléphone" class="form-fields"/></label></td>
-                            </tr>
-                        </table>
-                        <input type="submit" value="Valider" class="submit">
-                    </form>
-                </article>
-            </section>
-        </div>
-    </main>
-    <script>
-        const choices = document.querySelectorAll('button');
+ {{ form_start(form_devis) }}
 
-        choices.forEach(choice => {
-            choice.addEventListener('click', choiceButton);
-        });
+    {{ form_row(form_devis.maquette, {
+        'attr': {
+            'min': '0',
+            'max': '2',
+            'value': '0',
+        }})
+    }}
 
-        function choiceButton() {
-            this.dataset.choisi = this.dataset.choisi === "true" ? "false" : "true";
-        }
-        
-        
+    {{ form_row(form_devis.lvlgraphisme, {
+        'attr': {
+            'min': '1',
+            'max': '3',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.nbrpage, {
+        'attr': {
+            'min': '1',
+            'max': '50',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.nbrlangue, {
+        'attr': {
+            'min': '1',
+            'max': '20',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.partieblog, {
+        'required': false
+    }) }}
+
+    {{ form_row(form_devis.formulaireinscritdevis, {
+        'attr': {
+            'min': '1',
+            'max': '10',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.forum, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.accesmembre, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.gestionfichier, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.cartedynamique, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.integrvideo, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.assistance, {
+        'required': false
+    }) }}
+
+    {{ form_row(form_devis.nom) }}
+    {{ form_row(form_devis.prenom) }}
+    {{ form_row(form_devis.email) }}
+    {{ form_row(form_devis.telephone) }}
+    {{ form_row(form_devis.valider) }}
+
+    {{ form_end(form_devis) }}
 
 
-    </script>
+
 {% endblock %}
