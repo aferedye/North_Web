@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/style_base.css') }}">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+        <title>{% block title %}Accueil North Web{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
 
@@ -15,17 +17,19 @@
     </main>
 
     <body>
-   <header class="row">
+   <header class="row animated fadeInDown delay-1s">
+       <div class="marginauto">
         <img src="{{ asset('img/logo.png') }}" alt="Logo north web" class="logo">
         <nav>
             <ul class="row">
-                <li><a href="{{ path('accueil') }}">Accueil</a></li>
-                <li><a href="{{ path('qui_sommes_nous') }}">Présentations</a></li>
-                <li><a href="{{ path('devis') }}">Devis</a></li>
-                <li><a href="">Nos références</a></li>
-                <li><a href="{{ path('contact_index') }}">Contact</a></li>
+                <li><a href="{{ path('accueil') }}" class="navlink underline">Accueil</a></li>
+                <li><a href="{{ path('qui_sommes_nous') }}" class="navlink underline">Présentations</a></li>
+                <li><a href="{{ path('devis') }}" class="navlink underline">Devis</a></li>
+                <li><a href="" class="navlink underline">Nos références</a></li>
+                <li><a href="{{ path('contact_index') }}" class="navlink underline">Contact</a></li>
             </ul>
         </nav>
+       </div>
     </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}

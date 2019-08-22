@@ -2,6 +2,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Raleway', sans-serif;
 }
 #corps {
 
@@ -10,51 +11,27 @@
 
 }
 /*---Background---*/
-
-#corps .row article {
-    width: 100%;
-    height: 90vh;
-
-    background-repeat: no-repeat;
-    background-image: url(../img/images_accueil/web.jpg);
-    background-position: center;
+.s1 {
+    background-image: url(../img/images_accueil/webtest.jpg);
     background-size: cover;
-
 }
-#corps .row article:nth-child(2) {
-    width: 100%;
-    height: 100vh;
-    background-size: 100% 100vh;
-    background-repeat: no-repeat;
+
+.s2 {
     background-image: url(../img/images_accueil/modeledevis.jpg);
-    background-position: center;
     background-size: cover;
 
 }#corps .row article:nth-child(3) {
-    width: 100%;
-    height: 100vh;
-    background-size: 100% 100vh;
-    background-repeat: no-repeat;
     background-image: url(../img/images_accueil/assistance.jpg);
-    background-position: center;
     background-size: cover;
 
 }#corps .row article:nth-child(4) {
-    width: 100%;
-    height: 100vh;
-    background-size: 100% 100vh;
-    background-repeat: no-repeat;
+
     background-image: url(../img/images_accueil/lille.jpg);
-    background-position: center;
     background-size: cover;
 
 }#corps .row article:nth-child(5) {
-    width: 100%;
-    height: 100vh;
-    background-size: 100% 100vh;
-    background-repeat: no-repeat;
+
     background-image: url(../img/images_accueil/bureau.jpg);
-    background-position: center;
     background-size: cover;
 
 }
@@ -92,28 +69,34 @@
 .besoin1{
     text-align: center;
     padding-top: 25px;
-    font-family: 'awesome_season_personal_useRg';
     font-size: 3.5rem;
+    color: whitesmoke;
 }
 .nosequipes{
     text-align: center;
     margin-top: 25px;
-    font-family: 'awesome_season_personal_useRg';
     font-size: 2rem;
+    color: whitesmoke;
 }
 .sommes {
     text-align: center;
-    font-family: 'awesome_season_personal_useRg';
     font-size: 1.8rem;
     margin-top: 150px;
     padding-left: 20px;
     padding-right: 20px;
+    color: whitesmoke;
 }
 #corps img:nth-child(3){
     display: block;
     height: 120px;
     margin: auto;
     margin-top: 100px;
+}
+
+.anim {
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
 }
 /** ------ article 2 position texte / bouton ------  **/
 .flex{

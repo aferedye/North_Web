@@ -3,9 +3,8 @@
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
     <link rel="stylesheet" href="{{ asset ('css/style_accueil.css') }}">
-
 {% endblock  %}
 
 
@@ -15,17 +14,17 @@
     <section id="corps">
         <div class="container-fluid">
             <div class="row" id="fullPage">
-                    <article class="section s1" id="section0">
-                        <p class="besoin1">Besoin de visibilité sur le web ?</p>
+                    <div class="section s1">
+                        <p class="besoin1 animated fadeInDown delay-2s">Besoin de visibilité sur le web ?</p>
 
-                        <p class="nosequipes">Nos équipes sont là pour forger votre identité graphique</p>
+                        <p class="nosequipes animated fadeInDown delay-3s">Nos équipes sont là pour forger votre identité graphique</p>
 
-                        <img src="{{ asset ('img/images_accueil/mouse-scroll-500.png') }}"/>
+                        <img src="{{ asset ('img/images_accueil/mouse-scroll-500.png') }}" class="animated anim heartBeat"/>
 
-                        <p class="sommes"> Nous sommes capables de répondre à tout vos types de projets
+                        <p class="sommes animated fadeInUp delay-4s"> Nous sommes capables de répondre à tout vos types de projets
                             du site vitrine au site ecommerce</p>
-                    </article>
-                    <article class="section s2" id="section1">
+                    </div>
+                    <div class="section s2" id="section1">
                         <div class="flex">
                             <div>
                                 <p class="besoin2">BESOIN</p>
@@ -40,7 +39,7 @@
                                 </a>
                             </div>
                         </div>
-                    </article>
+                    </div>
                     <article class="section s3" id="section2">
                         <div class="fond-txt-conseil">
                             <p class="perdu">
@@ -97,7 +96,7 @@
         new fullpage('#fullPage', {
             licenseKey: '4CD0DA3D-41024375-B2E14494-0EFF885A',
             autoScrolling: true,
-            naviguation: true
+            navigation: true,
         })
     </script>
     </body>
