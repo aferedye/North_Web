@@ -22,3 +22,18 @@
     background-image: url("../img/images_accueil/bureau.jpg");
     background-size: cover;
 }
+
+.sli1{
+    background-image: url("../img/imgContact/agenda1280.jpg");
+    background-size: cover;
+}
+
+.sli2{
+    background-image: url("../img/imgContact/banner1280.jpg");
+    background-size: cover;
+}
+
+.sli3{
+    background-image: url("../img/imgContact/contact1280.jpg");
+    background-size: cover;
+}
