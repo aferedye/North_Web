@@ -11,3 +11,7 @@ ul {
 li {
     padding-right: 15px;
 }
+
+header {
+    height: 10vh;
+}

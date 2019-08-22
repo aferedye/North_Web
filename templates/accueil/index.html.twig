@@ -3,17 +3,19 @@
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block stylesheets %}
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
     <link rel="stylesheet" href="{{ asset ('css/style_accueil.css') }}">
+
 {% endblock  %}
+
 
 {% block body %}
 
     <body>
     <section id="corps">
         <div class="container-fluid">
-            <div class="row">
-                    <article>
+            <div class="row" id="fullPage">
+                    <article class="section s1" id="section0">
                         <p class="besoin1">Besoin de visibilité sur le web ?</p>
 
                         <p class="nosequipes">Nos équipes sont là pour forger votre identité graphique</p>
@@ -23,7 +25,7 @@
                         <p class="sommes"> Nous sommes capables de répondre à tout vos types de projets
                             du site vitrine au site ecommerce</p>
                     </article>
-                    <article >
+                    <article class="section s2" id="section1">
                         <div class="flex">
                             <div>
                                 <p class="besoin2">BESOIN</p>
@@ -39,7 +41,7 @@
                             </div>
                         </div>
                     </article>
-                    <article>
+                    <article class="section s3" id="section2">
                         <div class="fond-txt-conseil">
                             <p class="perdu">
                                 Perdu à travers toutes nos offres ?
@@ -57,7 +59,7 @@
                             </a>
                         </div>
                     </article>
-                    <article>
+                    <article class="section s4" id="section3">
                     <p class="north">
                         North web en quelques lignes
                     </p>
@@ -72,7 +74,7 @@
                         </a>
                     </div>
                   </article>
-                  <article>
+                  <article class="section s5" id="section4">
                     <div class="fond-txt-projet">
                         <p class="decouvrez">
                             Découvrez
@@ -90,5 +92,13 @@
             </div>
         </div>
     </section>
+    <script type="text/javascript" src="{{ asset('javascript/fullPageJs/src/fullpage.js') }}"></script>
+    <script>
+        new fullpage('#fullPage', {
+            licenseKey: '4CD0DA3D-41024375-B2E14494-0EFF885A',
+            autoScrolling: true,
+            naviguation: true
+        })
+    </script>
     </body>
 {% endblock %}

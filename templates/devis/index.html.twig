@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_devis.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+{% endblock %}
+{% block title %}Mon Devis{% endblock %}
+{% block body %}
+ {{ form_start(form_devis) }}
+
+    {{ form_row(form_devis.maquette, {
+        'attr': {
+            'min': '0',
+            'max': '2',
+            'value': '0',
+        }})
+    }}
+
+    {{ form_row(form_devis.lvlgraphisme, {
+        'attr': {
+            'min': '1',
+            'max': '3',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.nbrpage, {
+        'attr': {
+            'min': '1',
+            'max': '50',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.nbrlangue, {
+        'attr': {
+            'min': '1',
+            'max': '20',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.partieblog, {
+        'required': false
+    }) }}
+
+    {{ form_row(form_devis.formulaireinscritdevis, {
+        'attr': {
+            'min': '0',
+            'max': '10',
+            'value': '1',
+        }})
+    }}
+
+    {{ form_row(form_devis.forum, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.accesmembre, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.gestionfichier, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.cartedynamique, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.integrvideo, {
+        'required': false
+    }) }}
+    {{ form_row(form_devis.assistance, {
+        'required': false
+    }) }}
+
+    {{ form_row(form_devis.nom) }}
+    {{ form_row(form_devis.prenom) }}
+    {{ form_row(form_devis.email) }}
+    {{ form_row(form_devis.telephone) }}
+    {{ form_row(form_devis.valider) }}
+
+    {{ form_end(form_devis) }}
+
+
+
+{% endblock %}
