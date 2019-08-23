@@ -11,12 +11,9 @@
 }
 
 .image {
-    width: 350px;
-    height: 350px;
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    width: 150px;
+    height: 150px;
+
 }
 .zoom img {
     -webkit-transform: scale(1);
@@ -42,4 +39,13 @@
     background-image: url(../img/images_projet/bgpj.jpg);
     background-position: center;
     background-size: cover;
+}
+.block {
+    display: flex;
+
+}
+
+.size {
+    width: 250px;
+    height: 250px;
 }
