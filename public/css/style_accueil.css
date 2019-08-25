@@ -1,70 +1,33 @@
 /*---GENERAL---*/
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Raleway', sans-serif;
 }
-#corps {
 
-}
-#corps container-fluid {
-
-}
 /*---Background---*/
+
 .s1 {
     background-image: url(../img/images_accueil/webtest.jpg);
     background-size: cover;
 }
-
 .s2 {
-    background-image: url(../img/images_accueil/modeledevistest.jpg);
-    background-size: cover;
-
-}#corps .row article:nth-child(2) {
-    background-image: url(../img/images_accueil/assistancetest.jpg);
-    background-size: cover;
-
-}#corps .row article:nth-child(4) {
-
     background-image: url(../img/images_accueil/lilletest1.jpg);
     background-size: cover;
-
-}#corps .row article:nth-child(5) {
-
+}
+.s3 {
+    background-image: url(../img/images_accueil/devistest3.jpg);
+    background-size: cover;
+}
+.s4 {
     background-image: url(../img/images_accueil/bureautest.jpg);
     background-size: cover;
+}
+.s5 {
+    background-image: url(../img/images_accueil/assisatancetest2.jpg);
+    background-size: cover;
+}
 
-}
-/*---------------Polices----------------- */
-@font-face {
-    font-family: 'awesome_season_personal_useRg';
-    src: url('../polices/awesome_season_personal_use-webfont.woff2') format('woff2'),
-    url('../polices/awesome_season_personal_use-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'la_palomaregular';
-    src: url('../polices/la_paloma-webfont.woff2') format('woff2'),
-    url('../polices/la_paloma-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'mathilderegular';
-    src: url('../polices/mathilde-webfont.woff2') format('woff2'),
-    url('../polices/mathilde-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'mf_really_awesomeregular';
-    src: url('../polices/mf_really_awesome-webfont.woff2') format('woff2'),
-    url('../polices/mf_really_awesome-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 /** ------ article 1 position texte ------  **/
 .besoin1{
     text-align: center;
@@ -86,10 +49,11 @@
     padding-right: 20px;
     color: whitesmoke;
 }
-#corps img:nth-child(3){
+.scroll{
     display: block;
     height: 120px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 100px;
 }
 
@@ -108,19 +72,20 @@
     padding-left: 50px;
     font-size: 5rem;
     color: white;
+    text-align: center;
 
 }
 .dun{
     padding-left: 80px;
     font-size: 4rem;
     color: white;
-
+    text-align: center;
 }
 .devis{
     padding-left: 110px;
     font-size: 4rem;
     color: white;
-
+    text-align: center;
 }
 .simulateur{
     margin-left: auto;
@@ -160,17 +125,17 @@
 
 .perdu{
     padding-top: 10px;
-    padding-left: 50px;
+    text-align: center;
     color: ghostwhite;
-    font-size: 1.8rem;
-
+    font-size: 2.4rem;
     font-weight: bold;
 }
 .nos{
+    text-align: center;
     padding-right: 50px;
     color: ghostwhite;
-    font-size: 1.7rem;
-    text-align: right;
+    font-size: 2.1rem;
+
 }
 .flex2{
     display: flex;
@@ -179,10 +144,10 @@
 .pos-btn-conseil {
     display: flex;
     text-align: center;
-    margin-top: 45vh;
+    margin-top: 25vh;
 }
 .btn-article2{
-    background-color: #759612;
+    background-color: #FE6E00;
     border: none;
     color: white;
     padding: 0px 30px;
@@ -196,7 +161,7 @@
 .btn-article2:hover{
     color: white;
     text-decoration: none;
-    background-color: #376307;
+    background-color: #CC0A00;
 }
 .btn-article2-txt{
     padding-top: 10px;
@@ -388,7 +353,6 @@
 /*------responsive 320px-Article 5 -------------*/
 .fond-txt-projet {
     width: 100%;
-}
 }
 /*------responsive de 768px à 1280px -------------*/
 /*------responsive 768px à 1280px-Article 1 -------------*/

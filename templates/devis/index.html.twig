@@ -1,83 +1,197 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_devis.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-{% endblock %}
-{% block title %}Mon Devis{% endblock %}
-{% block body %}
- {{ form_start(form_devis) }}
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style_devis.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
+    {% endblock %}
+    {% block title %}Mon Devis{% endblock %}
+    {% block body %}
+        <main>
+            <section class="col-12 flex-shrink-1 flex-grow-1 bannerstart">
+                <article class="txt-r">
+                    <h1 class="txt-r">Estimez le prix de votre projet internet</h1>
+                    <p class="p-banner">Obtenez une estimation personalisée de votre projet web en quelques minutes</p>
+                    <div class="q-global">
+                        <div class="Q">
+                            <div class="circle">
+                                <p class="black txt-r">1</p>
+                            </div>
+                            <p class="txt-r p-t">Répondez aux questions en 5min</p>
+                        </div>
+                        <div class="Q">
+                            <div class="circle">
+                                <p class="black txt-r">2</p>
+                            </div>
+                            <p class="txt-r p-t">Obtenez instantanément une estimation du prix</p>
+                        </div>
+                        <div class="Q">
+                            <div class="circle">
+                                <p class="black txt-r">3</p>
+                            </div>
+                            <p class="txt-r p-t">Demandez un devis seulement si vous le souhaitez</p>
+                        </div>
+                        <a href="#debut-devis" class="btn-ready">
+                            <p class="txt-btn">Commencer</p>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <!-- DEBUT DU DEVIS -->
+            <div class="flex devis flex-shrink-1 flex-grow-1">
+                <section class="col-7 section-devis">
+                    <article  id="debut-devis">
+                        <h2>Graphisme</h2>
+                        <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
+                        <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
+                            <span class="txt-purple">Maquette</span> : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).
+                        </p>
+                        {{ form_start(form_devis) }}
+                        {{ form_row(form_devis.maquette, {
+                            'label': false,
+                            'attr': {
+                                'min': '0',
+                                'max': '2',
+                                'value': '0',
+                            }}) }}
+                        <h3  class="margin-top">Niveau de graphisme attendu</h3>
+                        <p  class="margin-top">
+                            <span class="txt-purple">Normal</span> : Vous souhaitez un bon rendu graphique.<br /> <span class="txt-purple">Avancé</span> : Vous souhaitez un rendu graphique avancé
+                            (Plus coûteux que Normal).<br /> <span class="txt-purple">Sur-mesure</span> : Vous serez intraitable sur la qualité du rendu graphique
+                            (Plus coûteux que Avancé).
+                        </p>
+                        {{ form_row(form_devis.lvlgraphisme, {
+                            'label': false,
+                            'attr': {
+                                'min': '1',
+                                'max': '3',
+                                'value': '1',
+                            }}) }}
+                        <div class="flex margin-left-slider1"><p>|</p><p class="margin-left-slider">|</p><p class="margin-left-slider2">|</p></div>
+                        <div class="flex margin-block-txt"><p>Normal</p><p class="margin-slider-txt">Avancé</p><p class="margin-slider-txt2">Sur-mesure</p></div>
+                    </article>
+                    <article>
+                        <h2>Contenu</h2>
+                        <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable ?</h3>
+                        <div class="slider-block">
+                            {{ form_row(form_devis.nbrlangue, {
+                                'label': false,
+                                'attr': {
+                                    'min': '1',
+                                    'max': '20',
+                                    'value': '1',
+                                }}) }}
+                            <output name="result4">1</output>
+                        </div>
+                        <h3 class="margin-top">Combien de page souhaitez vous sur le site ?</h3>
+                        <div class="slider-block">
+                            {{ form_row(form_devis.nbrpage, {
+                                'label': false,
+                                'attr': {
+                                    'min': '1',
+                                    'max': '50',
+                                    'value': '1',
+                                }}) }}
+                            <output name="result4">1</output>
+                        </div>
+                        <h3>Nombre de formulaire présent sur le site</h3>
+                        <p>Il peut s'agir d'un simple formulaire de contact ou d'un formulaire de devis comme celui-ci </p>
+                        <div>
+                            {{ form_row(form_devis.formulaireinscritdevis, {
+                                'label': false,
+                                'attr': {
+                                    'min': '0',
+                                    'max': '10',
+                                    'value': '1',
+                                }}) }}
+                            <output name="result4">1</output>
+                        </div>
+                    </article>
+                    <article>
+                        <h2>Fonctionalités générales</h2>
+                        <h3 class="margin-top">Partie Actualité / Blog ?</h3>
+                        <p class="margin-top">Fonctionnalité qui permet d'ajouter des articles.</p>
+                        <div class="margin-top">
+                            {{ form_row(form_devis.partieblog, {
+                                'label': false,
+                                'required': false,
+                                'attr': {
+                                    'class': 'squaredTwo'
+                                }}) }}
+                        </div>
+                    </article>
+                    <article>
+                        <h2>Suivi et Référencement</h2>
+                        <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
+                        <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
+                        <div class="margin-top">
+                            {{ form_row(form_devis.assistance, {
+                                'required': false,
+                                'attr': {
+                                    'class': 'squaredTwo'
+                            }}) }}
+                        </div>
+                    </article>
+                    <article>
+                        <p class="margin-top">Votre devis vous sera envoyé par e-mail, si vous ne recevez rien penser à vérifier vos spam.</p>
+                        {{ form_row(form_devis.nom,{
+                            'label': false,
+                            'attr': {
+                                'class': 'form-fields',
+                                'placeholder': 'Nom'
+                            }}) }}
+                        {{ form_row(form_devis.prenom,{
+                            'label': false,
+                            'attr': {
+                                'class': 'form-fields',
+                                'placeholder': 'Prénom'
+                            }}) }}
+                        {{ form_row(form_devis.email,{
+                            'label': false,
+                            'attr': {
+                                'class': 'form-fields',
+                                'placeholder': 'E-mail'
+                            }}) }}
+                        {{ form_row(form_devis.telephone,{
+                            'label': false,
+                            'attr': {
+                                'class': 'form-fields',
+                                'placeholder': 'Téléphone'
+                            }}) }}
+                        {{ form_row(form_devis.valider,{
+                            'label': false,
+                            'attr': {
+                                'class': 'submit',
+                            }}) }}
 
-    {{ form_row(form_devis.maquette, {
-        'attr': {
-            'min': '0',
-            'max': '2',
-            'value': '0',
-        }})
-    }}
+                        {{ form_end(form_devis) }}
+                    </article>
+                </section>
+            </div>
+        </main>
 
-    {{ form_row(form_devis.lvlgraphisme, {
-        'attr': {
-            'min': '1',
-            'max': '3',
-            'value': '1',
-        }})
-    }}
 
-    {{ form_row(form_devis.nbrpage, {
-        'attr': {
-            'min': '1',
-            'max': '50',
-            'value': '1',
-        }})
-    }}
+        {{ form_row(form_devis.forum, {
+            'required': false
+        }) }}
+        {{ form_row(form_devis.accesmembre, {
+            'required': false
+        }) }}
+        {{ form_row(form_devis.gestionfichier, {
+            'required': false
+        }) }}
+        {{ form_row(form_devis.cartedynamique, {
+            'required': false
+        }) }}
+        {{ form_row(form_devis.integrvideo, {
+            'required': false
+        }) }}
+        {{ form_row(form_devis.assistance, {
+            'required': false
+        }) }}
 
-    {{ form_row(form_devis.nbrlangue, {
-        'attr': {
-            'min': '1',
-            'max': '20',
-            'value': '1',
-        }})
-    }}
-
-    {{ form_row(form_devis.partieblog, {
-        'required': false
-    }) }}
-
-    {{ form_row(form_devis.formulaireinscritdevis, {
-        'attr': {
-            'min': '0',
-            'max': '10',
-            'value': '1',
-        }})
-    }}
-
-    {{ form_row(form_devis.forum, {
-        'required': false
-    }) }}
-    {{ form_row(form_devis.accesmembre, {
-        'required': false
-    }) }}
-    {{ form_row(form_devis.gestionfichier, {
-        'required': false
-    }) }}
-    {{ form_row(form_devis.cartedynamique, {
-        'required': false
-    }) }}
-    {{ form_row(form_devis.integrvideo, {
-        'required': false
-    }) }}
-    {{ form_row(form_devis.assistance, {
-        'required': false
-    }) }}
-
-    {{ form_row(form_devis.nom) }}
-    {{ form_row(form_devis.prenom) }}
-    {{ form_row(form_devis.email) }}
-    {{ form_row(form_devis.telephone) }}
-    {{ form_row(form_devis.valider) }}
-
-    {{ form_end(form_devis) }}
+    {% endblock %}
 
 
 
-{% endblock %}
+
+
