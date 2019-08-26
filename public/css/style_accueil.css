@@ -44,7 +44,7 @@
 .sommes {
     text-align: center;
     font-size: 1.8rem;
-    margin-top: 65px;
+    margin-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
     color: whitesmoke;
@@ -54,7 +54,7 @@
     height: 120px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .anim {
@@ -68,37 +68,25 @@
     justify-content: space-between;
 }
 .besoin2{
-    padding-top: 150px;
-    padding-left: 50px;
+    padding-top: 75px;
     font-size: 5rem;
     color: white;
     text-align: center;
 
-}
-.dun{
-    padding-left: 80px;
-    font-size: 4rem;
-    color: white;
-    text-align: center;
-}
-.devis{
-    padding-left: 110px;
-    font-size: 4rem;
-    color: white;
-    text-align: center;
 }
 .simulateur{
     margin-left: auto;
     margin-right: auto;
     color: whitesmoke;
     width: 920px;
-    padding-top: 50px;
+    padding-top: 25px;
     font-size: 1.6rem;
     margin-bottom: 0;
 }
 .pos-btn {
     text-align: center;
     margin: auto;
+    padding-top: 25px;
 }
 .btn-article{
     background-color: #0A2174;
@@ -192,8 +180,7 @@
 /** ------ article 5 position texte / bouton ------  **/
 
 .fond-txt-projet {
-    height: 250px;
-    margin-top: 75px;
+    margin-top: 30px;
 }
 
 .decouvrez{
@@ -201,7 +188,7 @@
     color: whitesmoke;
     font-weight: bold;
     margin-left: 125px;
-    margin-top: 125px;
+    margin-top: 50px;
 }
 
 .rea{
@@ -211,35 +198,16 @@
     margin-left: 175px;
 }
 
-.image {
-    width: 200px;
-    height: 200px;
-}
-
-.titre {
-    color: whitesmoke;
-    text-align: center;
-    margin-top: 200px;
-    font-size: 1.8rem;
-}
-
-.content {
-    width: 80%;
-    margin: auto;
-    height: 500px;
-}
-
 .pos-btn2 {
     display: flex;
-    margin-top: 0px;
-
+    margin-top: 0;
 }
 
 .btn-article3 {
     background-color: #CC470D;
     border: none;
     color: white;
-    padding: 0px 30px;
+    padding: 0 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -252,28 +220,6 @@
     color: whitesmoke;
     text-decoration: none;
     background-color: #E97D19;
-}
-
-.zoom img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-.zoom img:hover {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.zoom span{
-    visibility: hidden;
-}
-
-.zoom span:hover{
-    visibility: visible;
 }
 
 /*------responsive 320px -------------*/
@@ -314,8 +260,8 @@
     font-size: 2rem;
 }
 .pos-btn {
-    padding-right: 0px;
-    padding-top: 0px;
+    padding-right: 0;
+    padding-top: 0;
     margin-top: 200px;
 }
 /*------responsive 320px-Article 3 -------------*/

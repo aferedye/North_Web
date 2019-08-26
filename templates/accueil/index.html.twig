@@ -5,6 +5,7 @@
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
     <link rel="stylesheet" href="{{ asset ('css/style_accueil.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/style_projet.css') }}">
 {% endblock  %}
 
 
@@ -55,7 +56,6 @@
                         </div>
                     </div>
                 <article class="section s4" id="section4">
-                    <div class="fp-slide">
                         <div class="fond-txt-projet">
                             <p class="decouvrez">
                                 Découvrez
@@ -64,54 +64,70 @@
                                 Nos réalisations !
                             </p>
                         </div>
-                        <div class="pos-btn2 ">
-                            <a href="#real" class="btn-article3">
-                                <p class="btn-article2-txt">En savoir +</p>
-                            </a>
+
+                        <div class="flex real">
+                            <div class="overlay-image">
+                                <a href="">
+                                    <img class="image" src="{{ asset('img/images_projet/resto3.png') }}" alt="Alt text" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Buffalo Snack
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="">
+                                    <img class="image" src="{{ asset('img/images_projet/vit1.jpg') }}" alt="Alt text" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Life Style
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="">
+                                    <img class="image" src="{{ asset('img/images_projet/tech1.jpg') }}" alt="Alt text" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Smart Tech
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="">
+                                    <img class="image" src="{{ asset('img/images_projet/vet2.png') }}" alt="Alt text" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Phil Mode
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="">
+                                    <img class="image" src="{{ asset('img/images_projet/resto2.jpg') }}" alt="Alt text" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Mexican Restaurant
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="">
+                                    <img class="image" src="{{ asset('img/images_projet/tech2.png') }}" alt="Alt text" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Electro Shoppe
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
                 </article>
-                    <article class="fp-slide s4" data-menuanchor="real" id="real">
-                        <h4 class="titre">Réalisations</h4>
-                        <div class="content zoom flex">
-                            <div>
-                                <a href="">
-                                    <img src="{{ asset('img/images_projet/resto3.png') }}" alt="" class="image">
-                                    <span>Ton texte</span>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="{{ asset('img/images_projet/vit1.jpg') }}" alt="" class="image">
-                                    <span>Ton texte</span>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="{{ asset('img/images_projet/vet1.png') }}" alt="" class="image">
-                                    <span>Ton texte</span>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="{{ asset('img/images_projet/vet1.png') }}" alt="" class="image">
-                                    <span>Ton texte</span>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="{{ asset('img/images_projet/vet1.png') }}" alt="" class="image">
-                                    <span>Ton texte</span>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="{{ asset('img/images_projet/vet1.png') }}" alt="" class="image">
-                                    <span>Ton texte</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
                     <article class="section s5" id="section2">
                         <div class="fond-txt-conseil">
                             <p class="perdu">

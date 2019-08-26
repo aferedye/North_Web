@@ -2,50 +2,53 @@
    margin: auto;
 }
 
-.titre{
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
 
-.image {
-    width: 150px;
-    height: 150px;
-
-}
-.zoom img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-.zoom img:hover {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.zoom span{
-    visibility: hidden;
-}
-
-.zoom span:hover{
-    visibility: visible;
-}
-.bg{
-    background-image: url(../img/images_projet/bgpj.jpg);
-    background-position: center;
-    background-size: cover;
-}
 .block {
     display: flex;
-
 }
 
-.size {
-    width: 250px;
-    height: 250px;
+.real {
+    width: 90%;
 }
+
+.overlay-image {
+    position: relative;
+    width: 100%;
+}
+/* Image originale */
+.overlay-image .image {
+    display: block;
+    width: 160px;
+    height: 160px;
+}
+/* Texte original */
+.overlay-image .text {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.5em;
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.overlay-image .text {
+    display: none;
+
+}
+.overlay-image:hover .text {
+    display: block;
+}
+.hover {
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+.overlay-image:hover .hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
