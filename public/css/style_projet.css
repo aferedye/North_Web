@@ -10,7 +10,13 @@
 .real {
     width: 90%;
 }
-
+.lien {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+}
 .overlay-image {
     position: relative;
     width: 100%;
@@ -46,9 +52,19 @@
     width: 160px;
     position: absolute;
     top: 0;
-    left: 16px;
+    left: 0;
 }
 .overlay-image:hover .hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.zoom div img, .zoom div .hover {
+     -webkit-transform: scale(1);
+     transform: scale(1);
+     -webkit-transition: .3s ease-in-out;
+     transition: .3s ease-in-out;
+ }
+.zoom div:hover img, .zoom div:hover  .hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}

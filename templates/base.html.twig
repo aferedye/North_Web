@@ -1,27 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/style_base.css') }}">
+       <!-- <link rel="stylesheet" href="{{ asset('css/style_base.css') }}">-->
         <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/testnav.css') }}">
         <title>{% block title %}Accueil North Web{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
 
     <main role="main" class="container main">
         {% include 'flash_messages.html.twig' %}
-
+        {% include 'nav.html.twig' %}
         {% block main %}{% endblock %}
     </main>
 
     <body>
-   <header class="row animated fadeInDown delay-4s">
+
+   <!--<header class="row animated fadeInDown delay-4s">
        <div class="marginauto">
         <img src="{{ asset('img/logo.png') }}" alt="Logo north web" class="logo">
-        <nav>
-            <ul class="row">
+           <img src="{{ asset('img/images_accueil/menunav.png')}}" alt="" class="menu-min">
+           <nav>
+            <ul class="row menu-fat">
                 <li><a href="{{ path('accueil') }}" class="navlink underline">Accueil</a></li>
                 <li><a href="{{ path('qui_sommes_nous') }}" class="navlink underline">Présentations</a></li>
                 <li><a href="{{ path('devis') }}" class="navlink underline">Devis</a></li>
@@ -30,7 +34,7 @@
             </ul>
         </nav>
        </div>
-    </header>
+    </header>-->
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

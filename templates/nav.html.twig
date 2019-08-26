@@ -1,0 +1,32 @@
+{% block body %}
+<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+        <header>
+            <nav>
+                <div id="bouton-menu">
+                    <div class="barre1"></div>
+                    <div class="barre2"></div>
+                    <div class="barre3"></div>
+                </div>
+                <ul class="nav-smart-ul">
+                    <li class="nav-smart-li"><a href="{{ path('accueil') }}">Accueil</a></li>
+                    <li class="nav-smart-li"><a href="{{ path('qui_sommes_nous') }}">Présentations</a></li>
+                    <li class="nav-smart-li"><a href="{{ path('devis') }}">Devis</a></li>
+                    <li class="nav-smart-li"><a href="">Nos références</a></li>
+                    <li class="nav-smart-li"><a href="{{ path('contact_index') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="accueil">
+        </div>
+        <div id="bouton">
+            <div id="motif-bouton"></div>
+        </div>
+
+<script>
+    $("#bouton-menu").click(function() {
+        $(this).toggleClass("menu-ouvert");
+        $("header nav ul").slideToggle("fast", "linear");
+    });
+</script>
+{% endblock %}
