@@ -118,6 +118,22 @@
                                     'class': 'squaredTwo'
                                 }}) }}
                         </div>
+                        <h3 class="margin-top">Partie Forum</h3>
+                        <p class="margin-top">Fonctionnalité qui permet un système de questions réponse.</p>
+                        <div class="margin-top">
+                            {{ form_row(form_devis.forum, {
+                                'label': false,
+                                'required': false
+                            }) }}
+                        </div>
+                        <h3 class="margin-top">Espace membre</h3>
+                        <p class="margin-top">Fonctionnalité qui permet aux membres d'accéder à un espace qui leur est personnel.</p>
+                        <div class="margin-top">
+                            {{ form_row(form_devis.accesmembre, {
+                                'label': false,
+                                'required': false
+                            }) }}
+                        </div>
                     </article>
                     <article>
                         <h2>Suivi et Référencement</h2>
@@ -125,6 +141,7 @@
                         <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
                         <div class="margin-top">
                             {{ form_row(form_devis.assistance, {
+                                'label': false,
                                 'required': false,
                                 'attr': {
                                     'class': 'squaredTwo'
@@ -169,23 +186,20 @@
             </div>
         </main>
 
-
-        {{ form_row(form_devis.forum, {
-            'required': false
-        }) }}
-        {{ form_row(form_devis.accesmembre, {
-            'required': false
-        }) }}
         {{ form_row(form_devis.gestionfichier, {
+            'label': false,
             'required': false
         }) }}
         {{ form_row(form_devis.cartedynamique, {
+            'label': false,
             'required': false
         }) }}
         {{ form_row(form_devis.integrvideo, {
+            'label': false,
             'required': false
         }) }}
         {{ form_row(form_devis.assistance, {
+            'label': false,
             'required': false
         }) }}
 
