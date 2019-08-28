@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+	overflow: hidden;
 }
 
 .section-devis {
@@ -27,7 +27,6 @@ h1 {
 
 .bannerstart {
 	background-image: url('../img/logodevis/geek.jpg');
-	height: 100vh;
 	background-size: cover;
 	color: white;
 }
@@ -48,7 +47,10 @@ output {
 }
 
 article {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Raleway', sans-serif;
+    height: 100vh;
+	text-align: center;
+	background-color: whitesmoke;
 
 }
 
