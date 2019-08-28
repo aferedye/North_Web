@@ -7,28 +7,27 @@
     {% block title %}Mon Devis{% endblock %}
     {% block body %}
         <main class="container-fluid">
-
-                    <article class="section bannerstart">
-                        <h1 class="txt-r">Estimez le prix de votre projet internet</h1>
-                        <p class="p-banner">Obtenez une estimation personalisée de votre projet web en quelques minutes</p>
+                    <article id="debut">
+                        <h1>Estimez le prix de votre projet internet</h1>
+                        <p>Obtenez une estimation personalisée de votre projet web en quelques minutes</p>
                         <div class="q-global">
-                            <div class="Q">
+                            <div>
                                 <div class="circle">
-                                    <p class="black txt-r">1</p>
+                                    <p>1</p>
                                 </div>
-                                <p class="txt-r p-t">Répondez aux questions en 5min</p>
+                                <p>Répondez aux questions en 5min</p>
                             </div>
-                            <div class="Q">
+                            <div>
                                 <div class="circle">
-                                    <p class="black txt-r">2</p>
+                                    <p>2</p>
                                 </div>
-                                <p class="txt-r p-t">Obtenez instantanément une estimation du prix</p>
+                                <p>Obtenez instantanément une estimation du prix</p>
                             </div>
-                            <div class="Q">
+                            <div>
                                 <div class="circle">
-                                    <p class="black txt-r">3</p>
+                                    <p>3</p>
                                 </div>
-                                <p class="txt-r p-t">Demandez un devis seulement si vous le souhaitez</p>
+                                <p>Demandez un devis seulement si vous le souhaitez</p>
                             </div>
                             <a class="btn-ready" onclick="myScrollTo('art1')">
                                 <p class="txt-btn">Commencer</p>
@@ -37,7 +36,7 @@
                     </article>
 
                 <!-- DEBUT DU FORMULAIRE DE DEVIS -->
-                    <article  id="art1" class="devis section">
+                    <article  id="art1" class="devis">
                         <h2>Graphisme</h2>
                         <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
                         <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
@@ -66,8 +65,16 @@
                             }}) }}
                         <div class="flex margin-left-slider1"><p>|</p><p class="margin-left-slider">|</p><p class="margin-left-slider2">|</p></div>
                         <div class="flex margin-block-txt"><p>Normal</p><p class="margin-slider-txt">Avancé</p><p class="margin-slider-txt2">Sur-mesure</p></div>
+                        <div>
+                            <div>
+                                <a onclick="myScrollTo('debut')">Retour</a>
+                            </div>
+                            <div>
+                                <a onclick="myScrollTo('art2')">Suite</a>
+                            </div>
+                        </div>
                     </article>
-                    <article class="section">
+                    <article class="section" id="art2">
                         <h2>Contenu</h2>
                         <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable ?</h3>
                         <div class="slider-block">
@@ -133,7 +140,7 @@
                             }) }}
                         </div>
                     </article>
-                    <article class="section">
+                    <article>
                         <h2>Suivi et Référencement</h2>
                         <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
                         <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
@@ -146,7 +153,7 @@
                             }}) }}
                         </div>
                     </article>
-                    <article class="section">
+                    <article>
                         <p class="margin-top">Votre devis vous sera envoyé par e-mail, si vous ne recevez rien penser à vérifier vos spam.</p>
                         {{ form_row(form_devis.nom,{
                             'label': false,
@@ -181,7 +188,6 @@
                         {{ form_end(form_devis) }}
                     </article>
         </main>
-        <script type="text/javascript" src="{{ asset('javascript/fullPageJs/src/fullpage.js') }}"></script>
         <script>
             function myLastScrollTo(id) {
                 let e = document.getElementById(id);

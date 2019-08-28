@@ -25,12 +25,6 @@ h1 {
 	font-size: 1.4rem;
 }
 
-.bannerstart {
-	background-image: url('../img/logodevis/geek.jpg');
-	background-size: cover;
-	color: white;
-}
-
 .circle {
 	border-radius: 25px;
 	background-color: white;
@@ -85,7 +79,6 @@ article {
 	 cursor: pointer;
 	 border-radius: 35px;
 	 margin-top: 60px;
-	 margin-left: 275px;
  }
 
 .btn-estim {
