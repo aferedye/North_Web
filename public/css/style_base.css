@@ -1,6 +1,6 @@
 .logo {
     height: 100px;
-    margin: 0;
+    margin-left: 50px;
 }
 
 .imgnav {
@@ -9,29 +9,6 @@
     position: absolute;
     top: 25px;
     left: 50px;
-}
-.underline {
-    display: inline;
-    position: relative;
-    overflow: hidden;
-}
-.underline:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
-    bottom: -5px;
-    background: #12CEE1;
-    height: 1px;
-    transition-property: left right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-}
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
-    right: 0;
 }
 
 header {
@@ -79,3 +56,60 @@ header {
     font-size: 36px;
     margin-left: 50px;
 }
+
+.barre {
+    width: 40px;
+    height: 5px;
+    border-radius: 35px;
+    background-color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.imgnav:hover .barre{
+    margin-bottom: 8px;
+    width: 45px;
+}
+
+@media only screen and (max-width : 640px) {
+
+    header {
+
+        position: absolute;
+
+    }
+
+    #menu-icon {
+
+        display:inline-block;
+
+    }
+
+    .sidenav ul, .sidenav:active ul {
+
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: #fff;
+        border: 5px solid #444;
+        right: 20px;
+        top: 60px;
+        width: 50%;
+        border-radius: 4px 0 4px 4px;
+
+    }
+
+    .sidenav li {
+
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+
+    }
+
+    .sidenav:hover ul {
+
+        display: block;
+
+    }
+

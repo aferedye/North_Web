@@ -19,15 +19,19 @@
 
    <header class="row" id="head">
        <nav class="navsmart" id="nav">
-           <img src="{{ asset('img/images_accueil/menunav.png') }}" onclick="openNav()" alt="" class="imgnav">
+           <div class="iconnav imgnav" onclick="openNav()">
+               <div class="barre"></div>
+               <div class="barre"></div>
+               <div class="barre"></div>
+           </div>
            <div id="mySidenav" class="sidenav">
                <img src="{{ asset('img/logo.png') }}" alt="" class="logo">
-               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-               <a href="{{ path('accueil') }}">Accueil</a>
-               <a href="{{ path('qui_sommes_nous') }}">Présentations</a>
-               <a href="{{ path('devis') }}">Devis</a>
-               <a href="#">Références</a>
-               <a href="{{ path('contact_index') }}">Contact</a>
+               <a href="javascript:void(0)" class="closebtn underline" onclick="closeNav()">&times;</a>
+               <a href="{{ path('accueil') }}" class="underline">Accueil</a>
+               <a href="{{ path('qui_sommes_nous') }} class="underline"">Présentations</a>
+               <a href="{{ path('devis') }}" class="underline">Devis</a>
+               <a href="#" class="underline">Références</a>
+               <a href="{{ path('contact_index') }}" class="underline">Contact</a>
            </div>
        </nav>
     </header>
