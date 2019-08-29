@@ -3,37 +3,22 @@
 	padding: 0;
 	box-sizing: border-box;
 	overflow: hidden;
-}
 
-.section-devis {
-	margin-left: 30px;
-}
-
-.txt-r {
-	text-align: right;
 }
 
 h1 {
-	padding-right: 65px;
-	padding-top: 45px;
-	font-size: 1.6rem;
+	margin-top: 10%;
+	font-size: 2rem;
+	color: #FFFFFF;
 }
 
-.p-banner {
-	padding-right: 55px;
-	padding-top: 25px;
-	font-size: 1.4rem;
-}
-
-.circle {
-	border-radius: 25px;
-	background-color: white;
-	width: 40px;
-	height: 40px;
+#debut p, h1 {
+	color: #FFFFFF;
 }
 
 .q-global {
 	text-align: center;
+	margin-top: 75px;
 }
 
 output {
@@ -44,7 +29,7 @@ article {
 	font-family: 'Raleway', sans-serif;
     height: 100vh;
 	text-align: center;
-	background-color: whitesmoke;
+	background-color: slategray;
 
 }
 
