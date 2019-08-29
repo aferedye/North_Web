@@ -21,13 +21,15 @@
                         <p class="nosequipes animated fadeInDown delay-2s">
                             Nos équipes sont là pour forger votre identité graphique
                         </p>
-                        <img src="{{ asset ('img/images_accueil/mouse-scroll-500.png') }}" class="animated anim heartBeat scroll" alt="Scroll"/>
+                        <section id="scroll" class="demo">
+                            <a><span></span>Scroll</a>
+                        </section>
                         <p class="sommes animated fadeInUp delay-3s"> 
                             Nous sommes capables de répondre à tous vos types de projets
                             du site vitrine au site ecommerce
                         </p>
                     </article>
-                    <article class="section s2">
+                    <article class="section s2" id="s2">
                         <p class="north">
                             North web en quelques lignes...
                         </p>
@@ -157,7 +159,14 @@
             navigation: true,
             slidesNavigation: true,
             scrollHorizontally: true,
-        })
+        });
+        function myScrollTo(id) {
+            let e = document.getElementById(id);
+            let box = e.getBoundingClientRect();
+            let k;
+            for (k = 0; k < 49; k++) setTimeout("window.scrollBy(0," + Math.floor(box.top / 50) + ")", 10 * k);
+            setTimeout("myLastScrollTo('" + id + "')", 500);
+        }
     </script>
     </body>
 {% endblock %}
