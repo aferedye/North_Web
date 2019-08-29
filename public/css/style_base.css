@@ -1,14 +1,16 @@
 .logo {
     height: 100px;
     margin-left: 50px;
+    margin-bottom: 50px;
 }
 
 .imgnav {
     height: 75px;
     width: 75px;
     position: absolute;
-    top: 25px;
-    left: 50px;
+    top: 30px;
+    left: 60px;
+    transition: 0.3s;
 }
 
 header {
@@ -29,7 +31,7 @@ header {
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 70px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -70,6 +72,61 @@ header {
     width: 45px;
 }
 
+.social-nav {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    margin: 10px auto;
+}
+.social-nav li {
+    display: inline-block;
+}
+.social-nav a {
+    display: inline-block;
+    float: left;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 48px;
+    background: #000;
+    position: relative;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.model-4 li {
+    margin: 0 2px;
+}
+.model-4 a {
+    background: none;
+    line-height: 1.5;
+    font-size: 32px;
+    text-shadow: 0px 0px 1px;
+}
+.model-4 a:hover {
+    text-shadow: 0px 0px 25px;
+}
+.model-4 .twitter {
+    color: #00ACED;
+}
+.model-4 .facebook {
+    color: #3B579D;
+}
+.model-4 .google-plus {
+    color: #DD4A3A;
+}
+.model-4 .linkedin {
+    color: #007BB6;
+}
+.model-4 .pinterest {
+    color: #CB2026;
+}
+
 @media only screen and (max-width : 640px) {
 
     header {
@@ -80,7 +137,7 @@ header {
 
     #menu-icon {
 
-        display:inline-block;
+        display: inline-block;
 
     }
 
@@ -112,4 +169,5 @@ header {
         display: block;
 
     }
+}
 

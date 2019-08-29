@@ -17,22 +17,30 @@
 
     <body>
 
-   <header class="row" id="head">
-       <nav class="navsmart" id="nav">
-           <div class="iconnav imgnav" onclick="openNav()">
+   <header class="row">
+       <nav>
+           <div class="imgnav" onclick="openNav()">
                <div class="barre"></div>
                <div class="barre"></div>
                <div class="barre"></div>
            </div>
            <div id="mySidenav" class="sidenav">
                <img src="{{ asset('img/logo.png') }}" alt="" class="logo">
-               <a href="javascript:void(0)" class="closebtn underline" onclick="closeNav()">&times;</a>
-               <a href="{{ path('accueil') }}" class="underline">Accueil</a>
-               <a href="{{ path('qui_sommes_nous') }} class="underline"">Présentations</a>
-               <a href="{{ path('devis') }}" class="underline">Devis</a>
-               <a href="#" class="underline">Références</a>
-               <a href="{{ path('contact_index') }}" class="underline">Contact</a>
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               <a href="{{ path('accueil') }}">Accueil</a>
+               <a href="{{ path('qui_sommes_nous') }}">Présentations</a>
+               <a href="{{ path('devis') }}">Devis</a>
+               <a href="{{ path('accueil')}}#section4">Références</a>
+               <a href="{{ path('contact_index') }}">Contact</a>
+               <ul class="social-nav model-4">
+                   <li><a class="twitter" href="https://twitter.com/vineethtrv"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                   <li><a class="facebook" href="https://www.facebook.com/vini.thekingal"><i class="fa fa-facebook"></i></a></li>
+                   <li><a class="google-plus" href="https://plus.google.com/u/0/109987289949504261649/posts"><i class="fa fa-google-plus"></i></a></li>
+                   <li><a class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                   <li><a class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+               </ul>
            </div>
+
        </nav>
     </header>
    <div id="accueil">
