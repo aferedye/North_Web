@@ -145,7 +145,7 @@ header {
 .menu:before {
     content: "M \00a0 \00a0 \00a0 \00a0 \00a0U";
     top: -60px;
-    left: -100%;
+    left: -110%;
     width: 215px;
 }
 .menu:after {
