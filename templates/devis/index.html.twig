@@ -6,14 +6,15 @@
     {% endblock %}
     {% block title %}Mon Devis{% endblock %}
     {% block body %}
+        <body>
         <main id="container-fluid">
                     <article id="debut" class="flex">
                         <h1>Vous souhaitez un site web ?</h1>
                         <p>Utilisez notre simulateur afin d'obtenir un prix détaillé en quelque clic</p>
                         <div class="q-global">
                             <p>Laissez nous vous guider</p>
-                            <p>Obtenez instantanément une estimation du prix</p>
-                            <p>Demandez un devis seulement si vous le souhaitez</p>
+                            <p>Recevez un devis en quelque minute par email</p>
+                            <p>Pour commencer cliquer sur le bouton ci-dessous ou scroller vers le bas</p>
                             <a class="btn-ready" onclick="myScrollTo('art1')">
                                 <p class="txt-btn">Commencer</p>
                             </a>
@@ -24,8 +25,10 @@
                         <h2>Graphisme</h2>
                         <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
                         <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
-                            <span class="txt-purple">Maquette</span> : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).
+                            <span class="txt-purple">Maquette</span> : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).<br />
+                            <span class="txt-purple">Non</span> : Vous ne fournissez aucune information graphique.
                         </p>
+                        <div class="range">
                         {{ form_start(form_devis) }}
                         {{ form_row(form_devis.maquette, {
                             'label': false,
@@ -34,12 +37,26 @@
                                 'max': '2',
                                 'value': '0',
                             }}) }}
+                            <div class="range-style"><p class="range2-start-bar">|</p><p class="range2-mid-bar">|</p><p class="range2-end-bar">|</p></div>
+                            <div class="range-style"><p class="range-start-txt">Maquette</p><p class="range-mid-txt">Zoning</p><p class="range-end-txt">Non</p></div>
+                        </div>
+                        <div class="nav-button">
+                            <div class="nav-button-s">
+                                <p onclick="myScrollTo('debut')" class="nav-button-t">Retour</p>
+                            </div>
+                            <div class="pos-nav-button nav-button-s">
+                                <p onclick="myScrollTo('art2')" class="nav-button-t">Suite</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="art2" class="devis">
                         <h3  class="margin-top">Niveau de graphisme attendu</h3>
                         <p  class="margin-top">
                             <span class="txt-purple">Normal</span> : Vous souhaitez un bon rendu graphique.<br /> <span class="txt-purple">Avancé</span> : Vous souhaitez un rendu graphique avancé
                             (Plus coûteux que Normal).<br /> <span class="txt-purple">Sur-mesure</span> : Vous serez intraitable sur la qualité du rendu graphique
                             (Plus coûteux que Avancé).
                         </p>
+                        <div class="range">
                         {{ form_row(form_devis.lvlgraphisme, {
                             'label': false,
                             'attr': {
@@ -47,18 +64,19 @@
                                 'max': '3',
                                 'value': '1',
                             }}) }}
-                        <div class="flex margin-left-slider1"><p>|</p><p class="margin-left-slider">|</p><p class="margin-left-slider2">|</p></div>
-                        <div class="flex margin-block-txt"><p>Normal</p><p class="margin-slider-txt">Avancé</p><p class="margin-slider-txt2">Sur-mesure</p></div>
-                        <div>
-                            <div>
-                                <a onclick="myScrollTo('debut')">Retour</a>
+                            <div class="range-style"><p class="range2-start-bar">|</p><p class="range2-mid-bar">|</p><p class="range2-end-bar">|</p></div>
+                            <div class="range-style"><p class="range2-start-txt">Normal</p><p class="range2-mid-txt">Avancé</p><p class="range2-end-txt">Sur-mesure</p></div>
+                        </div>
+                        <div class="nav-button">
+                            <div class="nav-button-s">
+                                <p onclick="myScrollTo('art1')" class="nav-button-t">Retour</p>
                             </div>
-                            <div>
-                                <a onclick="myScrollTo('art2')">Suite</a>
+                            <div class="pos-nav-button nav-button-s">
+                                <p onclick="myScrollTo('art3')" class="nav-button-t">Suite</p>
                             </div>
                         </div>
                     </article>
-                    <article class="section" id="art2">
+                    <article class="devis" id="art3">
                         <h2>Contenu</h2>
                         <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable ?</h3>
                         <div class="slider-block">
@@ -172,6 +190,7 @@
                         {{ form_end(form_devis) }}
                     </article>
         </main>
+        </body>
         <script>
             function myLastScrollTo(id) {
                 let e = document.getElementById(id);

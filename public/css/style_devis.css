@@ -4,11 +4,20 @@
 	box-sizing: border-box;
 }
 
+body {
+	overflow: hidden;
+}
+
 h1 {
 	margin-top: 10%;
-	font-size: 2rem;
+	font-size: 2.4rem;
 	color: #FFFFFF;
 }
+h3 {
+	margin-top: 30px;
+}
+
+
 
 #debut p, h1 {
 	color: #FFFFFF;
@@ -32,6 +41,7 @@ article {
 	text-align: center;
 	background-color: slategray;
 	background-size: cover;
+	color: #FFFFFF;
 }
 
 .black {
@@ -53,10 +63,11 @@ article {
 }
 
 .btn-ready {
-	 background-color: #8A5633;
+	 background-color: #8584C2;
 	 border: none;
 	 color: white;
-	 padding: 15px 32px;
+	 height: 50px;
+	 width: 115px;
 	 text-align: center;
 	 text-decoration: none;
 	 display: inline-block;
@@ -65,6 +76,10 @@ article {
 	 border-radius: 35px;
 	 margin-top: 60px;
  }
+
+.txt-btn {
+	padding-top: 12px;
+}
 
 .btn-estim {
 	background-color: #428BCA;
@@ -82,11 +97,11 @@ article {
 }
 
 .btn-ready:hover {
-	background-color: #AE7D4A;
+	background-color: #615DF5;
 }
 
 .txt-purple {
-	color: #428BCA;
+	color: #0007e0;
 }
 
 .casecontexte {
@@ -130,10 +145,78 @@ article {
 .m-l {
 	margin-left: 15px;
 }
+.nav-button {
+	display: flex;
+	flex-direction: row;
+	margin-left: 15%;
+}
+
+.nav-button-s {
+	background-color: #8584C2;
+	width: 75px;
+	height: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.nav-button-s:hover {
+	background-color: #615DF5;
+}
+
+.nav-button-t {
+	padding-top: 4px;
+}
+
+.pos-nav-button {
+	margin-left: 70%;
+}
 
 .caseimg {
 	height: 75px;
 	width: 75px;
+}
+.range {
+	width: 400px;
+	margin: auto;
+}
+
+.range-style {
+	display: flex;
+	flex-direction: row;
+}
+.range-start-txt {
+	margin-top: -10px;
+	margin-left: 24px;
+}
+.range-mid-txt {
+	margin-top: -10px;
+	margin-left: 78px;
+}
+.range-end-txt {
+	margin-top: -10px;
+	margin-left: 101px;
+}
+
+.range2-start-bar {
+	margin-left: 57px;
+}
+.range2-mid-bar {
+	margin-left: 139px;
+}
+.range2-end-bar {
+	margin-left: 138px;
+}
+.range2-start-txt {
+	margin-top: -10px;
+	margin-left: 29px;
+}
+.range2-mid-txt {
+	margin-top: -10px;
+	margin-left: 89px;
+}
+.range2-end-txt {
+	margin-top: -10px;
+	margin-left: 67px;
 }
 
 .avancement {
@@ -159,35 +242,11 @@ article {
 }
 
 .margin-top {
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
-.margin-left-slider {
-	margin-left: 137px;
-}
-
-.margin-left-slider2 {
-	margin-left: 136px;
-}
-
-.margin-left-slider1 {
-	 margin-left: 158px;
- }
-
-.margin-block-txt {
-	margin-left: 132px;
-}
-
-.margin-slider-txt {
-	margin-left: 89px;
-}
-
-.margin-slider-txt2 {
-	margin-left: 72px;
-}
-
-.devis {
-	position: sticky;
+.devis h1{
+	margin-top: 50px;
 }
 
 .topaside {
