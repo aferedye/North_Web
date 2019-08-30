@@ -7,7 +7,7 @@
 .demo a {
     position: absolute;
     bottom: 20px;
-    left: 50%;
+    left: 48%;
     z-index: 2;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
@@ -24,11 +24,12 @@
 
 #scroll a {
     padding-top: 60px;
+    color: #FFFFFF;
 }
 #scroll a span {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 48%;
     width: 30px;
     height: 50px;
     margin-left: -15px;
@@ -39,7 +40,7 @@
 #scroll a span::before {
     position: absolute;
     top: 10px;
-    left: 50%;
+    left: 48%;
     content: '';
     width: 6px;
     height: 6px;
@@ -109,7 +110,6 @@
 /** ------ article 1 position texte ------  **/
 .besoin1{
     text-align: center;
-    padding-top: 140px;
     font-size: 3.5rem;
     color: whitesmoke;
 }
