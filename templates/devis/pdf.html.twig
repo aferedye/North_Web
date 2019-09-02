@@ -35,11 +35,12 @@
     .border-r { border-right: 1px solid #D3D3D3; padding: 10px; }
     .floatl { float: left }
     .abs { position: absolute; top: 137px; left: 460px; }
-    .30p { width: 30%; }
+    .30p { width: 235px; }
     .75p { width: 75%; }
     .50p { width: 49.5%; }
     .m-l { margin-left: 30px;}
     .m-t { margin-top: 25px; }
+    .designation { width: 387px;}
     table {
         width: 100%;
         color: #717375;
@@ -49,11 +50,10 @@
         margin-left: 30px;
     }
     h1{ padding-top: 10px; }
-
 </style>
 <body>
 <div class="container">
-   <!-- <img src="C:\wamp64\www\North_Web\public\img\logo.png" alt="Logo North Web" width="100" class="floatl m-l">-->
+    <img src="C:\wamp64\www\North_Web\public\img\logo.png" alt="Logo North Web" width="100" class="floatl m-l">
     <h1 class="txt-center">Devis</h1>
     <p class="txt-center">Ce devis est à titre indicatif et ne constitue en aucun cas un acte de vente.<br/> Veuillez vous rapprochez de nos équipes afin d'obtenir un devis final.</p>
     <div class="border 30p m-l m-t">
@@ -72,19 +72,21 @@
     <table>
         <thead>
         <tr>
-            <th class="border">Désignation</th>
+            <th class="border designation">Désignation</th>
             <th class="border">Quantité</th>
             <th class="border">Prix Unitaire</th>
             <th class="border">Prix Total</th>
         </tr>
         </thead>
         <tbody>
+        {% if maquette > 0 %}
         <tr>
             <td class="border">Maquette graphique</td>
             <td class="border">{{ maquette }}</td>
             <td class="border">{{ prixmaquette }}</td>
             <td class="border">{{ totalmaquette }}</td>
         </tr>
+        {% endif %}
         <tr>
             <td class="border">Niveau de graphisme</td>
             <td class="border">{{ lvlgraphisme }}</td>
