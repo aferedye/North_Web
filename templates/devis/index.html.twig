@@ -7,36 +7,7 @@
     {% block body %}
         <body>
         <main id="container-fluid" >
-            <div class="fle">
-            <aside class="col-2 avancement">
-                <div class="progress">
-                    <div class="circle done">
-                        <span class="label">1</span>
-                        <span class="title">Graphisme</span>
-                    </div>
-                    <span class="bar done"></span>
-                    <div class="circle done">
-                        <span class="label">2</span>
-                        <span class="title">Address</span>
-                    </div>
-                    <span class="bar half"></span>
-                    <div class="circle active">
-                        <span class="label">3</span>
-                        <span class="title">Payment</span>
-                    </div>
-                    <span class="bar"></span>
-                    <div class="circle">
-                        <span class="label">4</span>
-                        <span class="title">Review</span>
-                    </div>
-                    <span class="bar"></span>
-                    <div class="circle">
-                        <span class="label">5</span>
-                        <span class="title">Finish</span>
-                    </div>
-                </div>
-            </aside>
-            <section class="col-10">
+            <section>
                     <article id="debut" class="flex">
                         <h1>Vous souhaitez un site web ?</h1>
                         <p>Utilisez notre simulateur afin d'obtenir un prix détaillé en quelque clic</p>
@@ -51,7 +22,7 @@
                     </article>
                 <!-- DEBUT DU FORMULAIRE DE DEVIS -->
                     <article  id="art1" class="devis">
-                        <h2 class="pt-15">Graphisme</h2>
+                        <h2 class="pt-10">Graphisme</h2>
                         <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
                         <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
                             <span class="txt-purple">Maquette</span> : Vous fournissez le rendu définitif et détaillée des pages du site (agencement et graphisme).<br />
@@ -79,7 +50,7 @@
                         </div>
                     </article>
                     <article id="art2" class="devis">
-                        <h3 class="pt-15">Niveau de graphisme attendu</h3>
+                        <h3 class="pt-10">Niveau de graphisme attendu</h3>
                         <p  class="margin-top">
                             <span class="txt-purple">Normal</span> : Vous souhaitez un bon rendu graphique.<br /> <span class="txt-purple">Avancé</span> : Vous souhaitez un rendu graphique avancé
                             (Plus coûteux que Normal).<br /> <span class="txt-purple">Sur-mesure</span> : Vous serez intraitable sur la qualité du rendu graphique
@@ -106,19 +77,18 @@
                         </div>
                     </article>
                     <article class="devis" id="art3">
-                        <h2 class="pt-10">Contenu</h2>
+                        <h2 class="pt-5">Contenu</h2>
                         <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable ?</h3>
                         <div class="slider-block">
-                                <input type="range" min="1" max="20" value="1" name="a" oninput="result1.value=parseInt(a.value)">
-                                <br />
-                                <output name="result1" >1</output>
+                            <input type="range" min="1" max="20" value="1" name="a" oninput="result1.value=parseInt(a.value)">
+                            <br />
+                            <output name="result1" >1</output>
                         </div>
-                        <h3 class="margin-top">Combien de page souhaitez vous sur le site ?</h3>
+                        <h3 class="margin-top">Combien de page(s) souhaitez vous sur le site ?</h3>
                         <div class="slider-block">
                             <input type="range" min="1" max="50" value="1" name="b" oninput="result2.value=parseInt(b.value)">
                             <br />
                             <output name="result2">1</output>
-
                         </div>
                         <h3>Nombre de formulaire présent sur le site</h3>
                         <p>Il peut s'agir d'un simple formulaire de contact ou d'un formulaire de devis comme celui-ci </p>
@@ -126,7 +96,6 @@
                             <input type="range" min="0" max="10" value="0" name="c" oninput="result3.value=parseInt(c.value)">
                             <br />
                             <output name="result3">1</output>
-
                         </div>
                         <div class="nav-button">
                             <div class="nav-button-s">
@@ -137,29 +106,29 @@
                             </div>
                         </div>
                     </article>
-                    <article class="section" id="art4">
+                    <article id="art4">
                         <h2>Fonctionalités générales</h2>
                         <h3 class="margin-top">Partie Actualité / Blog ?</h3>
                         <p class="margin-top">Fonctionnalité qui permet d'ajouter des articles.</p>
                         <div class="toggle-button-cover">
-                                <div class="button r" id="button-3">
-                                    {{ form_widget(form_devis.partieblog, {
-                                        'label': false,
-                                        'required': false,
-                                        'attr': {
-                                            'class': 'checkbox'
-                                        }}) }}
-                                    <div class="knobs"></div>
-                                    <div class="layer"></div>
-                                </div>
-
+                            <div class="button r">
+                                {{ form_widget(form_devis.partieblog, {
+                                    'label': false,
+                                    'required': false,
+                                    'attr': {
+                                        'class': 'checkbox'
+                                    }}
+                                ) }}
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
                         </div>
                         <div class="margin-top">
                         </div>
                         <h3 class="margin-top">Partie Forum</h3>
                         <p class="margin-top">Fonctionnalité qui permet un système de questions réponse.</p>
                         <div class="toggle-button-cover">
-                            <div class="button r" id="button-3">
+                            <div class="button r">
                             {{ form_widget(form_devis.forum, {
                                 'label': false,
                                 'required': false,
@@ -170,12 +139,11 @@
                                 <div class="knobs"></div>
                                 <div class="layer"></div>
                             </div>
-
                         </div>
                         <h3 class="margin-top">Espace membre</h3>
                         <p class="margin-top">Fonctionnalité qui permet aux membres d'accéder à un espace qui leur est personnel.</p>
                         <div class="toggle-button-cover">
-                            <div class="button r" id="button-3">
+                            <div class="button r">
                             {{ form_widget(form_devis.accesmembre, {
                                 'label': false,
                                 'required': false,
@@ -186,7 +154,6 @@
                             <div class="knobs"></div>
                             <div class="layer"></div>
                         </div>
-
                         </div>
                         <div class="nav-button">
                             <div class="nav-button-s">
@@ -197,17 +164,52 @@
                             </div>
                         </div>
                     </article>
-                    <article id="5">
-                        <h2>Suivi et Référencement</h2>
-                        <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
-                        <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
-                        <div class="margin-top">
-                            {{ form_row(form_devis.assistance, {
-                                'label': false,
-                                'required': false,
-                                'attr': {
-                                    'class': 'squaredTwo'
-                            }}) }}
+                    <article id="art5">
+                        <h2>Fonctionalités générales ...</h2>
+                        <h3>Système de gestion de fichiers</h3>
+                        <p>Souhaitez vous que vos clients ai la possibilitées de télécharger des fichiers ?</p>
+                        <div class="toggle-button-cover">
+                            <div class="button r">
+                                {{ form_widget(form_devis.gestionfichier, {
+                                    'label': false,
+                                    'required': false,
+                                    'attr': {
+                                        'class': 'checkbox'
+                                    }
+                                }) }}
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
+                        </div>
+                        <h3>Carte dynamique</h3>
+                        <p>Offre a vos clients une carte interactive qui permet de vous repérez</p>
+                        <div class="toggle-button-cover">
+                            <div class="button r">
+                                {{ form_widget(form_devis.cartedynamique, {
+                                    'label': false,
+                                    'required': false,
+                                    'attr': {
+                                        'class': 'checkbox'
+                                    }
+                                }) }}
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
+                        </div>
+                        <h3>Intégrations Vidéos</h3>
+                        <p>Souhaitez vous intégrer du contenu audiovisuel à votre site ?</p>
+                        <div class="toggle-button-cover">
+                            <div class="button r">
+                                {{ form_widget(form_devis.integrvideo, {
+                                    'label': false,
+                                    'required': false,
+                                    'attr': {
+                                        'class': 'checkbox'
+                                    }
+                                }) }}
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
                         </div>
                         <div class="nav-button">
                             <div class="nav-button-s">
@@ -218,7 +220,32 @@
                             </div>
                         </div>
                     </article>
-                    <article id="art5">
+                    <article id="art6">
+                        <h2>Suivi et Référencement</h2>
+                        <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
+                        <p class="margin-top">Le prestataire vous assiste en cas de problème technique sur le site.</p>
+                        <div class="toggle-button-cover">
+                            <div class="button r">
+                                {{ form_widget(form_devis.assistance, {
+                                    'label': false,
+                                    'required': false,
+                                    'attr': {
+                                        'class': 'checkbox'
+                                    }}) }}
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
+                        </div>
+                        <div class="nav-button">
+                            <div class="nav-button-s">
+                                <p onclick="myScrollTo('art5')" class="nav-button-t">Retour</p>
+                            </div>
+                            <div class="pos-nav-button nav-button-s">
+                                <p onclick="myScrollTo('art7')" class="nav-button-t">Suite</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="art7">
                         <p class="margin-form">Votre devis vous sera envoyé par e-mail, si vous ne recevez rien penser à vérifier vos spam.</p>
                         {{ form_row(form_devis.nom,{
                             'label': false,
@@ -245,22 +272,15 @@
                                 'placeholder': 'Téléphone'
                             }}) }}
                         {{ form_row(form_devis.valider,{
-                            'label': false,
                             'attr': {
                                 'class': 'submit',
                             }}) }}
-
                         {{ form_end(form_devis) }}
                     </article>
             </section>
-            </div>
         </main>
         </body>
         <script>
-            function rangeOut(output, input) {
-                output.value=parseInt(input.value);
-            }
-
             function myLastScrollTo(id) {
                 let e = document.getElementById(id);
                 let box = e.getBoundingClientRect();
@@ -275,24 +295,6 @@
                 setTimeout("myLastScrollTo('" + id + "')", 500);
             }
         </script>
-
-        {{ form_row(form_devis.gestionfichier, {
-            'label': false,
-            'required': false
-        }) }}
-        {{ form_row(form_devis.cartedynamique, {
-            'label': false,
-            'required': false
-        }) }}
-        {{ form_row(form_devis.integrvideo, {
-            'label': false,
-            'required': false
-        }) }}
-        {{ form_row(form_devis.assistance, {
-            'label': false,
-            'required': false
-        }) }}
-
     {% endblock %}
 
 

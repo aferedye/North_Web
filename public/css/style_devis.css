@@ -162,6 +162,10 @@ article {
 	padding-top: 10%;
 }
 
+.pt-5 {
+	padding-top: 5%;
+}
+
 .nav-button-s {
 	background-color: #428BCA;
 	width: 75px;
@@ -247,7 +251,6 @@ article {
 	color: #FFFFFF;
 	border: none;
 	margin-top: 10px;
-	margin-left: 100px;
 }
 
 .margin-top {
@@ -518,7 +521,7 @@ input[type=range]:focus::-ms-fill-upper {
 	cursor: pointer;
 	z-index: 3;
 }
-#button-3 .knobs:before
+.button .knobs:before
 {
 	content: 'NO';
 	position: absolute;
@@ -537,25 +540,25 @@ input[type=range]:focus::-ms-fill-upper {
 	transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
 
-#button-3 .checkbox:active + .knobs:before
+.button .checkbox:active + .knobs:before
 {
 	width: 46px;
 	border-radius: 100px;
 }
 
-#button-3 .checkbox:checked:active + .knobs:before
+.button .checkbox:checked:active + .knobs:before
 {
 	margin-left: -26px;
 }
 
-#button-3 .checkbox:checked + .knobs:before
+.button .checkbox:checked + .knobs:before
 {
 	content: 'YES';
 	left: 42px;
 	background-color: #03A9F4;
 }
 
-#button-3 .checkbox:checked ~ .layer
+.button3 .checkbox:checked ~ .layer
 {
 	background-color: #fcebeb;
 }
