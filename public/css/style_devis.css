@@ -6,8 +6,8 @@
 
 body {
 	overflow: hidden;
-	background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/escheresque_ste.png');
 	background-size: cover;
+	background-color: dimgrey;
 }
 
 h1 {
@@ -42,8 +42,6 @@ article {
 	font-family: 'Raleway', sans-serif;
     height: 100vh;
 	text-align: center;
-
-	background-size: cover;
 	color: #FFFFFF;
 }
 
@@ -184,6 +182,18 @@ article {
 
 .pos-nav-button {
 	margin-left: 70%;
+}
+
+.nav-a {
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding-top: 3px;
+}
+
+.nav-a:hover {
+	text-decoration: none;
+	color: #FFFFFF;
 }
 
 .caseimg {
