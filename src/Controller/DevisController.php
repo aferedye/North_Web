@@ -53,19 +53,15 @@ class DevisController extends AbstractController
             ->add('valider', SubmitType::class)
             ->getForm();
 
-
-
-
-
         $formul->handleRequest($request);
 
         if ($formul->isSubmitted() && $formul->isValid()) {
 
             $formulaire = $formul->getData();
-
             $nbrlang = $request->request->get('a');
             $nbrpage = $request->request->get('b');
             $nbrdevis = $request->request->get('c');
+            $email = $formulaire->getEmail();
 
             $content = $this->renderView('devis/pdf.html.twig', [
                     'maquette' => $formulaire->getMaquette(),
@@ -84,10 +80,9 @@ class DevisController extends AbstractController
                     'nom' => $formulaire->getNom(),
                     'prenom' => $formulaire->getPrenom(),
                     'tel' => $formulaire->getTelephone(),
-
             ]);
 
-            $email = $formulaire->getEmail();
+
 
             $pdf = new Html2Pdf("p","A4","fr");
             $pdf->writeHTML($content);

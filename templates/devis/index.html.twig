@@ -6,9 +6,10 @@
     {% block title %}Mon Devis{% endblock %}
     {% block body %}
         <body>
-        <main id="container-fluid" >
             <section>
-                    <article id="debut" class="flex">
+                <div class="container-fluid">
+                    <div class="row">
+                    <article id="debut">
                         <h1>Vous souhaitez un site web ?</h1>
                         <p>Utilisez notre simulateur afin d'obtenir un prix détaillé en quelque clic</p>
                         <div class="q-global">
@@ -20,8 +21,10 @@
                             </a>
                         </div>
                     </article>
+                    </div>
                 <!-- DEBUT DU FORMULAIRE DE DEVIS -->
-                    <article  id="art1" class="devis">
+                    <div class="row">
+                    <article  id="art1">
                         <h2 class="pt-10">Graphisme</h2>
                         <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
                         <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
@@ -49,7 +52,9 @@
                             </div>
                         </div>
                     </article>
-                    <article id="art2" class="devis">
+                    </div>
+                    <div class="row">
+                    <article id="art2">
                         <h3 class="pt-10">Niveau de graphisme attendu</h3>
                         <p  class="margin-top">
                             <span class="txt-purple">Normal</span> : Vous souhaitez un bon rendu graphique.<br /> <span class="txt-purple">Avancé</span> : Vous souhaitez un rendu graphique avancé
@@ -76,7 +81,9 @@
                             </div>
                         </div>
                     </article>
-                    <article class="devis" id="art3">
+                    </div>
+                    <div class="row">
+                    <article id="art3">
                         <h2 class="pt-5">Contenu</h2>
                         <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable ?</h3>
                         <div class="slider-block">
@@ -106,6 +113,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art4">
                         <h2>Fonctionalités générales</h2>
                         <h3 class="margin-top">Partie Actualité / Blog ?</h3>
@@ -164,6 +173,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art5">
                         <h2>Fonctionalités générales ...</h2>
                         <h3>Système de gestion de fichiers</h3>
@@ -220,6 +231,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art6">
                         <h2>Suivi et Référencement</h2>
                         <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
@@ -245,6 +258,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art7">
                         <p class="margin-form">Votre devis vous sera envoyé par e-mail, si vous ne recevez rien penser à vérifier vos spam.</p>
                         {{ form_row(form_devis.nom,{
@@ -277,6 +292,8 @@
                             }}) }}
                         {{ form_end(form_devis) }}
                     </article>
+                    </div>
+                    </div>
             </section>
         </main>
         </body>
