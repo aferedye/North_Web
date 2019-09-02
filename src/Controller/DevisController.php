@@ -39,10 +39,7 @@ class DevisController extends AbstractController
         $formul = $this->createFormBuilder($form)
             ->add('maquette',RangeType::class)
             ->add('lvlgraphisme', RangeType::class)
-            ->add('nbrpage', RangeType::class)
-            ->add('nbrlangue', RangeType::class)
             ->add('partieblog', CheckboxType::class)
-            ->add('formulaireinscritdevis', RangeType::class)
             ->add('forum', CheckboxType::class)
             ->add('accesmembre', CheckboxType::class)
             ->add('gestionfichier', CheckboxType::class)
@@ -57,19 +54,26 @@ class DevisController extends AbstractController
             ->getForm();
 
 
+
+
+
         $formul->handleRequest($request);
 
         if ($formul->isSubmitted() && $formul->isValid()) {
 
             $formulaire = $formul->getData();
 
+            $nbrlang = $request->request->get('a');
+            $nbrpage = $request->request->get('b');
+            $nbrdevis = $request->request->get('c');
+
             $content = $this->renderView('devis/pdf.html.twig', [
                     'maquette' => $formulaire->getMaquette(),
                     'lvlgraphisme' => $formulaire->getLvlgraphisme(),
-                    'nbrpage' => $formulaire->getNbrPage(),
-                    'nbrlangue' => $formulaire->getNbrLangue(),
+                    'nbrpage' => $nbrpage,
+                    'nbrlangue' => $nbrlang,
                     'partieblog' => $formulaire->getPartieBlog(),
-                    'forminscription' => $formulaire->getFormulaireinscritdevis(),
+                    'forminscription' => $nbrdevis,
                     'forum' => $formulaire->getForum(),
                     'accesmembre' => $formulaire->getAccesmembre(),
                     'gestionfichiers' => $formulaire->getGestionfichier(),
@@ -114,9 +118,13 @@ class DevisController extends AbstractController
 
             $mailer->send($message);
 
-            //$entityManager = $this->getDoctrine()->getManager();
-            //$entityManager->persist($form);
-            //$entityManager->flush();
+            $form->setNbrpage($nbrpage);
+            $form->setNbrlangue($nbrlang);
+            $form->setFormulaireinscritdevis($nbrdevis);
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($form);
+            $entityManager->flush();
 
             return $this->redirectToRoute('task_succes');
         }

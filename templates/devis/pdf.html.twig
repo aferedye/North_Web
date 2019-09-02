@@ -53,7 +53,7 @@
 </style>
 <body>
 <div class="container">
-    <img src="C:\wamp64\www\North_Web\public\img\logo.png" alt="Logo North Web" width="100" class="floatl m-l">
+   <!-- <img src="C:\wamp64\www\North_Web\public\img\logo.png" alt="Logo North Web" width="100" class="floatl m-l">-->
     <h1 class="txt-center">Devis</h1>
     <p class="txt-center">Ce devis est à titre indicatif et ne constitue en aucun cas un acte de vente.<br/> Veuillez vous rapprochez de nos équipes afin d'obtenir un devis final.</p>
     <div class="border 30p m-l m-t">
@@ -79,14 +79,12 @@
         </tr>
         </thead>
         <tbody>
-        {% if maquette > 0 %}
         <tr>
             <td class="border">Maquette graphique</td>
             <td class="border">{{ maquette }}</td>
             <td class="border">{{ prixmaquette }}</td>
             <td class="border">{{ totalmaquette }}</td>
         </tr>
-        {% endif %}
         <tr>
             <td class="border">Niveau de graphisme</td>
             <td class="border">{{ lvlgraphisme }}</td>
