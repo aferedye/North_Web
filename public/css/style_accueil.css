@@ -295,6 +295,7 @@
 }
 
 /*------responsive 320px -------------*/
+@media (min-width: 769px) and (max-width: )
 /*------responsive 320px-Article 1 -------------*/
 @media  (max-width: 768px) {
 .besoin1 {

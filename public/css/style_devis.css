@@ -5,9 +5,10 @@
 }
 
 body {
-	overflow: hidden;
+
 	background-size: cover;
 	background-color: dimgrey;
+	overflow: auto;
 }
 
 h1 {
@@ -40,6 +41,7 @@ output {
 
 article {
 	font-family: 'Raleway', sans-serif;
+	min-height: 90vh;
     height: 100vh;
 	text-align: center;
 	color: #FFFFFF;
