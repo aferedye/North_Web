@@ -19,7 +19,14 @@
                             <a class="btn-ready" onclick="myScrollTo('art1')">
                                 <p class="txt-btn">Commencer</p>
                             </a>
+                            {{ form_start(form_devis) }}
+                            {% if form_errors(form_devis.email) or form_errors(form_devis.telephone) != null %}
+                            <div class="error margin-top">
+                                <p>Le formulaire contient une ou plusieurs erreurs veuillez le corriger</p>
+                            </div>
+                            {% endif %}
                         </div>
+
                     </article>
                     </div>
                 <!-- DEBUT DU FORMULAIRE DE DEVIS -->
@@ -32,7 +39,6 @@
                             <span class="txt-purple">Non</span> : Vous ne fournissez aucune information graphique.
                         </p>
                         <div class="range">
-                        {{ form_start(form_devis) }}
                         {{ form_row(form_devis.maquette, {
                             'label': false,
                             'attr': {
@@ -262,30 +268,40 @@
                     <div class="row">
                     <article id="art7">
                         <p class="margin-form">Votre devis vous sera envoyé par e-mail, si vous ne recevez rien penser à vérifier vos spam.</p>
-                        {{ form_row(form_devis.nom,{
+                        {{ form_widget(form_devis.nom,{
                             'label': false,
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'Nom'
                             }}) }}
-                        {{ form_row(form_devis.prenom,{
+                        <div class="error">
+                            {{ form_errors(form_devis.nom) }}
+                        </div>
+                        {{ form_widget(form_devis.prenom,{
                             'label': false,
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'Prénom'
                             }}) }}
-                        {{ form_row(form_devis.email,{
-                            'label': false,
+                        <div class="error">
+                            {{ form_errors(form_devis.prenom) }}
+                        </div>
+                        {{ form_widget(form_devis.email,{
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'E-mail'
                             }}) }}
-                        {{ form_row(form_devis.telephone,{
-                            'label': false,
+                        <div class="error">
+                            {{ form_errors(form_devis.email) }}
+                        </div>
+                        {{ form_widget(form_devis.telephone,{
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'Téléphone'
                             }}) }}
+                        <div class="error">
+                            {{ form_errors(form_devis.telephone) }}
+                        </div>
                         {{ form_row(form_devis.valider,{
                             'attr': {
                                 'class': 'submit',
