@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <section>
+            <div class='login'>
+                <div class='login_title'>
+                    <span>Se connecter à mon compte</span>
+                </div>
+                <form action="{{ path('security_connexion') }}" method="post">
+                <div class='login_fields'>
+                    <div class='login_fields__user'>
+                        <div class='icon'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
+                        </div>
+                        <input placeholder='E-mail' type='text' name="_username">
+                        <div class='validation'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                        </div>
+                        </input>
+                    </div>
+                    <div class='login_fields__password'>
+                        <div class='icon'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+                        </div>
+                        <input placeholder='Password' type='password' name="_password">
+                        <div class='validation'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                        </div>
+                    </div>
+                    <div class='login_fields__submit'>
+                        <input type='submit' value='Log In'>
+                        <div class='forgot'>
+                            <a href='#'>Forgotten password?</a>
+                        </div>
+                        <div>
+                            Vous n'avez pas de compte ? <a href="{{ path('security_registration') }}">Cliquez ici</a>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}
