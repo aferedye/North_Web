@@ -78,6 +78,11 @@ class User implements UserInterface
     private $lastname;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $roles = [];
+
+    /**
      * @return mixed
      */
     public function getConfirmPassword()
@@ -238,7 +243,7 @@ class User implements UserInterface
      */
     public function getRoles()
     {
-        return ['ROLE_USER'];
+        return [$this->roles];
     }
 
     /**
@@ -272,5 +277,12 @@ class User implements UserInterface
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
+    }
+
+    public function setRoles(string $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
     }
 }
