@@ -32,7 +32,13 @@
                <a href="{{ path('devis') }}">Devis</a>
                <a href="{{ path('accueil')}}#section4">Références</a>
                <a href="{{ path('contact_index') }}">Contact</a>
-               <a href="{{ path('security_connexion') }}">Se connecter</a>
+               {% if user is not null %}
+                   <a href="{{ path('accueil') }}">Mon Espace</a>
+                   <a href="{{ path('security_logout') }}">Se déconnecter</a>
+               {% else %}
+                   <a href="{{ path('security_connexion') }}">Se connecter</a>
+               {% endif %}
+
            </div>
        </nav>
     </header>
