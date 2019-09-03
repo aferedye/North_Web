@@ -126,6 +126,7 @@ class DevisController extends AbstractController
 
         return $this->render('devis/index.html.twig', [
             'form_devis' => $formul->createView(),
+            'user' => $this->getUser()
         ]);
     }
 
@@ -136,7 +137,8 @@ class DevisController extends AbstractController
 
         $succes = 'Le devis vous a été envoyer par e-mail';
         return $this->render('succes/index.html.twig', [
-            'succes' => $succes
+            'succes' => $succes,
+            'user' => $this->getUser()
         ]);
     }
 
