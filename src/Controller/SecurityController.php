@@ -18,6 +18,8 @@ class SecurityController extends AbstractController
     public function registration(Request $request, ObjectManager $manager,UserPasswordEncoderInterface $encoder) {
 
         $user = new User();
+        $roles = 'ROLE_USER';
+        $user->setRoles($roles);
         $date = new \DateTime('now');
 
         $form = $this->createForm(RegistrationType::class, $user);
@@ -33,6 +35,10 @@ class SecurityController extends AbstractController
 
             $manager->persist($user);
             $manager->flush();
+
+            return $this->render('security/connexion.html.twig', [
+                'user' => $this->getUser()
+            ]);
 
         }
 
