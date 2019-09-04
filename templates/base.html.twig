@@ -36,7 +36,7 @@
                <a href="{{ path('admin') }}">Administration</a>
                {% endif %}
                {% if user is not null %}
-                   <a href="{{ path('accueil') }}">Mon Espace</a>
+                   <a href="{{ path('espace_client') }}">Mon Espace</a>
                    <a href="{{ path('security_logout') }}">Se déconnecter</a>
                {% else %}
                    <a href="{{ path('security_connexion') }}">Se connecter</a>
@@ -44,6 +44,11 @@
 
            </div>
        </nav>
+       {% if is_granted('ROLE_ADMIN') %}
+       <ul>
+           <li><a href=""></a></li>
+       </ul>
+       {% endif %}
     </header>
    <div id="accueil">
    </div>
