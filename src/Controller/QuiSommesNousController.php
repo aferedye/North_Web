@@ -14,6 +14,7 @@ class QuiSommesNousController extends AbstractController
     {
         return $this->render('qui_sommes_nous/index.html.twig', [
             'controller_name' => 'QuiSommesNousController',
+            'user' => $this->getUser()
         ]);
     }
 }
