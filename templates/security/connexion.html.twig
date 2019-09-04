@@ -32,12 +32,13 @@
                         </div>
                     </div>
                     <div class='login_fields__submit'>
-                        <input type='submit' value='Log In'>
+                        <input type='submit' value='Log In' class="submit">
                         <div class='forgot'>
-                            <a href='#'>Forgotten password?</a>
+                            <a href='{{ path('forgotten_password') }}'>Mot de passe oublié?</a>
                         </div>
-                        <div>
-                            Vous n'avez pas de compte ? <a href="{{ path('security_registration') }}">Cliquez ici</a>
+                        <br />
+                        <div class='login_title'>
+                            <span>Vous n'avez pas de compte ?</span> <a href="{{ path('security_registration') }}">Cliquez ici</a>
                         </div>
                     </div>
                 </div>
