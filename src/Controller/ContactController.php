@@ -58,7 +58,8 @@ class ContactController extends AbstractController
 
         //return $this->redirectToRoute("contact_index");
         return $this->render('contact/index.html.twig', [
-            "controller_name" => 'ContactController'
+            "controller_name" => 'ContactController',
+            'user' => $this->getUser()
         ]);
 
         $form->handleRequest($request);
