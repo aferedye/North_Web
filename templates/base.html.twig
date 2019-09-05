@@ -33,7 +33,7 @@
                <a href="{{ path('accueil')}}#section4">Références</a>
                <a href="{{ path('contact_index') }}">Contact</a>
                {% if is_granted('ROLE_ADMIN') %}
-               <a href="{{ path('admin') }}">Administration</a>
+                    <a href="{{ path('admin') }}">Administration</a>
                {% endif %}
                {% if user is not null %}
                    <a href="{{ path('espace_client') }}">Mon Espace</a>
@@ -44,11 +44,6 @@
 
            </div>
        </nav>
-       {% if is_granted('ROLE_ADMIN') %}
-       <ul>
-           <li><a href=""></a></li>
-       </ul>
-       {% endif %}
     </header>
    <div id="accueil">
    </div>
