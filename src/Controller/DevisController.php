@@ -117,9 +117,9 @@ class DevisController extends AbstractController
             $form->setNbrlangue($nbrlang);
             $form->setFormulaireinscritdevis($nbrdevis);
 
-            //$entityManager = $this->getDoctrine()->getManager();
-            //$entityManager->persist($form);
-            //$entityManager->flush();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($form);
+            $entityManager->flush();
 
             return $this->redirectToRoute('task_succes');
         }
