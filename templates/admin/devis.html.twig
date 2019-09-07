@@ -56,10 +56,13 @@
                    {% for result in results %}
                    <tr>
                        <th>{{ result.id }}</th>
-                       <td>{{ result.nom }}</td>
-                       <td>{{ result.prenom }}</td>
+                       <td>{{ result.nom|capitalize }}</td>
+                       <td>{{ result.prenom|capitalize }}</td>
                        <td>{{ result.email }}</td>
-                       <td><a href="{{ path('admin_detail_devis') }}">Voir les détails du devis</a></td>
+                       <form method="post" action="{{ path('admin_detail_devis') }}">
+                            <input type="hidden" name="iddevis" value="{{ result.id }}">
+                            <td><button type="submit" >Voir les détails du devis</button></td>
+                       </form>
                    </tr>
                    {% endfor %}
                    </tbody>
