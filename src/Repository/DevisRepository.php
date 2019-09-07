@@ -78,4 +78,14 @@ class DevisRepository extends ServiceEntityRepository
             ->getResult();
 
     }
+
+    public function searchId($needle)
+    {
+        return $this->CreateQueryBuilder('m')
+            ->where('m.id LIKE :needle')
+            ->setParameter('needle', "%".$needle."%")
+            ->getQuery()
+            ->getResult();
+
+    }
 }
