@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% set prixmaquette = 150 %}
+{% set prixgraphisme = 150 %}
+{% set prixpage = 150 %}
+{% set prixblog = 150 %}
+{% set prixinscription = 150 %}
+{% set prixforum = 150 %}
+{% set prixmembre = 150 %}
+{% set prixfichier = 150 %}
+{% set prixcarte = 150 %}
+{% set prixvideo = 150 %}
+{% set prixlangue = 150 %}
+{% set prixassistance = 150 %}
+
+<html lang="fr">
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
+{% endblock %}
+<body>
+<div class="container-fluid">
+    <h1 class="txt-center">Devis</h1>
+    <p class="txt-center">Ce devis est à titre indicatif et ne constitue en aucun cas un acte de vente.<br/> Veuillez vous rapprochez de nos équipes afin d'obtenir un devis final.</p>
+    {% for result in results %}
+    <div class="container txt-white">
+        <strong>Coordonnées du client :</strong><br /><br />
+        {{ result.nom | capitalize }} {{ result.prenom | capitalize }}<br />
+        {{ result.telephone }}<br />
+        {{ result.email }}
+    </div>
+    <a href="{{ path('admin_devis') }}" class="txt-c">Retour à tout les devis</a>
+    <table class="table table-dark col-8 container m-t10">
+        <thead>
+        <tr>
+            <th>Désignation</th>
+            <th>Quantité</th>
+            <th>Prix Unitaire</th>
+            <th>Prix Total</th>
+        </tr>
+        </thead>
+        <tbody>
+
+            {% set totalmaquette = prixmaquette * result.maquette %}
+            {% set totallangue = prixlangue * result.nbrlangue %}
+            {% set totalgraphisme = prixgraphisme * result.lvlgraphisme %}
+            {% set totalpage = prixpage * result.nbrpage %}
+            {% set totalblog = prixblog * result.partieblog %}
+            {% set totalinscription = prixinscription * result.formulaireinscritdevis %}
+            {% set totalforum = prixforum * result.forum %}
+            {% set totalmembre = prixmembre * result.accesmembre %}
+            {% set totalfichier = prixfichier * result.gestionfichier %}
+            {% set totalcarte = prixcarte * result.cartedynamique %}
+            {% set totalvideo = prixvideo * result.integrvideo %}
+            {% set totalassistance = prixassistance * result.assistance %}
+            {% set totalHT = totalmaquette +  totalgraphisme + totalpage + totallangue + totalblog + totalinscription +
+                totalforum + totalmembre + totalfichier + totalcarte + totalvideo + totalassistance %}
+            {% set totalTVA = totalHT / 100 * 20 %}
+            {% set totalTTC = totalHT + totalTVA %}
+        {% if result.maquette > 0 %}
+            <tr>
+                <td>Maquette graphique</td>
+                <td>{{ result.maquette }}</td>
+                <td>{{ prixmaquette }}</td>
+                <td>{{ totalmaquette }}</td>
+            </tr>
+        {% endif %}
+        <tr>
+            <td>Niveau de graphisme</td>
+            <td>{{ result.lvlgraphisme }}</td>
+            <td>{{ prixgraphisme }}</td>
+            <td>{{ totalgraphisme }}</td>
+        </tr>
+        <tr>
+            <td>Nombre de page(s)</td>
+            <td>{{ result.nbrpage }}</td>
+            <td>{{ prixpage }}</td>
+            <td>{{ totalpage }}</td>
+        </tr>
+        <tr>
+            <td>Nombre de langue(s)</td>
+            <td>{{ result.nbrlangue }}</td>
+            <td>{{ prixlangue }}</td>
+            <td>{{ totallangue }}</td>
+        </tr>
+        {% if result.partieblog > 0 %}
+            <tr>
+                <td>Partie actualité / blog</td>
+                <td>{{ result.partieblog }}</td>
+                <td>{{ prixblog }}</td>
+                <td>{{ totalblog }}</td>
+            </tr>
+        {% endif %}
+        {% if result.formulaireinscritdevis > 0 %}
+            <tr>
+                <td>Formulaire Inscription / Devis</td>
+                <td>{{ result.formulaireinscritdevis }}</td>
+                <td>{{ prixinscription }}</td>
+                <td>{{ totalinscription }}</td>
+            </tr>
+        {% endif %}
+        {% if result.forum > 0 %}
+            <tr>
+                <td>Forum de discussions</td>
+                <td>{{ result.forum }}</td>
+                <td>{{ prixforum }}</td>
+                <td>{{ totalforum }}</td>
+            </tr>
+        {% endif %}
+        {% if result.accesmembre > 0 %}
+            <tr>
+                <td>Accès membres</td>
+                <td>{{ result.accesmembre }}</td>
+                <td>{{ prixmembre }}</td>
+                <td>{{ totalmembre }}</td>
+            </tr>
+        {% endif %}
+        {% if result.gestionfichier > 0 %}
+            <tr>
+                <td>Gestion des fichiers</td>
+                <td>{{ result.gestionfichier }}</td>
+                <td>{{ prixfichier }}</td>
+                <td>{{ totalfichier }}</td>
+            </tr>
+        {% endif %}
+        {% if result.cartedynamique > 0 %}
+            <tr>
+                <td>Carte dynamique</td>
+                <td>{{ result.cartedynamique }}</td>
+                <td>{{ prixcarte }}</td>
+                <td>{{ totalcarte }}</td>
+            </tr>
+        {% endif %}
+        {% if result.integrvideo > 0 %}
+            <tr>
+                <td>Intégration vidéo</td>
+                <td>{{ result.integrvideo }}</td>
+                <td>{{ prixvideo }}</td>
+                <td>{{ totalvideo }}</td>
+            </tr>
+        {% endif %}
+        {% if result.assistance > 0 %}
+            <tr>
+                <td>Offre d'assistance mensuelle</td>
+                <td>{{ result.assistance }}</td>
+                <td>{{ prixassistance }} / mois</td>
+                <td>{{ totalassistance }}</td>
+            </tr>
+        {% endif %}
+        <tr>
+            <td></td>
+            <td class="border-r"></td>
+            <td><strong>Prix H.T</strong></td>
+            <td>{{ totalHT }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><strong>TVA 20%</strong></td>
+            <td>{{ totalTVA }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><strong>Prix TTC</strong></td>
+            <td>{{ totalTTC }} €</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+{% endblock %}
+
+
+
