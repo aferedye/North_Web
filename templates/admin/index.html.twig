@@ -11,6 +11,10 @@
             <article class="row">
                 <ul>
                     <li><a href="{{ path('admin_devis') }}">Consulter les émissions de devis</a></li>
+                    {% if is_granted('ROLE_MASTER') %}
+                        <li><a href="{{ path('master_user') }}">Consulter les comptes utilisateurs</a></li>
+                    {% endif %}
+
                 </ul>
             </article>
         </section>
