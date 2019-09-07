@@ -61,6 +61,7 @@ class SecurityController extends AbstractController
      * @return Response
      */
     public function login(Request $request, AuthenticationUtils $authUtils) {
+        $lastUsername = null;
 
         $error = $authUtils->getLastAuthenticationError();
         $lastUsername = $authUtils->getLastUsername();
