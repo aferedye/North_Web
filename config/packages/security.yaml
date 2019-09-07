@@ -13,6 +13,7 @@ security:
     role_hierarchy:
         ROLE_USER: ~
         ROLE_ADMIN: ROLE_USER
+        ROLE_MASTER: ROLE_ADMIN
 
     firewalls:
         dev:
@@ -43,4 +44,5 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/master, roles: ROLE_MASTER }
         # - { path: ^/profile, roles: ROLE_USER }
