@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Devis;
+use App\Entity\User;
 use App\Repository\DevisRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -47,13 +48,20 @@ class AdminController extends AbstractController
      * @Route("/admin/devis/detail", name="admin_detail_devis")
      * @Security("is_granted('ROLE_ADMIN')")
      */
-    public function devisdetail() {
+    public function devisDetail(Request $request) {
+
+        $id = $request->get("iddevis");
+        dump($id);
+
+        $em = $this->getDoctrine()->getRepository(Devis::class);
+        $results = $em->searchId($id);
+        dump($results);
 
         return $this->render('admin/devisdetail.html.twig', [
             'user' => $this->getUser(),
+            'results' => $results
         ]);
     }
-
 
     /**
      * @Route("/admin/devis/search/name", name="admin_devis_searchname")
@@ -137,4 +145,5 @@ class AdminController extends AbstractController
         ]);
 
     }
+
 }
