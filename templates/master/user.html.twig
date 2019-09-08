@@ -8,7 +8,7 @@
     <main>
         <section class="container-fluid">
             <h1>Administration Utilisateur</h1>
-            <a href="{{ path('master') }}" class="retour">Retour à l'espace d'administration</a>
+            <a href="{{ path('admin') }}" class="retour">Retour à l'espace d'administration</a>
             {% if message != null %}
                 {{ message }}
             {% endif %}
@@ -49,8 +49,8 @@
                         <td>ID</td>
                         <td>Nom</td>
                         <td>Prénom</td>
-                        <td>Roles</td>
                         <td>Adresse e-mail</td>
+                        <td>Roles</td>
                     </tr>
                     </thead>
                     <tbody>
@@ -59,13 +59,20 @@
                             <th>{{ result.id }}</th>
                             <td>{{ result.lastname }}</td>
                             <td>{{ result.firstname }}</td>
-                            <td>{{ result.roles|join }}</td>
                             <td>{{ result.email }}</td>
+                            <td>{{ result.roles|join }}</td>
+                            {% if result.roles|join == 'ROLE_USER' or 'ROLE_ADMIN' %}
                             <form method="post" action="{{ path('master_user_role') }}">
                                 <input type="hidden" name="iduser" value="{{ result.id }}">
-
-                                <td><button type="submit" >Changer le rôles</button></td>
+                                <td>
+                                    <select name="role">
+                                    <option value="ROLE_USER">User</option>
+                                    <option value="ROLE_ADMIN">admin</option>
+                                    </select>
+                                    <button type="submit" >Changer le rôles</button>
+                                </td>
                             </form>
+                            {% endif %}
                         </tr>
                     {% endfor %}
                     </tbody>
