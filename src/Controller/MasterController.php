@@ -126,7 +126,7 @@ class MasterController extends AbstractController
     }
 
     /**
-     * @Route("/master/user", name="master_user_role")
+     * @Route("/master/user/role", name="master_user_role")
      * @Security("is_granted('ROLE_MASTER')")
      */
     public function changeRole(Request $request, ObjectManager $manager) {
@@ -134,21 +134,16 @@ class MasterController extends AbstractController
         $message = null;
 
         $id = $request->get("iduser");
+        $role = $request->request->get('role');
 
         $em = $this->getDoctrine()->getRepository(User::class);
         $results = $em->searchId($id);
 
-        if ($results['0']->getRoles() != 'ROLE_ADMIN') {
-            $result = $results['0']->setRoles('ROLE_ADMIN');
-            $manager->persist($result);
-            $manager->flush();
-        }
-        if ($results['0']->getRoles() != 'ROLE_USER') {
-            $result = $results->setRoles('ROLE_USER');
-            $manager->persist($result);
-            $manager->flush();
-        }
+        $results['0']->setRoles($role);
+        $manager->persist($results['0']);
+        $manager->flush();
 
+        $results = $em->findAll();
 
         return $this->render('master/user.html.twig', [
             'user' => $this->getUser(),
