@@ -80,7 +80,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @return mixed
@@ -243,7 +243,7 @@ class User implements UserInterface
      */
     public function getRoles()
     {
-        return $this->roles;
+        return [$this->roles];
     }
 
     /**
