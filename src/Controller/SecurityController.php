@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\RegistrationType;
 use Doctrine\Common\Persistence\ObjectManager;
+use Exception;
 use Swift_Mailer;
 use Swift_SmtpTransport;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,14 +21,25 @@ class SecurityController extends AbstractController
 {
     /**
      * @Route("/inscription", name="security_registration")
+     * @param Request $request
+     * @param ObjectManager $manager
+     * @param UserPasswordEncoderInterface $encoder
+     * @param TokenGeneratorInterface $tokenGenerator
+     * @param Swift_Mailer $mailer
+     * @return Response
+     * @throws Exception
      */
-    public function registration(Request $request, ObjectManager $manager,UserPasswordEncoderInterface $encoder) {
+    public function registration(Request $request, ObjectManager $manager,UserPasswordEncoderInterface $encoder,
+                                 TokenGeneratorInterface $tokenGenerator,\Swift_Mailer $mailer) {
+
+        $lastUsername = null;
+        $error = null;
+        $roles = 'ROLE_USER';
 
         $user = new User();
-        $roles = 'ROLE_USER';
-        $user->setRoles($roles);
         $date = new \DateTime('now');
 
+        $user->setRoles($roles);
         $form = $this->createForm(RegistrationType::class, $user);
 
         $form->handleRequest($request);
@@ -35,14 +47,41 @@ class SecurityController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user->setDateSubscribe($date);
+            $token = $tokenGenerator->generateToken();
+
+            $a = "ok";
+            $b = "ok1";
 
             $hash = $encoder->encodePassword($user, $user->getPassword());
+            var_dump($a);
+
+            $user->setConfirmationToken($token);
+            var_dump($b);
             $user->setPassword($hash);
+
+            $lastUsername = $user->getEmail();
 
             $manager->persist($user);
             $manager->flush();
 
+            $url = $this->generateUrl('confirm_account', array('token' => $token, 'user' => $this->getUser()), UrlGeneratorInterface::ABSOLUTE_URL);
+
+            $mail = (new \Swift_Message('Mot de passe oublié'))
+                ->setFrom('contact.northweb@gmail.com')
+                ->setTo($lastUsername)
+                ->setBody(
+                    "Bonjour, 
+                     Confirmez votre compte en cliquant sur ce lien : " . $url,
+                    'text/html'
+                );
+
+            $mailer->send($mail);
+
+
+
             return $this->render('security/connexion.html.twig', [
+                'last_username' => $lastUsername,
+                'error'         => $error,
                 'user' => $this->getUser()
             ]);
 
@@ -52,6 +91,32 @@ class SecurityController extends AbstractController
             'form' => $form->createView(),
             'user' => $this->getUser()
         ]);
+    }
+
+    /**
+     * @Route("/account/confirm/{token}", name="confirm_account")
+     * @param $token
+     * @return Response
+     */
+    public function confirmAccount(string $token): Response
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $em->getRepository(User::class)->findOneBy(array('ConfirmationToken' => $token));
+        /* @var $user User */
+
+        if ($user === null) {
+            $message = "Token inconnu";
+            return $this->redirectToRoute('accueil', [
+                'message' => $message
+            ]);
+        }
+
+        $user->setConfirmationToken(null);
+        $user->setEnabled(true);
+        $em->persist($user);
+        $em->flush();
+            return $this->redirectToRoute('security_connexion');
     }
 
     /**
@@ -92,7 +157,7 @@ class SecurityController extends AbstractController
     public function forgottenPassword(
         Request $request,
         UserPasswordEncoderInterface $encoder,
-        TokenGeneratorInterface $tokenGenerator): Response
+        TokenGeneratorInterface $tokenGenerator,\Swift_Mailer $mailer): Response
 
     {
         $message = null;
@@ -121,7 +186,7 @@ class SecurityController extends AbstractController
             try{
                 $user->setResetToken($token);
                 $entityManager->flush();
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $message = "Un problème est survenu pendant la génération du token";
                 return $this->render('forgotten_password', [
                     'message' => $message
@@ -129,13 +194,6 @@ class SecurityController extends AbstractController
             }
 
             $url = $this->generateUrl('app_reset_password', array('token' => $token, 'user' => $this->getUser()), UrlGeneratorInterface::ABSOLUTE_URL);
-
-            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                ->setUsername('contact.northweb@gmail.com')
-                ->setPassword('MafNorthW1')
-            ;
-
-            $mailer = new Swift_Mailer($transport);
 
             $mail = (new \Swift_Message('Mot de passe oublié'))
                 ->setFrom('contact.northweb@gmail.com')
@@ -198,5 +256,13 @@ class SecurityController extends AbstractController
             ]);
         }
 
+    }
+    /**
+     * @return string
+     * @throws \Exception
+     */
+    private function generateToken()
+    {
+        return rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
     }
 }

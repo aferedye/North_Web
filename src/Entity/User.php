@@ -80,7 +80,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $roles = [];
+    private $roles;
 
     /**
      * @return mixed
@@ -239,11 +239,11 @@ class User implements UserInterface
      * and populated in any number of different ways when the user object
      * is created.
      *
-     * @return (Role|string)[] The user roles
+     * @return array (Role|json)[] The user roles
      */
     public function getRoles()
     {
-        return [$this->roles];
+        return $this->roles;
     }
 
     /**
@@ -293,6 +293,16 @@ class User implements UserInterface
     private $resetToken;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ConfirmationToken;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $Enabled;
+
+    /**
      * @return string
      */
     public function getResetToken(): string
@@ -306,6 +316,30 @@ class User implements UserInterface
     public function setResetToken(?string $resetToken): void
     {
         $this->resetToken = $resetToken;
+    }
+
+    public function getConfirmationToken(): ?string
+    {
+        return $this->ConfirmationToken;
+    }
+
+    public function setConfirmationToken(?string $ConfirmationToken): self
+    {
+        $this->ConfirmationToken = $ConfirmationToken;
+
+        return $this;
+    }
+
+    public function getEnabled(): ?bool
+    {
+        return $this->Enabled;
+    }
+
+    public function setEnabled(?bool $Enabled): self
+    {
+        $this->Enabled = $Enabled;
+
+        return $this;
     }
 
 }
