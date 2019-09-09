@@ -30,6 +30,8 @@ security:
                 check_path: security_connexion
                 default_target_path: accueil
 
+            user_checker: App\Controller\UserChecker
+
             logout:
                 path: security_logout
                 target: accueil
