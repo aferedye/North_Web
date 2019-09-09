@@ -1,19 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello EspaceClientController!{% endblock %}
-
+   {% block stylesheets %}
+       <link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
+   {% endblock %}
 {% block body %}
 
-    <style>
-        body {
-            background-color: #1f222e;
-        }
-    </style>
 <main>
-    <aside>
+    <section class="container-fluid">
+        <h1>Espace Client</h1>
+        <div class="container col-8">
         <ul>
-            <li><a href="">Consulter les devis</a></li>
+            <li><a href="{{ path('espace_client_devis') }}">Consulter les devis</a></li>
+            <li><a href="{{ path('espace_client_devisdetail') }}">Modifier mes informations</a></li>
         </ul>
-    </aside>
+        </div>
+    </section>
 </main>
 {% endblock %}
