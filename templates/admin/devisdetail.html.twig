@@ -23,7 +23,7 @@
     <h1 class="txt-center">Devis</h1>
     <p class="txt-center">Ce devis est à titre indicatif et ne constitue en aucun cas un acte de vente.<br/> Veuillez vous rapprochez de nos équipes afin d'obtenir un devis final.</p>
     {% for result in results %}
-    <div class="container txt-white">
+    <div class="container txt-white col-8">
         <strong>Coordonnées du client :</strong><br /><br />
         {{ result.nom | capitalize }} {{ result.prenom | capitalize }}<br />
         {{ result.telephone }}<br />
