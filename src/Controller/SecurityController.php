@@ -49,14 +49,9 @@ class SecurityController extends AbstractController
             $user->setDateSubscribe($date);
             $token = $tokenGenerator->generateToken();
 
-            $a = "ok";
-            $b = "ok1";
-
             $hash = $encoder->encodePassword($user, $user->getPassword());
-            var_dump($a);
 
             $user->setConfirmationToken($token);
-            var_dump($b);
             $user->setPassword($hash);
 
             $lastUsername = $user->getEmail();
@@ -125,7 +120,7 @@ class SecurityController extends AbstractController
      * @param AuthenticationUtils $authUtils
      * @return Response
      */
-    public function login(Request $request, AuthenticationUtils $authUtils) {
+    public function login(AuthenticationUtils $authUtils) {
         $lastUsername = null;
 
         $error = $authUtils->getLastAuthenticationError();
@@ -134,7 +129,7 @@ class SecurityController extends AbstractController
         return $this->render('security/connexion.html.twig',[
             'last_username' => $lastUsername,
             'error'         => $error,
-            'user' => $this->getUser()
+            'user' => $this->getUser(),
         ]);
     }
 
