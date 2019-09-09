@@ -47,4 +47,45 @@ class DevisRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function searchName($needle)
+    {
+        return $this->CreateQueryBuilder('m')
+            ->where('m.nom LIKE :needle')
+            ->setParameter('needle', "%".$needle."%")
+            ->getQuery()
+            ->getResult();
+
+    }
+
+    public function searchFirstname($needle)
+    {
+        return $this->CreateQueryBuilder('m')
+            ->where('m.prenom LIKE :needle')
+            ->setParameter('needle', "%".$needle."%")
+            ->getQuery()
+            ->getResult();
+
+    }
+
+
+    public function searchEmail($needle)
+    {
+        return $this->CreateQueryBuilder('m')
+            ->where('m.email LIKE :needle')
+            ->setParameter('needle', "%".$needle."%")
+            ->getQuery()
+            ->getResult();
+
+    }
+
+    public function searchId($needle)
+    {
+        return $this->CreateQueryBuilder('m')
+            ->where('m.id LIKE :needle')
+            ->setParameter('needle', "%".$needle."%")
+            ->getQuery()
+            ->getResult();
+
+    }
 }

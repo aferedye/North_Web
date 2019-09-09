@@ -53,19 +53,15 @@ class DevisController extends AbstractController
             ->add('valider', SubmitType::class)
             ->getForm();
 
-
-
-
-
         $formul->handleRequest($request);
 
         if ($formul->isSubmitted() && $formul->isValid()) {
 
             $formulaire = $formul->getData();
-
             $nbrlang = $request->request->get('a');
             $nbrpage = $request->request->get('b');
             $nbrdevis = $request->request->get('c');
+            $email = $formulaire->getEmail();
 
             $content = $this->renderView('devis/pdf.html.twig', [
                     'maquette' => $formulaire->getMaquette(),
@@ -84,10 +80,9 @@ class DevisController extends AbstractController
                     'nom' => $formulaire->getNom(),
                     'prenom' => $formulaire->getPrenom(),
                     'tel' => $formulaire->getTelephone(),
-
             ]);
 
-            $email = $formulaire->getEmail();
+
 
             $pdf = new Html2Pdf("p","A4","fr");
             $pdf->writeHTML($content);
@@ -122,15 +117,16 @@ class DevisController extends AbstractController
             $form->setNbrlangue($nbrlang);
             $form->setFormulaireinscritdevis($nbrdevis);
 
-            //$entityManager = $this->getDoctrine()->getManager();
-            //$entityManager->persist($form);
-            //$entityManager->flush();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($form);
+            $entityManager->flush();
 
             return $this->redirectToRoute('task_succes');
         }
 
         return $this->render('devis/index.html.twig', [
             'form_devis' => $formul->createView(),
+            'user' => $this->getUser()
         ]);
     }
 
@@ -141,7 +137,8 @@ class DevisController extends AbstractController
 
         $succes = 'Le devis vous a été envoyer par e-mail';
         return $this->render('succes/index.html.twig', [
-            'succes' => $succes
+            'succes' => $succes,
+            'user' => $this->getUser()
         ]);
     }
 

@@ -5,15 +5,15 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class FullpageController extends AbstractController
+class EspaceClientController extends AbstractController
 {
     /**
-     * @Route("/fullpage", name="fullpage")
+     * @Route("/espace/client", name="espace_client")
      */
     public function index()
     {
-        return $this->render('fullpage/index.html.twig', [
-            'controller_name' => 'FullpageController',
+        return $this->render('espace_client/index.html.twig', [
+            'user' => $this->getUser()
         ]);
     }
 }

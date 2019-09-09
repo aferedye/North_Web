@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin/Devis{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
+{% endblock %}
+{% block body %}
+    <main>
+        <section class="container-fluid">
+            <h1>Administration devis soumis</h1>
+            <a href="{{ path('admin') }}" class="retour">Retour à l'espace d'administration</a>
+            {% if message != null %}
+                {{ message }}
+            {% endif %}
+            <article class="row">
+               <table class="table table-dark col-8 container">
+                   <thead>
+                       <tr>
+                           <th>Recherche</th>
+                           <form method="post" action="{{ path('admin_devis_searchname') }}">
+                               <td>
+                                   <label for="name">
+                                       <input type="text" name="Nom" id="name" placeholder="Nom" class="search-fields">
+                                   </label>
+                                   <input type="submit" value="Search" class="btn btn-light">
+                               </td>
+                           </form>
+                           <form method="post" action="{{ path('admin_devis_searchfirstname') }}">
+                               <td>
+                                   <label for="firstname">
+                                       <input type="text" name="Prenom" id="firstname" placeholder="Prénom" class="search-fields">
+                                   </label>
+                                   <input type="submit" value="Search" class="btn btn-light">
+                               </td>
+                           </form>
+                           <form method="post" action="{{ path('admin_devis_searchemail') }}">
+                               <td>
+                                   <label for="email">
+                                       <input type="text" name="Email" id="email" placeholder="E-mail" class="search-fields">
+                                   </label>
+                                   <input type="submit" value="Search" class="btn btn-light">
+                               </td>
+                           </form>
+                           <td>
+                               <a href="{{ path('admin_devis') }}">Retour à tout les devis</a>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>ID</td>
+                           <td>Nom</td>
+                           <td>Prénom</td>
+                           <td>Adresse e-mail</td>
+                       </tr>
+                   </thead>
+                   <tbody>
+                   {% for result in results %}
+                   <tr>
+                       <th>{{ result.id }}</th>
+                       <td>{{ result.nom|capitalize }}</td>
+                       <td>{{ result.prenom|capitalize }}</td>
+                       <td>{{ result.email }}</td>
+                       <form method="post" action="{{ path('admin_detail_devis') }}">
+                            <input type="hidden" name="iddevis" value="{{ result.id }}">
+                            <td><button type="submit" >Voir les détails du devis</button></td>
+                       </form>
+                   </tr>
+                   {% endfor %}
+                   </tbody>
+               </table>
+            </article>
+        </section>
+    </main>
+{% endblock %}
+

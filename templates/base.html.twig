@@ -32,6 +32,16 @@
                <a href="{{ path('devis') }}">Devis</a>
                <a href="{{ path('accueil')}}#section4">Références</a>
                <a href="{{ path('contact_index') }}">Contact</a>
+               {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin') }}">Administration</a>
+               {% endif %}
+               {% if user is not null %}
+                   <a href="{{ path('espace_client') }}">Mon Espace</a>
+                   <a href="{{ path('security_logout') }}">Se déconnecter</a>
+               {% else %}
+                   <a href="{{ path('security_connexion') }}">Se connecter</a>
+               {% endif %}
+
            </div>
        </nav>
     </header>

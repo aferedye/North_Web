@@ -6,9 +6,10 @@
     {% block title %}Mon Devis{% endblock %}
     {% block body %}
         <body>
-        <main id="container-fluid" >
             <section>
-                    <article id="debut" class="flex">
+                <div class="container-fluid">
+                    <div class="row">
+                    <article id="debut">
                         <h1>Vous souhaitez un site web ?</h1>
                         <p>Utilisez notre simulateur afin d'obtenir un prix détaillé en quelque clic</p>
                         <div class="q-global">
@@ -18,10 +19,19 @@
                             <a class="btn-ready" onclick="myScrollTo('art1')">
                                 <p class="txt-btn">Commencer</p>
                             </a>
+                            {{ form_start(form_devis) }}
+                            {% if form_errors(form_devis.email) or form_errors(form_devis.telephone) != null %}
+                            <div class="error margin-top">
+                                <p>Le formulaire contient une ou plusieurs erreurs veuillez le corriger</p>
+                            </div>
+                            {% endif %}
                         </div>
+
                     </article>
+                    </div>
                 <!-- DEBUT DU FORMULAIRE DE DEVIS -->
-                    <article  id="art1" class="devis">
+                    <div class="row">
+                    <article  id="art1">
                         <h2 class="pt-10">Graphisme</h2>
                         <h3 class="margin-top">Fournissez-vous des instructions graphiques détaillées ?</h3>
                         <p class="margin-top"><span class="txt-purple">Zoning</span> : Vous fournissez au prestataire le détail concernant l'agencement (emplacement des informations) des pages du site.<br />
@@ -29,7 +39,6 @@
                             <span class="txt-purple">Non</span> : Vous ne fournissez aucune information graphique.
                         </p>
                         <div class="range">
-                        {{ form_start(form_devis) }}
                         {{ form_row(form_devis.maquette, {
                             'label': false,
                             'attr': {
@@ -49,7 +58,9 @@
                             </div>
                         </div>
                     </article>
-                    <article id="art2" class="devis">
+                    </div>
+                    <div class="row">
+                    <article id="art2">
                         <h3 class="pt-10">Niveau de graphisme attendu</h3>
                         <p  class="margin-top">
                             <span class="txt-purple">Normal</span> : Vous souhaitez un bon rendu graphique.<br /> <span class="txt-purple">Avancé</span> : Vous souhaitez un rendu graphique avancé
@@ -76,7 +87,9 @@
                             </div>
                         </div>
                     </article>
-                    <article class="devis" id="art3">
+                    </div>
+                    <div class="row">
+                    <article id="art3">
                         <h2 class="pt-5">Contenu</h2>
                         <h3 class="margin-top">Dans combien de langues le contenu sera-t-il consultable ?</h3>
                         <div class="slider-block">
@@ -106,6 +119,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art4">
                         <h2>Fonctionalités générales</h2>
                         <h3 class="margin-top">Partie Actualité / Blog ?</h3>
@@ -164,6 +179,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art5">
                         <h2>Fonctionalités générales ...</h2>
                         <h3>Système de gestion de fichiers</h3>
@@ -220,6 +237,8 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art6">
                         <h2>Suivi et Référencement</h2>
                         <h3 class="margin-top">Offre d'assistance mensuelle ?</h3>
@@ -245,38 +264,52 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="row">
                     <article id="art7">
                         <p class="margin-form">Votre devis vous sera envoyé par e-mail, si vous ne recevez rien penser à vérifier vos spam.</p>
-                        {{ form_row(form_devis.nom,{
+                        {{ form_widget(form_devis.nom,{
                             'label': false,
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'Nom'
                             }}) }}
-                        {{ form_row(form_devis.prenom,{
+                        <div class="error">
+                            {{ form_errors(form_devis.nom) }}
+                        </div>
+                        {{ form_widget(form_devis.prenom,{
                             'label': false,
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'Prénom'
                             }}) }}
-                        {{ form_row(form_devis.email,{
-                            'label': false,
+                        <div class="error">
+                            {{ form_errors(form_devis.prenom) }}
+                        </div>
+                        {{ form_widget(form_devis.email,{
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'E-mail'
                             }}) }}
-                        {{ form_row(form_devis.telephone,{
-                            'label': false,
+                        <div class="error">
+                            {{ form_errors(form_devis.email) }}
+                        </div>
+                        {{ form_widget(form_devis.telephone,{
                             'attr': {
                                 'class': 'form-fields',
                                 'placeholder': 'Téléphone'
                             }}) }}
+                        <div class="error">
+                            {{ form_errors(form_devis.telephone) }}
+                        </div>
                         {{ form_row(form_devis.valider,{
                             'attr': {
                                 'class': 'submit',
                             }}) }}
                         {{ form_end(form_devis) }}
                     </article>
+                    </div>
+                    </div>
             </section>
         </main>
         </body>
