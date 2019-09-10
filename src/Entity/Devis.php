@@ -19,17 +19,17 @@ class Devis
         ]));
 
         $metadata->addPropertyConstraint('telephone', new Assert\Regex([
-            'pattern' => '/^[0-9\-\(\)\/\+\s]*$/',
-            'message' => 'Votre numéro de téléphone n\'est pas valide',
+            'pattern' => '/^[0-9\.\-\(\)\/\+\s]*$/',
+            'message' => 'Votre n° de téléphone n\'est pas valide',
         ]));
 
         $metadata->addPropertyConstraint('nom', new Assert\Regex([
-            'pattern' => '/^[\w\'\-,.]*[^_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]*$/',
+            'pattern' => '/^([A-Z]|[a-z])[a-z]*(-)?[a-z]+$/',
             'message' => 'Votre nom n\'est pas valide',
         ]));
 
         $metadata->addPropertyConstraint('prenom', new Assert\Regex([
-            'pattern' => '/^[\w\'\-,.]*[^_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]*$/',
+            'pattern' => '/^([A-Z]|[a-z])[a-z]*(-)?[a-z]+$/',
             'message' => 'Votre prénom n\'est pas valide',
         ]));
 
