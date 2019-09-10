@@ -167,11 +167,11 @@
     padding-top: 25px;
 }
 .btn-article{
-    background-color: #0A2174;
+    background-color: #CC470D;
     border: none;
     color: white;
     margin-top: 5px;
-    padding: 0px 30px;
+    padding: 0 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -181,11 +181,29 @@
 .btn-article:hover{
     color: whitesmoke;
     text-decoration: none;
-    background-color: dodgerblue;
+    background-color: #CC0A00;
 }
 .btn-article-txt{
     padding-top: 10px;
     font-size: 20px;
+}
+
+.btn-articled{
+    background-color: #0A2174;
+    border: none;
+    color: white;
+    margin-top: 5px;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 35px;
+}
+.btn-articled:hover{
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: dodgerblue;
 }
 /** ------ article 3 position texte / bouton ------  **/
 
@@ -203,17 +221,20 @@
     font-size: 2.1rem;
 
 }
+
 .flex2{
     display: flex;
     justify-content: space-between;
 }
+
 .pos-btn-conseil {
     display: flex;
     text-align: center;
     margin-top: 25vh;
 }
+
 .btn-article2{
-    background-color: #FE6E00;
+    background-color: #0A2174;
     border: none;
     color: white;
     padding: 0px 30px;
@@ -227,7 +248,7 @@
 .btn-article2:hover{
     color: white;
     text-decoration: none;
-    background-color: #CC0A00;
+    background-color: dodgerblue;
 }
 .btn-article2-txt{
     padding-top: 10px;
