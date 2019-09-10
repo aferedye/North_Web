@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
@@ -51,7 +51,7 @@
                             <p class="besoin2">Besoin d'un devis ?</p>
                             <p class="simulateur">Utlisez notre simulateur de devis pour obtenir une estimation en quelque clic</p>
                             <div class="pos-btn">
-                                <a href="{{ path('devis') }}" class="btn-article">
+                                <a href="{{ path('devis') }}" class="btn-articled">
                                     <p class="btn-article-txt">C'est parti !</p>
                                 </a>
                             </div>
@@ -151,6 +151,8 @@
         </div>
     </section>
     <script type="text/javascript" src="{{ asset('javascript/fullPageJs/src/fullpage.js') }}"></script>
+    <script src="https://app.engati.com/static/standalone/bot.html?bot_key=a2e2767d250c44bc"></script>
+    <script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"a2e2767d250c44bc",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
     <script>
         new fullpage('#fullPage', {
             anchor: ['real'],
