@@ -7,8 +7,8 @@
 body {
 
 	background-size: cover;
-	background-color: dimgrey;
-	overflow: auto;
+	background-color: #303030;
+
 }
 
 h1 {
@@ -146,8 +146,7 @@ article {
 }
 .nav-button {
 	display: flex;
-	flex-direction: row;
-	margin-left: 15%;
+	justify-content: space-between;
 }
 
 .pt-15 {
@@ -179,7 +178,7 @@ article {
 }
 
 .pos-nav-button {
-	margin-left: 70%;
+
 }
 
 .nav-a {
@@ -259,6 +258,9 @@ article {
 	color: #FFFFFF;
 	border: none;
 	margin-top: 10px;
+}
+.submit:hover {
+	background-color: #615DF5;
 }
 
 .margin-top {
@@ -657,7 +659,29 @@ aside {
 }
 
 .error {
-	color: red;
+	background-color: darkred;
+	border-radius: 5px;
+	height: 25px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+
+}
+
+.errorgen {
+	background-color: darkred;
+	border-radius: 5px;
+	height: 25px;
+	width: 575px;
+}
+
+.errorlink {
+	color: whitesmoke;
+	cursor: pointer;
+}
+.errorlink:hover {
+	color: whitesmoke;
 }
 
 
@@ -665,3 +689,18 @@ aside {
 	list-style-type: none;
 }
 
+.p-t10 {
+	padding-top: 10%;
+}
+
+.icon-top {
+	width: 75px;
+	height: 75px;
+	color: whitesmoke;
+}
+
+.pos-icon-top {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+}
