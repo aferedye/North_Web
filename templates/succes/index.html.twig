@@ -6,11 +6,12 @@
 {% block title %}Mon Devis{% endblock %}
 {% block body %}
     {% if succes != null %}
-        <article>
+        <div class="row">
+        <article class="vert-a">
         <h1>Nous vous avons envoyé le devis par e-mail</h1>
         <p>Si vous n'avez rien reçu d'ici 5 minutes, vérifiez vos spams </p>
         <p>Vous pouvez désormais retourner à l'acceuil ou recommencer une simulation</p>
-        <div class="nav-button">
+        <div class="flex2 nav-button">
             <div class="nav-button-s">
                 <a href="{{ path('accueil') }}" class="nav-a">Accueil</a>
             </div>
@@ -19,6 +20,7 @@
             </div>
         </div>
         </article>
+        </div>
     {% endif %}
 {% endblock %}
 
