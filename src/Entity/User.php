@@ -65,7 +65,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\EqualTo(propertyPath="confirm_email", message="Votre adresse e-mail doit être identique")
+     * @Assert\EqualTo(propertyPath="confirm_email", message="Les adresses e-mail doivent être identique")
      */
     private $email;
 
