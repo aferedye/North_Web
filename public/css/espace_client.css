@@ -1,0 +1,49 @@
+body {
+    background-color: #1f222e;
+}
+
+h1, h2 {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 25px;
+}
+
+.txt-index {
+    color: whitesmoke;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.m-t10 {
+    margin-top: 10%;
+}
+
+.list-index {
+    list-style-type: none;
+    text-align: center;
+}
+
+.m-a {
+    margin: auto;
+}
+
+.btn-index {
+    display: block;
+    color: whitesmoke;
+    height: 100px;
+    width: 250px;
+    background-color: #3B579D;
+    text-align: center;
+    padding-top: 35px;
+    transform: skew(20deg);
+}
+
+.btn-index:hover {
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: #0A2174;
+}
+.transform {
+    display: block;
+    transform: skew(-20deg);
+}
