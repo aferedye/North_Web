@@ -13,7 +13,7 @@ class EspaceClientController extends AbstractController
     public function index()
     {
         return $this->render('espace_client/index.html.twig', [
-            'user' => $this->getUser()
+            'user' => $this->getUser(),
         ]);
     }
 
@@ -22,8 +22,10 @@ class EspaceClientController extends AbstractController
      */
     public function mesDevis()
     {
+        $message = null;
         return $this->render('espace_client/devis.html.twig', [
-            'user' => $this->getUser()
+            'user' => $this->getUser(),
+            'message' => $message
         ]);
     }
 
@@ -32,9 +34,10 @@ class EspaceClientController extends AbstractController
      */
     public function mesDevisDetail()
     {
-
+        $message = null;
         return $this->render('espace_client/devisdetail.html.twig', [
-            'user' => $this->getUser()
+            'user' => $this->getUser(),
+            'message' => $message
         ]);
     }
 }
