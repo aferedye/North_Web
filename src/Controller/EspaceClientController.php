@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Devis;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -22,6 +24,9 @@ class EspaceClientController extends AbstractController
      */
     public function mesDevis()
     {
+        $user = $this->getUser();
+
+
         $message = null;
         return $this->render('espace_client/devis.html.twig', [
             'user' => $this->getUser(),
