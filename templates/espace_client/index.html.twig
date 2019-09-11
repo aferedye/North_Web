@@ -1,19 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello EspaceClientController!{% endblock %}
+{% block title %}Espace Client{% endblock %}
    {% block stylesheets %}
-       <link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
+       <link rel="stylesheet" href="{{ asset('css/espace_client.css') }}">
    {% endblock %}
 {% block body %}
 
 <main>
-    <section class="container-fluid">
+    <section class="container">
         <h1>Espace Client</h1>
-        <div class="container col-8">
-        <ul>
-            <li><a href="{{ path('espace_client_devis') }}">Consulter les devis</a></li>
-            <li><a href="{{ path('espace_client_devisdetail') }}">Modifier mes informations</a></li>
-        </ul>
+        <h2>Bonjour, Mr. {{ user.lastname }}</h2>
+        <p class="m-t10 txt-index">Que souhaiter vous faire ?</p>
+        <div class="d-flex">
+            <div class="col-sm-12 col-md-12 col-lg-12 d-flex">
+                <ul class="d-flex list-index m-a">
+                    <li><a href="{{ path('espace_client_devis') }}" class="btn-index"><span class="transform">Consulter mes devis</span></a></li>
+                    <li><a href="{{ path('espace_client_devisdetail') }}" class="btn-index"><span class="transform">Modifier mes informations</span></a></li>
+                </ul>
+            </div>
         </div>
     </section>
 </main>
