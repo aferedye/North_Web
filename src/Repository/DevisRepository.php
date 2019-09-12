@@ -74,16 +74,7 @@ class DevisRepository extends ServiceEntityRepository
         return $this->CreateQueryBuilder('m')
             ->where('m.email LIKE :needle')
             ->setParameter('needle', "%".$needle."%")
-            ->getQuery()
-            ->getResult();
-
-    }
-
-    public function searchId($needle)
-    {
-        return $this->CreateQueryBuilder('m')
-            ->where('m.id LIKE :needle')
-            ->setParameter('needle', "%".$needle."%")
+            ->orderBy('m.id', 'DESC')
             ->getQuery()
             ->getResult();
 

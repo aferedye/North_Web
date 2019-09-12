@@ -27,6 +27,7 @@ class DevisType extends AbstractType
             ->add('cartedynamique', CheckboxType::class)
             ->add('integrvideo', CheckboxType::class)
             ->add('assistance', CheckboxType::class)
+            ->add('nomprojet', TextType::class)
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('email', TextType::class)

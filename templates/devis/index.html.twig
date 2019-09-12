@@ -309,6 +309,12 @@
                             {{ form_errors(form_devis.email) }}
                         </div>
                         {% endif %}
+                        {{ form_widget(form_devis.nomprojet,{
+                            'required': false,
+                            'attr': {
+                                'class': 'form-fields',
+                                'placeholder': 'Nom du projet*'
+                            }}) }}
                         {{ form_widget(form_devis.telephone,{
                             'attr': {
                                 'class': 'form-fields',
@@ -319,6 +325,7 @@
                             {{ form_errors(form_devis.telephone) }}
                         </div>
                         {% endif %}
+                        <p>Les champs marqué par un astérix ne sont pas obligatoires</p>
                         {{ form_row(form_devis.valider,{
                             'attr': {
                                 'class': 'submit',

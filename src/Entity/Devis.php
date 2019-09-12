@@ -121,6 +121,21 @@ class Devis
      */
     private $telephone;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $Date;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $horstaxe;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $nomprojet;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -314,6 +329,42 @@ class Devis
     public function setTelephone(string $telephone): self
     {
         $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->Date;
+    }
+
+    public function setDate(\DateTimeInterface $Date): self
+    {
+        $this->Date = $Date;
+
+        return $this;
+    }
+
+    public function getHorstaxe(): ?int
+    {
+        return $this->horstaxe;
+    }
+
+    public function setHorstaxe(int $horstaxe): self
+    {
+        $this->horstaxe = $horstaxe;
+
+        return $this;
+    }
+
+    public function getNomprojet(): ?string
+    {
+        return $this->nomprojet;
+    }
+
+    public function setNomprojet(?string $nomprojet): self
+    {
+        $this->nomprojet = $nomprojet;
 
         return $this;
     }

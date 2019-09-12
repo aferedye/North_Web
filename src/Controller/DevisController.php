@@ -37,7 +37,7 @@ class DevisController extends AbstractController
         $form = new Devis();
 
         $formul = $this->createFormBuilder($form)
-            ->add('maquette',RangeType::class)
+            ->add('maquette', RangeType::class)
             ->add('lvlgraphisme', RangeType::class)
             ->add('partieblog', CheckboxType::class)
             ->add('forum', CheckboxType::class)
@@ -48,6 +48,7 @@ class DevisController extends AbstractController
             ->add('assistance', CheckboxType::class)
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
+            ->add('nomprojet', TextType::class)
             ->add('email', TextType::class)
             ->add('telephone', TextType::class)
             ->add('valider', SubmitType::class)
@@ -57,6 +58,7 @@ class DevisController extends AbstractController
 
         if ($formul->isSubmitted() && $formul->isValid()) {
 
+            $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
             $formulaire = $formul->getData();
             $nbrlang = $request->request->get('a');
             $nbrpage = $request->request->get('b');
@@ -64,34 +66,31 @@ class DevisController extends AbstractController
             $email = $formulaire->getEmail();
 
             $content = $this->renderView('devis/pdf.html.twig', [
-                    'maquette' => $formulaire->getMaquette(),
-                    'lvlgraphisme' => $formulaire->getLvlgraphisme(),
-                    'nbrpage' => $nbrpage,
-                    'nbrlangue' => $nbrlang,
-                    'partieblog' => $formulaire->getPartieBlog(),
-                    'forminscription' => $nbrdevis,
-                    'forum' => $formulaire->getForum(),
-                    'accesmembre' => $formulaire->getAccesmembre(),
-                    'gestionfichiers' => $formulaire->getGestionfichier(),
-                    'cartedynamique' => $formulaire->getCartedynamique(),
-                    'integrationvideo' => $formulaire->getIntegrvideo(),
-                    'assistance' => $formulaire->getAssistance(),
-                    'email' => $formulaire->getEmail(),
-                    'nom' => $formulaire->getNom(),
-                    'prenom' => $formulaire->getPrenom(),
-                    'tel' => $formulaire->getTelephone(),
+                'maquette' => $maquette = $formulaire->getMaquette(),
+                'lvlgraphisme' => $formulaire->getLvlgraphisme(),
+                'nbrpage' => $nbrpage,
+                'nbrlangue' => $nbrlang,
+                'partieblog' => $formulaire->getPartieBlog(),
+                'forminscription' => $nbrdevis,
+                'forum' => $formulaire->getForum(),
+                'accesmembre' => $formulaire->getAccesmembre(),
+                'gestionfichiers' => $formulaire->getGestionfichier(),
+                'cartedynamique' => $formulaire->getCartedynamique(),
+                'integrationvideo' => $formulaire->getIntegrvideo(),
+                'assistance' => $formulaire->getAssistance(),
+                'email' => $formulaire->getEmail(),
+                'nom' => $formulaire->getNom(),
+                'prenom' => $formulaire->getPrenom(),
+                'tel' => $formulaire->getTelephone(),
             ]);
 
-
-
-            $pdf = new Html2Pdf("p","A4","fr");
+            $pdf = new Html2Pdf("p", "A4", "fr");
             $pdf->writeHTML($content);
             $result = $pdf->output('devis.pdf', 'S');
 
             $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
                 ->setUsername('contact.northweb@gmail.com')
-                ->setPassword('MafNorthW1')
-            ;
+                ->setPassword('MafNorthW1');
 
             $mailer = new Swift_Mailer($transport);
             $attachement = new Swift_Attachment($result, 'devis.pdf', 'application/pdf');
@@ -108,11 +107,14 @@ class DevisController extends AbstractController
              Merci pour votre compréhension,
              Nous vous souhaitons une agréable journée.
              L'équipe North Web.")
-                ->attach($attachement)
-            ;
+                ->attach($attachement);
+
+            $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
 
             $mailer->send($message);
 
+            $form->setHorstaxe($HT);
+            $form->setDate($date);
             $form->setNbrpage($nbrpage);
             $form->setNbrlangue($nbrlang);
             $form->setFormulaireinscritdevis($nbrdevis);
@@ -121,7 +123,10 @@ class DevisController extends AbstractController
             $entityManager->persist($form);
             $entityManager->flush();
 
-            return $this->redirectToRoute('task_succes');
+
+            //return $this->redirectToRoute('task_succes', array(
+            //  'ttc' => $ttc
+            //));
         }
 
         return $this->render('devis/index.html.twig', [
@@ -130,10 +135,43 @@ class DevisController extends AbstractController
         ]);
     }
 
+    const prixmaquette = 150;
+    const prixgraphisme = 150;
+    const prixpage = 150;
+    const prixblog = 150;
+    const prixinscription = 150;
+    const prixforum = 150;
+    const prixmembre = 150;
+    const prixfichier = 150;
+    const prixcarte = 150;
+    const prixvideo = 150;
+    const prixlangue = 150;
+    const prixassistance = 150;
+
+    public function calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis)
+    {
+        $totalmaquette = $formulaire->getMaquette() * self::prixmaquette;
+        $totalgraphisme = $formulaire->getLvlgraphisme() * self::prixgraphisme;
+        $totalpage = $nbrpage * self::prixpage;
+        $totalblog = $formulaire->getPartieBlog() * self::prixblog;
+        $totalinscription = $nbrdevis * self::prixinscription;
+        $totalforum = $formulaire->getForum() * self::prixforum;
+        $totalmembre = $formulaire->getAccesmembre() * self::prixmembre;
+        $totalfichier = $formulaire->getGestionfichier() * self::prixfichier;
+        $totalcarte = $formulaire->getCartedynamique() * self::prixcarte;
+        $totalvideo = $formulaire->getIntegrvideo() * self::prixvideo;
+        $totallangue = $nbrlang * self::prixlangue;
+        $totalassistance = $formulaire->getAssistance() * self::prixassistance;
+        $HT = $totalmaquette + $totalgraphisme + $totalpage + $totalblog + $totalinscription + $totalforum + $totalmembre +
+            $totalfichier + $totalcarte + $totalvideo + $totallangue + $totalassistance;
+        return $HT;
+    }
+
     /**
      * @Route("/succes", name="task_succes")
      */
-    public function succes() {
+    public function succes()
+    {
 
         $succes = 'Le devis vous a été envoyer par e-mail';
         return $this->render('succes/index.html.twig', [
@@ -141,7 +179,6 @@ class DevisController extends AbstractController
             'user' => $this->getUser()
         ]);
     }
-
 
 
 }
