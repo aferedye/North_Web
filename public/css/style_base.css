@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
 
 .logo {
-    height: 100px;
-    margin-left: 50px;
+    height: 150px;
+    margin-left: 25px;
     margin-bottom: 35px;
 }
 
-
+.first-link {
+    margin-top: 30%;
+}
 
 header {
     width: 100%;
@@ -38,6 +40,9 @@ header {
     color: #818181;
     display: block;
     transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* When you mouse over the navigation links, change their color */

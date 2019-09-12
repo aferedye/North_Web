@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Devis;
-use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -24,12 +23,17 @@ class EspaceClientController extends AbstractController
      */
     public function mesDevis()
     {
-        $user = $this->getUser();
-
-
+        $results = null;
         $message = null;
+        $usermail = $this->getUser()->getEmail();
+        dump($usermail);
+
+        $em = $this->getDoctrine()->getRepository(Devis::class);
+        $results = $em->searchEmail($usermail);
+
         return $this->render('espace_client/devis.html.twig', [
             'user' => $this->getUser(),
+            'results' => $results,
             'message' => $message
         ]);
     }
@@ -41,6 +45,18 @@ class EspaceClientController extends AbstractController
     {
         $message = null;
         return $this->render('espace_client/devisdetail.html.twig', [
+            'user' => $this->getUser(),
+            'message' => $message
+        ]);
+    }
+
+    /**
+     * @Route("/espace/client/profil", name="espace_client_profil")
+     */
+    public function monProfil()
+    {
+        $message = null;
+        return $this->render('espace_client/devis.html.twig', [
             'user' => $this->getUser(),
             'message' => $message
         ]);

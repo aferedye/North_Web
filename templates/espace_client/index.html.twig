@@ -5,17 +5,26 @@
        <link rel="stylesheet" href="{{ asset('css/espace_client.css') }}">
    {% endblock %}
 {% block body %}
-
-<main>
+    <main>
     <section class="container">
         <h1>Espace Client</h1>
-        <h2>Bonjour, Mr. {{ user.lastname }}</h2>
-        <p class="m-t10 txt-index">Que souhaiter vous faire ?</p>
+        <h2 class="m-t20">Bonjour, Mr. {{ user.lastname }}</h2>
+        <p class="txt-index">Que souhaiter vous faire ?</p>
         <div class="d-flex">
             <div class="col-sm-12 col-md-12 col-lg-12 d-flex">
-                <ul class="d-flex list-index m-a">
-                    <li><a href="{{ path('espace_client_devis') }}" class="btn-index"><span class="transform">Consulter mes devis</span></a></li>
-                    <li><a href="{{ path('espace_client_devisdetail') }}" class="btn-index"><span class="transform">Modifier mes informations</span></a></li>
+                <ul class="d-flex list-index ">
+                    <li class="case">
+                        <a href="{{ path('espace_client_devis') }}" class="case-title">
+                            <img src="{{ asset('img/multi-devis.png') }}" alt="" class="m-t15">
+                            <p class="m-t10 case-title">Mes Devis</p>
+                        </a>
+                    </li>
+                    <li class="case">
+                        <a href="{{ path('espace_client_profil') }}" class="case-title">
+                            <img src="{{ asset('img/particulier.png') }}" alt="" class="m-t15">
+                            <p class="m-t10 case-title">Mon Profil</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
