@@ -8,7 +8,7 @@
     <main>
         <section>
             <h1>Mes Devis</h1>
-            <a href="{{ path('admin') }}" class="retour">Retour à l'espace client</a>
+            <a href="{{ path('espace_client') }}" class="txt-c m-t5">Retour à l'espace client</a>
             {% if message != null %}
                 {{ message }}
             {% endif %}
@@ -16,51 +16,27 @@
                <table class="container">
                    <thead>
                        <tr>
-                           <th>Recherche</th>
-                           <form method="post" action="{{ path('admin_devis_searchname') }}">
-                               <td>
-                                   <label for="name">
-                                       <input type="text" name="Nom" id="name" placeholder="Nom" class="search-fields">
-                                   </label>
-                                   <input type="submit" value="Search" class="btn btn-light">
-                               </td>
-                           </form>
-                           <form method="post" action="{{ path('admin_devis_searchfirstname') }}">
-                               <td>
-                                   <label for="firstname">
-                                       <input type="text" name="Prenom" id="firstname" placeholder="Prénom" class="search-fields">
-                                   </label>
-                                   <input type="submit" value="Search" class="btn btn-light">
-                               </td>
-                           </form>
-                           <form method="post" action="{{ path('admin_devis_searchemail') }}">
-                               <td>
-                                   <label for="email">
-                                       <input type="text" name="Email" id="email" placeholder="E-mail" class="search-fields">
-                                   </label>
-                                   <input type="submit" value="Search" class="btn btn-light">
-                               </td>
-                           </form>
-                           <td>
-                               <a href="{{ path('admin_devis') }}">Retour à tout les devis</a>
-                           </td>
-                       </tr>
-                       <tr>
                            <td>ID</td>
-                           <td>Nom</td>
-                           <td>Prénom</td>
-                           <td>Adresse e-mail</td>
+                           <td>Date</td>
+                           <td>Nom du projet</td>
+                           <td>Prix H.T</td>
+                           <td>Prix T.T.C (TVA 20%)</td>
+                           <td></td>
                        </tr>
                    </thead>
                    <tbody>
                    {% set id = 1 %}
+
                    {% for result in results  %}
+                       {% set totalTVA = result.horstaxe / 100 * 20 %}
+                       {% set totalTTC = result.horstaxe + totalTVA %}
                    <tr>
                        {% set counter = ( counter | default(0) ) + 1 %}
                        <th>{{ counter }}</th>
-                       <td>{{ result.nom|capitalize }}</td>
-                       <td>{{ result.prenom|capitalize }}</td>
-                       <td>{{ result.email }}</td>
+                       <td>{{ result.date|date('j/m/Y H:i') }}</td>
+                       <td>{{ result.nomprojet|capitalize }}</td>
+                       <td>{{ result.horstaxe }} €</td>
+                       <td>{{ totalTTC }} €</td>
                        <form method="post" action="{{ path('admin_detail_devis') }}">
                             <input type="hidden" name="iddevis" value="{{ result.id }}">
                             <td><button type="submit" >Voir les détails du devis</button></td>

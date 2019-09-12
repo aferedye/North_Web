@@ -14,7 +14,9 @@ h1, h2 {
     font-size: 1.8em;
     text-align: center;
 }
-
+.m-t5 {
+    margin-top: 5%;
+}
 .m-t10 {
     margin-top: 10%;
 }
@@ -92,4 +94,8 @@ tbody td:hover:before {
     bottom: -9999px;
     background-color: rgba(255, 255, 255, 0.2);
     z-index: -1;
+}
+.txt-c {
+    display: block;
+    text-align: center;
 }
