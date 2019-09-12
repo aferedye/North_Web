@@ -51,11 +51,9 @@ class AdminController extends AbstractController
     public function devisDetail(Request $request) {
 
         $id = $request->get("iddevis");
-        dump($id);
 
         $em = $this->getDoctrine()->getRepository(Devis::class);
-        $results = $em->searchId($id);
-        dump($results);
+        $results = $em->findBy(array('id' => $id));
 
         return $this->render('admin/devisdetail.html.twig', [
             'user' => $this->getUser(),
