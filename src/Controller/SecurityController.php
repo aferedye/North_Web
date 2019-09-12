@@ -37,7 +37,7 @@ class SecurityController extends AbstractController
         $roles = 'ROLE_USER';
 
         $user = new User();
-        $date = new \DateTime('now');
+        $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
 
         $user->setRoles($roles);
         $form = $this->createForm(RegistrationType::class, $user);

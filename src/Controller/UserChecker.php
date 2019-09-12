@@ -33,10 +33,8 @@ class UserChecker implements UserCheckerInterface
 
     public function checkPostAuth(UserInterface $user)
     {
-        if (!$user instanceof AppUser) {
-            if ($user->getEnabled() === null) {
-                $message = "Votre compte est inactif";
-                return $message;}
+        if (!$user->getEnabled()) {
+            throw new \Exception("ce membre n'est pas actif");
         }
 
     }

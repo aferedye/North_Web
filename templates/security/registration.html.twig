@@ -14,6 +14,9 @@
             {{ form_start(form) }}
             <div class='login_fields'>
                 <div class='login_fields__firstname'>
+                    {{ form_widget(form.civility ) }}
+                </div>
+                <div class='login_fields__firstname'>
                    {{ form_widget(form.firstname, {
                        'attr': {
                            'placeholder': 'Prénom'

@@ -58,6 +58,7 @@ class User implements UserInterface
      */
     private $id;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -335,6 +336,11 @@ class User implements UserInterface
     private $Enabled;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $civility;
+
+    /**
      * @return string
      */
     public function getResetToken(): string
@@ -370,6 +376,19 @@ class User implements UserInterface
     public function setEnabled(?bool $Enabled): self
     {
         $this->Enabled = $Enabled;
+
+        return $this;
+    }
+
+
+    public function getCivility(): ?string
+    {
+        return $this->civility;
+    }
+
+    public function setCivility(string $civility): self
+    {
+        $this->civility = $civility;
 
         return $this;
     }

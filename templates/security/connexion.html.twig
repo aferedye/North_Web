@@ -34,6 +34,7 @@
                     {% if error %}
                         <div class="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                     {% endif %}
+                    {{ status.text }}
                     <div class='login_fields__submit'>
                         <input type='submit' value='Log In' class="submit">
                         <div class='forgot'>
