@@ -19,7 +19,7 @@ class ContactController extends AbstractController
     public function index(Request $request, \Swift_Mailer $mailer)
     {
 
-     /*   $form = $this->createForm(ContactType::class);
+        $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
         $this->addFlash('info', 'Test number 1' );
@@ -43,7 +43,7 @@ class ContactController extends AbstractController
 
         return $this->render('contact/index.html.twig', [
                 'our_form' => $form->createView(),
-        ]); */
+        ]);
 
 
         $response = $request->request->get("prenom");

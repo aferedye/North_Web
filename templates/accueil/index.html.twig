@@ -4,14 +4,14 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
-    <link rel="stylesheet" href="{{ asset ('css/style_accueil.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/style_projet.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset ('css/style_accueil.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 {% endblock  %}
 
 
 {% block body %}
     <body>
-    <section id="corps">
+    <section>
         <div class="container-fluid">
             <div class="row" id="fullPage">
                     <article class="section s1">
@@ -26,10 +26,10 @@
                         </p>
                         <p class="sommes animated fadeInUp delay-3s"> 
                             Nous sommes capables de répondre à tous vos types de projets
-                            du site vitrine au site ecommerce
+                            du site vitrine au site e-commerce
                         </p>
                     </article>
-                    <article class="section s2" id="s2">
+                    <article class="section s2">
                         <p class="north">
                             North web en quelques lignes...
                         </p>
@@ -39,26 +39,26 @@
                                 <br>
                                 Notre but est de vous fournir tout ce dont vous avez besoin pour une communication digitale réussie.
                             </p>
-                            <div class="pos-btn1 bt1">
-                                <a href="" class="btn-article">
-                                    <p class="btn-article2-txt">En savoir +</p>
+                            <div class="pos-btn">
+                                <a href="{{ path('presentation') }}" class="btn-article">
+                                    <p class="btn-article-txt">En savoir +</p>
                                 </a>
                             </div>
                         </div>
                     </article>
-                    <div class="section s3" id="section1">
+                    <div class="section s3">
                         <div>
                             <p class="besoin2">Besoin d'un devis ?</p>
                             <p class="simulateur">Utlisez notre simulateur de devis pour obtenir une estimation en quelque clic</p>
-                            <div class="pos-btn">
-                                <a href="{{ path('devis') }}" class="btn-articled">
-                                    <p class="btn-article-txt">C'est parti !</p>
+                            <div class="pos-btn2">
+                                <a href="{{ path('devis') }}" class="btn-article2">
+                                    <p class="btn-article2-txt">C'est parti !</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                 <article class="section s4" id="section4">
-                        <div class="fond-txt-projet">
+                        <div>
                             <p class="decouvrez">
                                 Découvrez
                             </p>
@@ -66,10 +66,10 @@
                                 Nos réalisations !
                             </p>
                         </div>
-                        <div class="flex real zoom">
+                        <div class="block real zoom">
                             <div class="overlay-image">
                                 <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/resto3.png') }}" alt="Alt text" />
+                                    <img class="image" src="{{ asset('img/images_projet/resto3.png') }}" alt="Buffalo Snack" />
                                     <div class="hover">
                                         <div class="text">
                                             Buffalo Snack
@@ -79,7 +79,7 @@
                             </div>
                             <div class="overlay-image">
                                 <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/vit1.jpg') }}" alt="Alt text" />
+                                    <img class="image" src="{{ asset('img/images_projet/vit1.jpg') }}" alt="Life Style" />
                                     <div class="hover">
                                         <div class="text">
                                             Life Style
@@ -89,7 +89,7 @@
                             </div>
                             <div class="overlay-image">
                                 <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/tech1.jpg') }}" alt="Alt text" />
+                                    <img class="image" src="{{ asset('img/images_projet/tech1.jpg') }}" alt="Smart Tech" />
                                     <div class="hover">
                                         <div class="text">
                                             Smart Tech
@@ -97,9 +97,11 @@
                                     </div>
                                 </a>
                             </div>
+                        </div>
+                        <div class="block real zoom mt5">
                             <div class="overlay-image">
                                 <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/vet2.png') }}" alt="Alt text" />
+                                    <img class="image" src="{{ asset('img/images_projet/vet2.png') }}" alt="Phil Mode" />
                                     <div class="hover">
                                         <div class="text">
                                             Phil Mode
@@ -109,7 +111,7 @@
                             </div>
                             <div class="overlay-image">
                                 <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/resto2.jpg') }}" alt="Alt text" />
+                                    <img class="image" src="{{ asset('img/images_projet/resto2.jpg') }}" alt="Mexican Restaurant" />
                                     <div class="hover">
                                         <div class="text">
                                             Mexican Restaurant
@@ -119,7 +121,7 @@
                             </div>
                             <div class="overlay-image">
                                 <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/tech2.png') }}" alt="Alt text" />
+                                    <img class="image" src="{{ asset('img/images_projet/tech2.png') }}" alt="Electro Shoppe" />
                                     <div class="hover">
                                         <div class="text">
                                             Electro Shoppe
@@ -142,7 +144,7 @@
                             <a href="{{ path('contact_index') }}" class="btn-article2">
                                 <p class="btn-article2-txt">Je prend RDV !</p>
                             </a>
-                            <a href="{{ path('contact_index') }}" class="btn-article2">
+                            <a href="{{ path('contact_index') }}" class="btn-article2 qmt5">
                                 <p class="btn-article2-txt">Nous appeller !</p>
                             </a>
                         </div>
@@ -159,14 +161,7 @@
             navigation: true,
             slidesNavigation: true,
             scrollHorizontally: true,
-        });
-        function myScrollTo(id) {
-            let e = document.getElementById(id);
-            let box = e.getBoundingClientRect();
-            let k;
-            for (k = 0; k < 49; k++) setTimeout("window.scrollBy(0," + Math.floor(box.top / 50) + ")", 10 * k);
-            setTimeout("myLastScrollTo('" + id + "')", 500);
-        }
+        })
     </script>
     </body>
 {% endblock %}

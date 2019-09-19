@@ -28,7 +28,7 @@
                <img src="{{ asset('img/logo.png') }}" alt="" class="logo">
                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                <a href="{{ path('accueil') }}" class="first-link">Accueil</a>
-               <a href="{{ path('qui_sommes_nous') }}">Présentations</a>
+               <a href="{{ path('presentation') }}">Présentations</a>
                <a href="{{ path('devis') }}">Devis</a>
                <a href="{{ path('accueil')}}#section4">Références</a>
                <a href="{{ path('contact_index') }}">Contact</a>
@@ -41,15 +41,13 @@
                {% else %}
                    <a href="{{ path('security_connexion') }}">Se connecter</a>
                {% endif %}
-
+               <footer>
+                   <p class="copyright text-center">Copyright &copy; 2019 North Web. Tous Droits Réservés</p>
+               </footer>
            </div>
        </nav>
     </header>
-   <div id="accueil">
-   </div>
-   <div id="bouton">
-       <div id="motif-bouton"></div>
-   </div>
+
         {% block body %}{% endblock %}
    <script>
        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
