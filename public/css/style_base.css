@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
 
 .logo {
-    height: 150px;
-    margin-left: 25px;
-    margin-bottom: 35px;
+    height: 110px;
+    margin-left: 55px;
+    margin-bottom: 15px;
 }
 
 .first-link {
-    margin-top: 30%;
+    margin-top: 15%;
 }
 
 header {
@@ -36,7 +36,7 @@ header {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -174,13 +174,9 @@ header {
     transition: transform 0.4s ease;
 }
 
-
-@media only screen and (max-width : 640px) {
-
-    header {
-
-        position: absolute;
-
-    }
+.copyright {
+    position: relative;
+    top: 20px;
 }
+
 
