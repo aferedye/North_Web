@@ -1,258 +1,275 @@
-* { box-sizing: border-box}
-* {margin :0px; padding: 0px}
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.resetFull {
+    padding: 0;
+    margin: 0;
+}
+
+.s1 {
+    background-image: url("../img/images_qui/presentation_back.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.s2{
+    background-image: url("../img/images_qui/fond_profil.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.titre{
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 15px;
+    left: 34%;
+}
+.pt5 {
+    padding-top: 2%;
+}
+.pb5 {
+    padding-bottom: 2%;
+}
+.presentation{
+    width: 100%;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.70);
+
+}
+
+p {
+    margin: 0;
+    padding-left: 15px;
+
+}
 
 
 /** FORMAT MOBILE !!!!! **/
 
 
-@media screen and (min-width: 320px ){ 
+@media screen and (min-width: 320px ){
 
-.container {
-    width: 320px;
- 
-}
 
-.row {
-    display: flex;
-   /* flex-wrap: wrap}   /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
+    .row {
+        display: flex;
+        /* flex-wrap: wrap}   /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
     }
-    
-.logo {
-    width: 70px;
-    height: 70px;
-    margin: 5%;   
-    
-}
 
-.antoine {
-    width: 40px;
-    height: 40px;
-    margin: 10%;
-    padding: 0%;
-}
+    .logo {
+        width: 70px;
+        height: 70px;
+        margin: 5%;
 
-.nav {
-    display: none;
-}
+    }
 
-.banniere{
-    background: url(../qui_sommes_nous/format_mobile/presentation_back320.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 180px;
-    width: 100%;  
-}
-    
-    .bannierefond{
-    background: url(../qui_sommes_nous/format_mobile/fond_profil320.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 100%;  
+    .antoine {
+        width: 40px;
+        height: 40px;
+        margin: 10%;
+        padding: 0;
     }
-    
-    .presentation{
-        font-size: 0.6rem;
-        padding: 5px;
-        color: white;
-        text-align: justify;
-        margin: 8px;
-        
-    }
-    
-    .titre{
-        text-align: center;
-        font-size: 1rem;
-        color: white;
-        padding: 5px;
-    }
-    
- 
-    
-    .article {
-        align-items: center;
-        height: 200px;
-    }
-    
-    .imageprofil{
-        height: 30px;
-        width: 30px;
-        border-radius: 50px;
-        margin: 30px;
-        margin-top: 10px;
-        margin-bottom: 7px;
-       align-items: center;
-      
-    }
-    
-    .prenom{
-        font-size: 0.5rem;
-        color: white;
-        margin: 30px;
-        margin-top: 5px;
-        margin-bottom: 7px;
-      
-        
-    }
-    
-    .description{
-        font-size: 0.4rem;
-        color: white;
-        margin: 30px;
-        margin-top: 5px;
-        width: 30%;
-        height: auto;
-        text-align: center;
-    }
+
+
     
     .policewall{
-        font-family: 'Marck Script', cursive;
-    }
-    
-    .police{
-        font-family: 'Open Sans', sans-serif;
-
-    }
-    
-    
-    
-footer {
-    font-size: 0.3rem;
-    text-align: center;
-        
-}
-    
-    
-}
-    
-
-
-
-
-
-
-    
-  /** FORMAT TABLETTE !!!!! **/
-    
-    
-  @media screen and (min-width: 768px ){ 
-        /** Version tablette **/
-      
-      
-  .container {
-     width: 768px;
-      display: flex;
-      flex-direction: column;
-      }
-    
-  
- /* .row {
-    display: flex;
-    flex-direction: row;
-    display: block;
-   
-      }    /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
-    
-    
-      
-.logo {
-    width: 100px;
-    height: 100px;
-    margin: 3%;
-    margin-left: 80px;
-    
-}
-    
-
-.antoine {
-    margin: 50px;
-    width: 50px;
-    height: 50px;
-    margin-top: 50px;
-    margin-left: 350px;
-}   
-      
-      
-.banniere{
-    background: url(../qui_sommes_nous/format_tablette/presentation_back768.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;  
-}
-    
-    .bannierefond{
-    background: url(../qui_sommes_nous/format_tablette/fond_profil768.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
-    height: 600px;
-    width: 100%;  
-    }
-      
-
-    .presentation{
-        font-size: 0.8rem;
-        padding: 5px;
+        font-family: 'Raleway', cursive;
+        font-size: 1.2rem;
         color: white;
-        text-align: justify;
-        margin: 8px; 
-    }
-      
-     
-    
-    .titre{
         text-align: center;
-        font-size: 1.5rem;
-        color: white;
-        padding: 5px;
     }
-      
-     .policewall{
-        font-family: 'Marck Script', cursive;
-         font-size: 1.5rem;
+
+    .taillearticle{
+        width: 105px;
     }
-      
-      
-      
-    .imageprofil{
-        height: 60px;
-        width: 60px;
-        border-radius: 50px;
-      
+
+    .zone-article {
+        width: 100%;
+        display: flex;
     }
-    
+
+    .end {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 3%;
+        margin-top: 3%;
+
+    }
+    .start {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+
+
     .prenom{
         font-size: 0.5rem;
         color: white;
-      }
-      
-      .articleantoine{
-          align-items: flex-end;
-      }
+        margin-left: 5px;
+        margin-right: 5px;
 
-      
-    
-      
-   
-    
-footer {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 5px;
-        
-}
-      
-      
-      
-      
-      
     }
-      
-      
-      
-      
-    
+
+    .imageprofil{
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        margin: 5px;
+
+
+    }
+
+    .description{
+        font-size: 0.5rem;
+        color: white;
+        margin-top: 5px;
+        height: auto;
+        text-align: justify;
+        padding-right: 7%;
+
+    }
+
+    .descriptionant{
+        text-align: right;
+        font-size: 0.5rem;
+        color: white;
+        padding-left: 7%;
+    }
+
+
+    footer {
+        font-size: 0.3rem;
+        text-align: center;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/** FORMAT TABLETTE !!!!! **/
+
+
+@media screen and (min-width: 768px ){
+    /** Version tablette **/
+
+
+
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin: 3%;
+        margin-left: 80px;
+
+    }
+
+
+    .antoine {
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        margin-left: 350px;
+    }
+
+
+
+
+
+    .policewall{
+        font-family: 'Marck Script', cursive;
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+        color: white;
+        text-align: center;
+    }
+
+
+    .zone-article {
+        width: 100%;
+        display: flex;
+        height: 133px;
+        padding: 1%;
+    }
+
+    .end {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    .start {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+
+    .prenom{
+        font-size: 1rem;
+        color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+
+    }
+
+    .imageprofil{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin: 10px;
+
+
+    }
+
+    .description{
+        font-size: 0.9rem;
+        color: white;
+        margin-top: 5px;
+        height: auto;
+        text-align: left;
+    }
+
+    .descriptionant{
+        text-align: right;
+        font-size: 0.9rem;
+    }
+
+
+
+
+    footer {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 10px;
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
 /** FORMAT PC !!!!! **/
 
 
@@ -260,115 +277,92 @@ footer {
 
 
 @media screen and (min-width: 1280px){        /** Version PC **/
-    
-.container {
-        width: 1280px;
-        margin: auto}
-    
-      
-.logo {
-    width: 200px;
-    height: 200px;
-    margin: 5%;   
-    
-}
 
-.row {
-    display: flex;
-    flex-wrap: block;        /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
 
-     }
-    
-nav {
-    display: block;
-}
-    
+
+
+    .logo {
+        width: 200px;
+        height: 200px;
+        margin: 5%;
+
+    }
+
+
     .antoine{
         display: none;
     }
-    
-    
-    .banniere{
-    background: url(../qui_sommes_nous/format_pc/presentation_back.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 650px;
-    width: 100%;  
-}
-    
-    .bannierefond{
-           background: url(../qui_sommes_nous/format_pc/fond_profil.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 650px;
-    width: 100%;  
-    }
-    
-    
-    .presentation{
-        font-size: 1.3rem;
-        padding: 5px;
+
+
+
+
+
+    .policewall{
+
+        font-size: 2.5rem;
+        margin-bottom: 50px;
         color: white;
-        text-align: justify;
-        margin: 15px;
-        
-        
-    }
-    
-    .titre{
         text-align: center;
-        font-size: 1.5rem;
-        color: white;
-        padding: 5px;
     }
-    
-      .policewall{
-        font-family: 'Marck Script', cursive;
-          font-size: 2.5rem;
-    }
-    
+
     .taillearticle{
         width: 105px;
     }
-    
+
+    .zone-article {
+        width: 100%;
+        display: flex;
+        height: 133px;
+        padding: 1%;
+    }
+
+    .end {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 3%;
+        margin-top: 3%;
+
+    }
+    .start {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+
+
+
+
+    .prenom{
+        font-size: 1rem;
+        color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+
+    }
+
     .imageprofil{
         height: 100px;
         width: 100px;
         border-radius: 50px;
-        margin: 30px;
-        margin-top: 10px;
-        margin-bottom: 7px;
-       align-items: center;
-      
-    }
-    
-    .prenom{
-        font-size: 0.5rem;
-        color: white;
-         margin: 30px;
-        margin-top: 5px;
-        margin-bottom: 7px;
-      
-        
-    }
-    
-    .description{
-        text-align: justify;
-        font-size: 0.5rem;
-        color: white;
         margin: 10px;
+
+
     }
-    
-    
-footer {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 5px;
-        
+
+    .description{
+        font-size: 0.9rem;
+        color: white;
+        margin-top: 5px;
+        height: auto;
+        text-align: left;
+        margin-right: 50%;
+    }
+
+    .descriptionant{
+        text-align: right;
+        font-size: 0.9rem;
+        margin-left: 50%;
+    }
+
 }
-      
-    
-    
-    
-    
-    }
