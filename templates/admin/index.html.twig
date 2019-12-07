@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
+{% endblock %}
+{% block body %}
+    <main>
+        <section class="container-fluid">
+            <h1>Espace d'administration North Web</h1>
+            <article class="row">
+                <ul>
+                    <li><a href="{{ path('admin_devis') }}">Consulter les émissions de devis</a></li>
+                    {% if is_granted('ROLE_MASTER') %}
+                        <li><a href="{{ path('master_user') }}">Consulter les comptes utilisateurs</a></li>
+                    {% endif %}
+
+                </ul>
+            </article>
+        </section>
+    </main>
+{% endblock %}

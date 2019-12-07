@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #1f222e;
+}
+
+h1 {
+    color: gainsboro;
+    text-align: center;
+    padding-top: 25px;
+}
+
+
+ul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    width: 30%;
+    height: 350px;
+    border: gainsboro 1px solid;
+    border-radius: 3px;
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+.retour{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.search-fields {
+    background-color: #1f222e;
+    color: gainsboro;
+    border: gainsboro 0.5px solid;
+    padding: 5px;
+}
+
+.m-t10 {
+    margin-top: 15px;
+}
+
+.txt-c {
+    display: block;
+    text-align: center;
+}
+
+.txt-white {
+    color: white;
+}

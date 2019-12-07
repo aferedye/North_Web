@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin/Devis{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/espace_client.css') }}">
+{% endblock %}
+{% block body %}
+    <main>
+        <section>
+            <h1>Mes Devis</h1>
+            <a href="{{ path('espace_client') }}" class="txt-c m-t5">Retour à l'espace client</a>
+            {% if message != null %}
+                {{ message }}
+            {% endif %}
+            <article>
+               <table class="container">
+                   <thead>
+                       <tr>
+                           <td>ID</td>
+                           <td>Date</td>
+                           <td>Nom du projet</td>
+                           <td>Prix H.T</td>
+                           <td>Prix T.T.C (TVA 20%)</td>
+                           <td></td>
+                       </tr>
+                   </thead>
+                   <tbody>
+                   {% set id = 1 %}
+
+                   {% for result in results  %}
+                       {% set totalTVA = result.horstaxe / 100 * 20 %}
+                       {% set totalTTC = result.horstaxe + totalTVA %}
+                   <tr>
+                       {% set counter = ( counter | default(0) ) + 1 %}
+                       <th>{{ counter }}</th>
+                       <td>{{ result.date|date('j/m/Y H:i') }}</td>
+                       <td>{{ result.nomprojet|capitalize }}</td>
+                       <td>{{ result.horstaxe }} €</td>
+                       <td>{{ totalTTC }} €</td>
+                       <form method="post" action="{{ path('admin_detail_devis') }}">
+                            <input type="hidden" name="iddevis" value="{{ result.id }}">
+                            <td><button type="submit" >Voir les détails du devis</button></td>
+                       </form>
+                   </tr>
+                   {% endfor %}
+                   </tbody>
+               </table>
+            </article>
+        </section>
+    </main>
+{% endblock %}
+

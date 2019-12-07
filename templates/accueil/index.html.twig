@@ -1,94 +1,167 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset ('css/style_accueil.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset ('css/style_accueil.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 {% endblock  %}
 
+
 {% block body %}
-
     <body>
-    <section id="corps">
+    <section>
         <div class="container-fluid">
-            <div class="row">
-                    <article>
-                        <p class="besoin1">Besoin de visibilité sur le web ?</p>
-
-                        <p class="nosequipes">Nos équipes sont là pour forger votre identité graphique</p>
-
-                        <img src="{{ asset ('img/images_accueil/mouse-scroll-500.png') }}"/>
-
-                        <p class="sommes"> Nous sommes capables de répondre à tout vos types de projets
-                            du site vitrine au site ecommerce</p>
+            <div class="row" id="fullPage">
+                    <article class="section s1">
+                        <p class="besoin1 animated fadeInDown delay-1s">
+                            Besoin de visibilité sur le web ?
+                        </p>
+                        <p class="nosequipes animated fadeInDown delay-2s">
+                            Nos équipes sont là pour forger votre identité graphique
+                        </p>
+                        <p id="scroll" class="demo">
+                            <a><span></span>Scroll</a>
+                        </p>
+                        <p class="sommes animated fadeInUp delay-3s"> 
+                            Nous sommes capables de répondre à tous vos types de projets
+                            du site vitrine au site e-commerce
+                        </p>
                     </article>
-                    <article >
+                    <article class="section s2">
+                        <p class="north">
+                            North web en quelques lignes...
+                        </p>
                         <div class="flex">
-                            <div>
-                                <p class="besoin2">BESOIN</p>
-
-                                <p class="dun">d'un</p>
-
-                                <p class="devis">devis?</p>
-                            </div>
+                            <p class="nous">
+                                Nous adorons faire de belles choses.
+                                <br>
+                                Notre but est de vous fournir tout ce dont vous avez besoin pour une communication digitale réussie.
+                            </p>
                             <div class="pos-btn">
-                                <a href="#" class="btn-article">
-                                    <p class="btn-article-txt">C'est parti !</p>
+                                <a href="{{ path('presentation') }}" class="btn-article">
+                                    <p class="btn-article-txt">En savoir +</p>
                                 </a>
                             </div>
                         </div>
                     </article>
-                    <article>
+                    <div class="section s3">
+                        <div>
+                            <p class="besoin2">Besoin d'un devis ?</p>
+                            <p class="simulateur">Utlisez notre simulateur de devis pour obtenir une estimation en quelque clic</p>
+                            <div class="pos-btn2">
+                                <a href="{{ path('devis') }}" class="btn-article2">
+                                    <p class="btn-article2-txt">C'est parti !</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <article class="section s4" id="section4">
+                        <div>
+                            <p class="decouvrez">
+                                Découvrez
+                            </p>
+                            <p class="rea">
+                                Nos réalisations !
+                            </p>
+                        </div>
+                        <div class="block real zoom">
+                            <div class="overlay-image">
+                                <a href="" class="lien">
+                                    <img class="image" src="{{ asset('img/images_projet/resto3.png') }}" alt="Buffalo Snack" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Buffalo Snack
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="" class="lien">
+                                    <img class="image" src="{{ asset('img/images_projet/vit1.jpg') }}" alt="Life Style" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Life Style
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="" class="lien">
+                                    <img class="image" src="{{ asset('img/images_projet/tech1.jpg') }}" alt="Smart Tech" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Smart Tech
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block real zoom mt5">
+                            <div class="overlay-image">
+                                <a href="" class="lien">
+                                    <img class="image" src="{{ asset('img/images_projet/vet2.png') }}" alt="Phil Mode" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Phil Mode
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="" class="lien">
+                                    <img class="image" src="{{ asset('img/images_projet/resto2.jpg') }}" alt="Mexican Restaurant" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Mexican Restaurant
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="overlay-image">
+                                <a href="" class="lien">
+                                    <img class="image" src="{{ asset('img/images_projet/tech2.png') }}" alt="Electro Shoppe" />
+                                    <div class="hover">
+                                        <div class="text">
+                                            Electro Shoppe
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                </article>
+                    <article class="section s5" id="section2">
                         <div class="fond-txt-conseil">
                             <p class="perdu">
                                 Perdu à travers toutes nos offres ?
                             </p>
                             <p class="nos">
-                                Nos conseillers sont là pour défénir vos besoins !
+                                Nos conseillers sont là pour définir vos besoins !
                             </p>
                         </div>
                         <div class="flex2 pos-btn-conseil">
-                            <a href="#" class="btn-article2">
+                            <a href="{{ path('contact_index') }}" class="btn-article2">
                                 <p class="btn-article2-txt">Je prend RDV !</p>
                             </a>
-                            <a href="#" class="btn-article2">
+                            <a href="{{ path('contact_index') }}" class="btn-article2 qmt5">
                                 <p class="btn-article2-txt">Nous appeller !</p>
                             </a>
                         </div>
                     </article>
-                    <article>
-                    <p class="north">
-                        North web en quelques lignes
-                    </p>
-                    <p class="nous">
-                        Nous adorons faire de belles choses.
-                        <br>
-                        Notre but est de vous fournir tout ce dont vous avez besoin pour une communication digitale réussie.
-                    </p>
-                    <div class="pos-btn2 bt1">
-                        <a href="#" class="btn-article">
-                            <p class="btn-article2-txt">En savoir +</p>
-                        </a>
-                    </div>
-                  </article>
-                  <article>
-                    <div class="fond-txt-projet">
-                        <p class="decouvrez">
-                            Découvrez
-                        </p>
-                        <p class="rea">
-                            Nos réalisations !
-                        </p>
-                    </div>
-                    <div class="pos-btn2 ">
-                        <a href="#" class="btn-article">
-                            <p class="btn-article2-txt">En savoir +</p>
-                        </a>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
+    <script type="text/javascript" src="{{ asset('javascript/fullPageJs/src/fullpage.js') }}"></script>
+    <script>
+        new fullpage('#fullPage', {
+            anchor: ['real'],
+            licenseKey: '4CD0DA3D-41024375-B2E14494-0EFF885A',
+            autoScrolling: true,
+            navigation: true,
+            slidesNavigation: true,
+            scrollHorizontally: true,
+        })
+    </script>
     </body>
 {% endblock %}

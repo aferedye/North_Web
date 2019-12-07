@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+    <section>
+        <div class='login_registration'>
+            <div class='login_title'>
+                <span>Inscription</span>
+                <p>Pour créer un compte veuillez remplir le formulaire</p>
+            </div>
+            {{ form_start(form) }}
+            <div class='login_fields'>
+                <div class='login_fields__firstname'>
+                    {{ form_widget(form.civility ) }}
+                </div>
+                <div class='login_fields__firstname'>
+                   {{ form_widget(form.firstname, {
+                       'attr': {
+                           'placeholder': 'Prénom'
+                       }
+                   }) }}
+                </div>
+                <div class='login_fields__lastname'>
+                   {{ form_widget(form.lastname, {
+                       'attr': {
+                           'placeholder': 'Nom'
+                       }
+                   }) }}
+                </div>
+                <div class='login_fields__email'>
+                    {{ form_widget(form.email, {
+                        'attr': {
+                            'placeholder': 'E-mail'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__confirm-email'>
+                    {{ form_widget(form.confirm_email, {
+                        'attr': {
+                            'placeholder': 'Confirmez votre e-mail'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__adress'>
+                    {{ form_widget(form.address, {
+                        'attr': {
+                            'placeholder': 'Entrez votre adresse postale'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__city'>
+                    {{ form_widget(form.city, {
+                        'attr': {
+                            'placeholder': 'Ville de résidence'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__zip'>
+                    {{ form_widget(form.zip, {
+                        'attr': {
+                            'placeholder': 'Votre Code Postal'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__country'>
+                    {{ form_widget(form.country, {
+                        'attr': {
+                            'placeholder': 'Dans quel pays habiter vous ?'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__password'>
+                    {{ form_widget(form.password, {
+                        'type': 'password',
+                        'attr': {
+                            'placeholder': 'Votre mot de passe'
+                        }
+                    }) }}
+                </div>
+                <div class='login_fields__confirm-password'>
+                    {{ form_widget(form.confirm_password, {
+                        'type': 'password',
+                        'attr': {
+                            'placeholder': 'Répetez votre mot de passe'
+                        }
+                    }) }}
+                </div>
+
+                <div class="error">
+                    {{ form_errors(form.email) }}
+                    {{ form_errors(form.password) }}
+                    {{ form_errors(form) }}
+                </div>
+                <div class='login_fields__submit'>
+                    {{ form_row(form.submit, {
+                        'label': 'S\'inscrire',
+                        'attr': {
+                            'class': 'submit'
+                        }
+                    })}}
+                </div>
+            </div>
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
+        </div>
+    </section>
+</main>
+{% endblock %}
