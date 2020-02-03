@@ -37,7 +37,7 @@
                        <td>{{ result.nomprojet|capitalize }}</td>
                        <td>{{ result.horstaxe }} €</td>
                        <td>{{ totalTTC }} €</td>
-                       <form method="post" action="{{ path('admin_detail_devis') }}">
+                       <form method="post" action="{{ path('espace_client_devisdetail') }}">
                             <input type="hidden" name="iddevis" value="{{ result.id }}">
                             <td><button type="submit" >Voir les détails du devis</button></td>
                        </form>

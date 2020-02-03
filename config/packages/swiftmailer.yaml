@@ -1,5 +1,5 @@
 swiftmailer:
     url: '%env(MAILER_URL)%'
     spool: { type: 'memory' }
-    delivery_addresses: ['contact.northweb@gmail.com']
+    delivery_addresses: ['testphp59150@gmail.com']
 

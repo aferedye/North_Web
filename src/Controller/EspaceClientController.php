@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Devis;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class EspaceClientController extends AbstractController
@@ -41,11 +42,17 @@ class EspaceClientController extends AbstractController
     /**
      * @Route("/espace/client/devis/detail", name="espace_client_devisdetail")
      */
-    public function mesDevisDetail()
+    public function mesDevisDetail(Request $request)
     {
+        $id = $request->get("iddevis");
+
+        $em = $this->getDoctrine()->getRepository(Devis::class);
+        $results = $em->findBy(array('id' => $id));
         $message = null;
+
         return $this->render('espace_client/devisdetail.html.twig', [
             'user' => $this->getUser(),
+            'results' => $results,
             'message' => $message
         ]);
     }

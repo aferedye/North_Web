@@ -2,99 +2,67 @@
 
 {% block title %}Contact{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_contact.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
+{% endblock %}
+
 {% block body %}
-
-
-    <head>
-        <meta name="viewport" content="width=device-width=device-width, initial-scale=1">
-        <meta charset="utf-8" />
-         <link rel="stylesheet" href="{{ asset('css/style_contact.css') }}" />
-         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
-    </head>
-
-    <body class="container">
-
-        <header class="row">
-        <img class="logo" src="./images_contact/autres/logo.png">
-        <img class="antoine" src="images_contact/autres/antoine.png">
-        <nav class="nav">
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Devis</a></li>
-            <li><a href="#">Nos Projet</a></li>
-            <li><a href="#">Contact</a></li>
-
-        </ul>
-        </nav>
-        </header>
-
-
-
-        <article class=" banniere " >
-            <p class="titreespace nongras"><br />Vous souhaitez nous contacter ? </p>
-            <br />
-            <p class="titreespace telephone">Par téléphone au :</p>
-           <a class="taillenum" href="tel:+0620763448"> 06.20.76.34.48</a>
+<body>
+    <div id="fullPage">
+        <article class="section banniere" >
+            <div class="filtre-background">
+                <div class="pt15">
+                    <p><br />Vous souhaitez nous contacter ? </p>
+                    <br />
+                    <p>Par téléphone au :</p>
+                    <a href="tel:+0620763448" class="tel"> 06.20.76.34.48</a>
+                </div>
+            </div>
         </article>
-
-
-
-        <article class=" bannierebleu">
-            <p class=" margetitre texteblanc titreespace ">Une question, un avis, un besoin spécifique ? </p>
-           <br />
-
-        <form method="post" action="">
-
-            <input class= " taillechamp " type="text" name="prenom" id="pseudo" placeholder="Prénom*" required/>
-            <input class= " taillechamp" type="text" name="nom" id="nom" placeholder="Nom*" required/>
-
-             <br />
-
-            <input class= " taillechamp " type="email" name="email" id="email" placeholder="Email*" required/>
-            <input class= " taillechamp " type="tel" name="telephone" id="telephone" placeholder="Téléphone*" required/>
-
-            <br />
-
-            <textarea class="message" name="message" id="message" placeholder="Ici écrivez votre message :" rows="10" cols="30" required></textarea>
+        <article class="section bannierebleu">
+            <div class="filtre-background">
+                <p class="margetitre pt10">Une question, un avis, un besoin spécifique ? </p>
                 <br />
-            <input class="boutonbleu" type="submit" value="Envoyer"  />
-
-        </form>
+                <form method="post" action="">
+                    <input class= "taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*"/>
+                    <input class= "taillechamp" type="text" name="nom" id="nom" placeholder="Nom*"/>
+                    <br />
+                    <input class= "taillechamp" type="email" name="email" id="email" placeholder="Email*"/>
+                    <input class= "taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone*"/>
+                    <br />
+                    <textarea class="message" name="message" id="message" placeholder="Ici écrivez votre message :" rows="10" cols="30"></textarea>
+                    <br />
+                    <input class="boutonbleu" type="submit" value="Envoyer"/>
+                </form>
+            </div>
         </article>
-
-
-
-         <article class="banniereagenda">
-         <form method="post" action="">
-             <p class="margetitre nongras titreespace">Vous préférez nous rencontrer ? </p>
-
-             <input class="taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*" required/>
-             <input class="taillechamp" type="text" name="nom" id="nom" placeholder="Nom*" required/>
-
-             <br />
-            <input class="taillechamp" type="email" name="email" id="email" placeholder="Email*" required/>
-            <input class="taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone*" required/>
-
-             <br />
-            <p class="margetitre titreespace">Renseignez vos disponibilités</p>
-
-
-            <iframe class="calendrier" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;
-            ctz=Europe%2FParis&amp;src=Y29udGFjdC5ub3J0aHdlYkBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;
-            src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;
-            color=%2333B679&amp;color=%230B8043" style="border-width:0" width="800" height="300" frameborder="0" scrolling="no"></iframe>
-                <br />
-        </form>
+        <article class="section banniereagenda">
+            <div class="filtre-background">
+                <form method="post" action="">
+                    <h2 class="margetitre pt15">Vous préférez nous rencontrer ? </h2>
+                    <input class="taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*"/>
+                    <input class="taillechamp" type="text" name="nom" id="nom" placeholder="Nom*"/>
+                    <br />
+                    <input class="taillechamp" type="email" name="email" id="email" placeholder="Email*"/>
+                    <input class="taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone*"/>
+                    <br />
+                    <p class="margetitre titreespace">Renseignez vos disponibilités</p>
+                    <br />
+                </form>
+            </div>
         </article>
-
-    </body>
-
-
-
-    <footer>
-         <p class="text-center">Copyright &copy; 2019 North Web. Tous Droits Réservés</p>
-    </footer>
-
-
+    </div>
+    <script type="text/javascript" src="{{ asset('javascript/fullPageJs/src/fullpage.js') }}"></script>
+    <script>
+        new fullpage('#fullPage', {
+            anchor: ['real'],
+            licenseKey: '4CD0DA3D-41024375-B2E14494-0EFF885A',
+            autoScrolling: true,
+            navigation: true,
+            slidesNavigation: true,
+            scrollHorizontally: true,
+        })
+    </script>
+</body>
 {% endblock %}

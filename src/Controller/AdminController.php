@@ -13,11 +13,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AdminController extends AbstractController
 {
-    private $security;
+    
+
 
     /**
      * @Route("/admin", name="admin")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * 
      */
     public function index()
     {
@@ -28,7 +29,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/devis", name="admin_devis")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * 
      */
     public function devis()
     {
@@ -46,7 +47,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/devis/detail", name="admin_detail_devis")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * 
      */
     public function devisDetail(Request $request) {
 
@@ -63,7 +64,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/devis/search/name", name="admin_devis_searchname")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * 
      */
     public function searchName(Request $request)
     {
@@ -91,7 +92,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/devis/search/firstname", name="admin_devis_searchfirstname")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * 
      */
     public function searchFirstName(Request $request)
     {
@@ -118,7 +119,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/devis/search/email", name="admin_devis_searchemail")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * 
      */
     public function searchEmail(Request $request)
     {

@@ -5,36 +5,32 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300">
         <link rel="stylesheet" href="{{ asset('css/style_base.css') }}">
         <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>{% block title %}Accueil North Web{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
-
-    <main role="main" class="container main">
-        {% block main %}{% endblock %}
-    </main>
-
     <body>
-
-   <header class="row">
-       <nav>
-           <div class="menu" onclick="openNav()">
-               <div class="bar"></div>
-               <div class="bar"></div>
-               <div class="bar"></div>
-           </div>
-           <div id="mySidenav" class="sidenav">
-               <img src="{{ asset('img/logo.png') }}" alt="" class="logo">
-               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-               <a href="{{ path('accueil') }}" class="first-link">Accueil</a>
-               <a href="{{ path('presentation') }}">Présentations</a>
-               <a href="{{ path('devis') }}">Devis</a>
-               <a href="{{ path('accueil')}}#section4">Références</a>
-               <a href="{{ path('contact_index') }}">Contact</a>
-               {% if is_granted('ROLE_ADMIN') %}
+        <header class="row">
+            <nav>
+                <div class="menu" onclick="openNav()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div id="mySidenav" class="sidenav">
+                    <img src="{{ asset('img/logo.png') }}" alt="" class="logo">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="{{ path('accueil') }}" class="first-link">Accueil</a>
+                    <a href="{{ path('presentation') }}">Présentations</a>
+                    <a href="{{ path('devis') }}">Devis</a>
+                    <a href="{{ path('accueil')}}#section4">Références</a>
+                    <a href="{{ path('contact_index') }}">Contact</a>
+                {% if is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('admin') }}">Administration</a>
-               {% endif %}
+                {% endif %}
                {% if user is not null %}
                    <a href="{{ path('espace_client') }}">Mon Espace</a>
                    <a href="{{ path('security_logout') }}">Se déconnecter</a>
@@ -47,7 +43,6 @@
            </div>
        </nav>
     </header>
-
         {% block body %}{% endblock %}
    <script>
        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */

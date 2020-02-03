@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
-
 .logo {
     height: 110px;
     margin-left: 55px;
     margin-bottom: 15px;
 }
-
 .first-link {
     margin-top: 15%;
 }
-
 header {
     width: 100%;
     height: 100px;
@@ -17,7 +14,6 @@ header {
     top: 0;
     z-index: 99;
 }
-
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -31,7 +27,6 @@ header {
     padding-top: 65px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-
 /* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -44,12 +39,10 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
@@ -58,50 +51,7 @@ header {
     font-size: 36px;
     margin-left: 50px;
 }
-
-.barre {
-    width: 40px;
-    height: 5px;
-    border-radius: 35px;
-    background-color: whitesmoke;
-    margin-bottom: 5px;
-}
-
-.imgnav:hover .barre{
-    margin-bottom: 8px;
-    width: 45px;
-}
-
-.model-4 a {
-    background: none;
-    line-height: 1.5;
-    font-size: 32px;
-    text-shadow: 0 0 1px;
-}
-.model-4 a:hover {
-    text-shadow: 0 0 25px;
-}
-.model-4 .twitter {
-    color: #00ACED;
-}
-.model-4 .facebook {
-    color: #3B579D;
-}
-.model-4 .google-plus {
-    color: #DD4A3A;
-}
-.model-4 .linkedin {
-    color: #007BB6;
-}
-
-#menu-icon {
-
-    display: inline-block;
-
-}
-
 .sidenav ul, .sidenav:active ul {
-
     display: none;
     position: absolute;
     padding: 20px;
@@ -111,24 +61,16 @@ header {
     top: 60px;
     width: 50%;
     border-radius: 4px 0 4px 4px;
-
 }
-
 .sidenav li {
-
     text-align: center;
     width: 100%;
     padding: 10px 0;
     margin: 0;
-
 }
-
 .sidenav:hover ul {
-
     display: block;
-
 }
-
 .menu {
     position: absolute;
     width: 56px;
@@ -136,7 +78,7 @@ header {
     left: 125px;
     transform: translate(-50%, -50%);
     font-size: 62px;
-    font-family:'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     color: #fff;
     cursor: pointer;
 }
@@ -164,16 +106,13 @@ header {
     opacity: 1;
     transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
 }
-
 .bar {
     width: 80%;
     height: 3px;
     background: white;
-
     margin-bottom: 18px;
     transition: transform 0.4s ease;
 }
-
 .copyright {
     position: relative;
     top: 20px;

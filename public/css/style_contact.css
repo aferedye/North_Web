@@ -1,335 +1,77 @@
-* { box-sizing: border-box}
-* {margin :0px; padding: 0px}
+* { 
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px; 
+    padding: 0px;
+}  
 
-
-/** FORMAT MOBILE !!!!! **/
-
-
-@media screen and (min-width: 320px ){ 
-
-.container {
-    font-family: 'Open Sans', sans-serif;
-    width: 320px;
-    text-align: center;
-}
-
-    .row {
-    display: flex;
-        flex-wrap: wrap}   /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
-    
-.nongras{
-    font-weight: lighter;
-}
-
-
-.logo {
-    width: 100px;
-    height: 100px;
-    margin: 10%;   
-    
-}
-
-.antoine {
-    width: 92px;
-    height: 92px;
-    margin: 5%;
-    padding: 6%;
-}
-
-.nav {
-    display: none;
-}
-
-
-
-.telephone{
-    margin-top: 0px;
-    padding-top: 1px;
-    font-size: 0.5rem;
-}
-
-.taillenum{
-    font-size:0.7rem;
-}
-
-
-.titreespace{
-    font-size: 0.8rem;  
-}
-    
-.margetitre{
-        padding: 5px;
-        
-    }
-
-.texteblanc{
-     color: white;
-}
-
-
-
-.message{
-    padding: 10px;
-    margin: 15px;
-    
-}
-
-.banniere{
-    background: url(../img/imgContact/contact1280.jpg);
-    background-size: cover no-repeat;
-    height: 100px;
-    width: 100%;  
-}
-
-
-.bannierebleu {
-    background: url(../img/imgContact/banner1280.jpg);
-    background-size: cover no-repeat;
-    height: 400px;
+.filtre-background {
+    background: rgba(0, 0, 0, 0.86);
+    height: 100vh;
     width: 100%;
 }
-
-.boutonbleu{
-    border-radius: 25% 10%;
-    padding: 7px;
-    background-color: #4C7FA8;
-    border: none;
+.banniere {
+    background: url(../img/imgContact/office.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;  
+    text-align: center;
+    font-size: 2.5rem;
     color: white;
 }
-
-.taillechamp{
-    height: 20px;
-    width: 110px;
-    padding: 5px;
-    margin-top: 10px;
-  
+.pt15 {
+    padding-top: 15%;
 }
-
-.banniereagenda{
-    background: url(../img/imgContact/agenda1280.jpg);
-    background-size: cover no-repeat;
-    height: 425px;
+.pt10 {
+    padding-top: 10%;
+}
+.bannierebleu {
+    background: url(../img/imgContact/geometric.jpg);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+.boutonbleu {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #263974;
+    border: none;
+    color: white;
+    margin-top: 25px;
+}
+.boutonbleu:hover {
+    background-color: #272264;
+}
+.tel {
+    font-family: 'Times New Roman', Times, serif;
+}
+.taillechamp {
+	margin-top: 20px;
+	width: 300px;
+	height: 50px;
+	font-size: 1.4rem;
+	padding-left: 10px;
+	border: solid black 1px;
+	border-radius: 3px;
+}
+.message {
+    width: 604px;
+    height: 200px;
+    font-size: 1.4rem;
+	padding-left: 10px;
+	border: solid black 1px;
+    border-radius: 3px;
+    margin-top: 25px;
+}
+.margetitre {
+    font-size: 2.2rem;
+}
+.banniereagenda {
+    background: url(../img/imgContact/agenda.jpg);
+    background-size: cover;
+    text-align: center;
+    color: white;
+    height: 100%;
     width: 100%;
 }
-    
-    .calendrier{
-        margin: 10px;
-    }
-    
-    .margetitre{
-        padding: 10px;
-        
-    }
 
-
-footer {
-    font-size: 0.5rem;
-        
-}
-
-}
-
-
-
-
-/** FORMAT TABLETTE !!!!! **/
-
-
-
-
-
-@media screen and (min-width: 768px ){ 
-        /** Version tablette **/
-        
-.container {
-     width: 768px }
-    
-    .row {
-    display: flex;
-        flex-wrap: wrap}    /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
-    
-.logo {
-    width: 150px;
-    height: 150px;
-    margin: 10%;   
-    
-}
-    
-
-
-.antoine {
-    margin: 50px;
-    width: 400px;
-    height: 400px;
-}
-   
-.banniere { 
-        width: 768px; 
-        height: 240px;   
-        background: url(../img/imgContact/contact1280.jpg) }
-    
-.bannierebleu { 
-        width: 768px }
-    
-.banniereagenda { 
-        width: 768px }
-    
-.antoine { 
-        width: 100px;
-        height: 100px;
-         margin: 5%;
-        padding: 3%}
-    
-.titreespace{
-    font-size: 1rem;  
-}
-    
-.telephone { 
-        margin-top: 100px}
-    
-.bannierebleu { 
-        background: url(../img/imgContact/banner1280.jpg);
-        width: 768px;
-        height: 500px }
-    
-.banniereagenda{
-        background: url(../img/imgContact/banner1280.jpg);}
-
-.telephone{
-        margin-top: 125px;
-        font-size: 1rem;
-        font-weight: lighter}
-    
-.taillechamp{
-        height: 20px;
-        width: 250px;
-        padding: 13px;
-        margin: 5px }
-
-.message{
-        padding: 10px;
-        margin: 30px ;
-        width: 500px;
-    }
-    
-.taillenum{
-    font-size: 1rem }
-    
-    
-   .calendrier{
-        margin: 10px;
-       width: 400px;
-       
-    }
-
-    
- footer {
-        font-size: 0.9rem;
-    padding: 5px}
-        
-
-}
-
-
-
-
-/** FORMAT PC !!!!! **/
-
-
-
-
-
-@media screen and (min-width: 1280px){        /** Version PC **/
-    
-.container {
-        width: 1280px;
-        margin: auto}
-    
-    
-    
-.logo {
-    width: 200px;
-    height: 200px;
-    margin: 5%;   
-    
-}
-
-.row {
-    display: flex;
-    flex-wrap: block;        /* retour à la ligne mais c'est ce qui permet aussi de tout mettre sur la même ligne*/
-
-     }
-    
-nav {
-    display: block;
-}
-    
-    .antoine{
-        display: none;
-    }
-
-    
-    
-.banniere { 
-        width: 1280px; 
-        height: 240px;   
-        background: url(../img/imgContact/contact1280.jpg) }
-
-    
-.bannierebleu { 
-        background: url(../img/imgContact/banner1280.jpg);
-        width: 1280px;
-        height: 500px }
-
-.banniereagenda{
-        background: url(../img/imgContact/agenda1280.jpg);
-        width: 1280px;
-        height: 600px;
-        }
-    
- .telephone{
-    margin-top: 0px;
-    padding-top: 1px;
-    font-size: 1.5rem;
-}
-
-.taillenum{
-    font-size:1.5rem;
-    margin-top: 0px;
-}
-
-
-.titreespace{
-    padding-top: 1px;
-    padding: 10px;
-    font-size: 1.5rem;
-    padding-bottom: 20px;
-}
-    
- .taillechamp{
-        height: 20px;
-        width: 300px;
-        padding: 15px;
-        margin: 10px; 
-    }
-      
-.message{
-        padding: 10px;
-        margin: 20px ;
-        width: 500px;
-        height: 200px;
-    }
-    
-      .calendrier{
-        margin: 10px;
-       width: 600px;
-        height: 340px;
-       
-    }
-    
-footer {
-        font-size: 0.9rem;
-    padding: 10px }
-
-
-}

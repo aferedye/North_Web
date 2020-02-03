@@ -5,7 +5,6 @@
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ asset('javascript/fullPageJs/src/fullpage.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset ('css/style_accueil.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 {% endblock  %}
 
 
@@ -58,36 +57,28 @@
                         </div>
                     </div>
                 <article class="section s4" id="section4">
-                        <div>
-                            <p class="decouvrez">
-                                Découvrez
-                            </p>
-                            <p class="rea">
-                                Nos réalisations !
-                            </p>
+                    <div>
+                        <p class="decouvrez">Découvrez</p>
+                        <p class="rea">Nos réalisations !</p>
+                    </div>
+                    <div class="block real zoom">
+                        <div class="overlay-image">
+                            <a href="" class="lien">
+                                <img class="image" src="{{ asset('img/images_projet/resto3.png') }}" alt="Buffalo Snack" />
+                                <div class="hover">
+                                    <div class="text">Buffalo Snack</div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="block real zoom">
-                            <div class="overlay-image">
-                                <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/resto3.png') }}" alt="Buffalo Snack" />
-                                    <div class="hover">
-                                        <div class="text">
-                                            Buffalo Snack
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="overlay-image">
-                                <a href="" class="lien">
-                                    <img class="image" src="{{ asset('img/images_projet/vit1.jpg') }}" alt="Life Style" />
-                                    <div class="hover">
-                                        <div class="text">
-                                            Life Style
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="overlay-image">
+                        <div class="overlay-image">
+                            <a href="" class="lien">
+                                <img class="image" src="{{ asset('img/images_projet/vit1.jpg') }}" alt="Life Style" />
+                                <div class="hover">
+                                    <div class="text">Life Style</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="overlay-image">
                                 <a href="" class="lien">
                                     <img class="image" src="{{ asset('img/images_projet/tech1.jpg') }}" alt="Smart Tech" />
                                     <div class="hover">
@@ -131,24 +122,20 @@
                             </div>
                         </div>
                 </article>
-                    <article class="section s5" id="section2">
-                        <div class="fond-txt-conseil">
-                            <p class="perdu">
-                                Perdu à travers toutes nos offres ?
-                            </p>
-                            <p class="nos">
-                                Nos conseillers sont là pour définir vos besoins !
-                            </p>
-                        </div>
-                        <div class="flex2 pos-btn-conseil">
-                            <a href="{{ path('contact_index') }}" class="btn-article2">
-                                <p class="btn-article2-txt">Je prend RDV !</p>
-                            </a>
-                            <a href="{{ path('contact_index') }}" class="btn-article2 qmt5">
-                                <p class="btn-article2-txt">Nous appeller !</p>
-                            </a>
-                        </div>
-                    </article>
+                <article class="section s5" id="section2">
+                    <div class="fond-txt-conseil">
+                        <p class="perdu">Perdu à travers toutes nos offres ?</p>
+                        <p class="nos">Nos conseillers sont là pour définir vos besoins !</p>
+                    </div>
+                    <div class="flex2 pos-btn-conseil">
+                        <a href="{{ path('contact_index') }}" class="btn-article2">
+                            <p class="btn-article2-txt">Je prend RDV !</p>
+                        </a>
+                        <a href="{{ path('contact_index') }}" class="btn-article2 qmt5">
+                            <p class="btn-article2-txt">Nous appeller !</p>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

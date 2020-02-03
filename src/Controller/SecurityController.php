@@ -35,11 +35,13 @@ class SecurityController extends AbstractController
         $lastUsername = null;
         $error = null;
         $roles = 'ROLE_USER';
+        $enabled = 0;
 
         $user = new User();
         $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
 
         $user->setRoles($roles);
+        $user->setEnabled($enabled);
         $form = $this->createForm(RegistrationType::class, $user);
 
         $form->handleRequest($request);
@@ -61,8 +63,8 @@ class SecurityController extends AbstractController
 
             $url = $this->generateUrl('confirm_account', array('token' => $token, 'user' => $this->getUser()), UrlGeneratorInterface::ABSOLUTE_URL);
 
-            $mail = (new \Swift_Message('Mot de passe oublié'))
-                ->setFrom('contact.northweb@gmail.com')
+            $mail = (new \Swift_Message('Confirmez votre e-mail'))
+                ->setFrom('testphp59150@gmail.com')
                 ->setTo($lastUsername)
                 ->setBody(
                     "Bonjour, 
@@ -191,7 +193,7 @@ class SecurityController extends AbstractController
             $url = $this->generateUrl('app_reset_password', array('token' => $token, 'user' => $this->getUser()), UrlGeneratorInterface::ABSOLUTE_URL);
 
             $mail = (new \Swift_Message('Mot de passe oublié'))
-                ->setFrom('contact.northweb@gmail.com')
+                ->setFrom('testphp59@gmail.com')
                 ->setTo([$email])
                 ->setBody(
                     "Bonjour, 

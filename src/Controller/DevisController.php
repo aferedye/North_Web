@@ -46,6 +46,7 @@ class DevisController extends AbstractController
      * @param Request $request
      * @return RedirectResponse|Response
      * @throws Html2PdfException
+     * @throws \Exception
      */
     public function index(Request $request)
     {
@@ -104,14 +105,14 @@ class DevisController extends AbstractController
             $result = $pdf->output('devis.pdf', 'S');
 
             $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                ->setUsername('contact.northweb@gmail.com')
-                ->setPassword('MafNorthW1');
+                ->setUsername('testphp59150@gmail.com')
+                ->setPassword('testphp59!');
 
             $mailer = new Swift_Mailer($transport);
             $attachement = new Swift_Attachment($result, 'devis.pdf', 'application/pdf');
 
             $message = (new Swift_Message('Devis North Web'))
-                ->setFrom('contact.northweb@gmail.com')
+                ->setFrom('testphp59150@gmail.com')
                 ->setReplyTo([$email])
                 ->setTo([$email])
                 ->setBody("Bonjour,
@@ -140,8 +141,8 @@ class DevisController extends AbstractController
 
 
             //return $this->redirectToRoute('task_succes', array(
-            //  'ttc' => $ttc
-            //));
+              //'ttc' => $ttc
+           // ));
         }
 
         return $this->render('devis/index.html.twig', [
