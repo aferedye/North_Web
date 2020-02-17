@@ -1,3 +1,3 @@
-#index:
-#    path: /
-#    controller: App\Controller\AccueilController::index
+index:
+    path: accueil
+    controller: App\Controller\AccueilController::index
