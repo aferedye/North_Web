@@ -4,57 +4,38 @@
     margin: 0px; 
     padding: 0px;
 }  
-
 .filtre-background {
     background: rgba(0, 0, 0, 0.86);
-    height: 100vh;
-    width: 100%;
 }
-.banniere {
+.article1__banniere {
     background: url(../img/imgContact/office.jpg);
-    background-size: cover;
-    height: 100%;
-    width: 100%;  
+    background-size: cover; 
     text-align: center;
     font-size: 2.5rem;
     color: white;
 }
-.pt15 {
-    padding-top: 15%;
-}
-.pt10 {
-    padding-top: 10%;
-}
-.bannierebleu {
+.article2__banniere {
     background: url(../img/imgContact/geometric.jpg);
     text-align: center;
     color: white;
     font-size: 1.5rem;
 }
-.boutonbleu {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #263974;
-    border: none;
-    color: white;
-    margin-top: 25px;
+.article2__title {
+    font-size: 2.2rem;
 }
-.boutonbleu:hover {
-    background-color: #272264;
-}
-.tel {
-    font-family: 'Times New Roman', Times, serif;
-}
-.taillechamp {
+.formfields {
 	margin-top: 20px;
 	width: 300px;
 	height: 50px;
 	font-size: 1.4rem;
 	padding-left: 10px;
 	border: solid black 1px;
-	border-radius: 3px;
+    border-radius: 3px;
 }
-.message {
+.formfields__police {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.formfields__message {
     width: 604px;
     height: 200px;
     font-size: 1.4rem;
@@ -63,15 +44,45 @@
     border-radius: 3px;
     margin-top: 25px;
 }
-.margetitre {
-    font-size: 2.2rem;
-}
-.banniereagenda {
-    background: url(../img/imgContact/agenda.jpg);
+.article3__banniere {
+    background: url(../img/imgContact/globe.jpg);
     background-size: cover;
-    text-align: center;
+}
+.btn-blue {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #263974;
+    border: none;
     color: white;
+    margin-top: 15px;
+}
+.btn-blue:hover {
+    background-color: #272264;
+}
+.warning {
+    color: tomato;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.article3__banniere {
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.article3__card  {
+    margin-top: 25px;
+}
+
+
+/* ---- Generic Classes ---- */
+.pt15 {
+    padding-top: 15%;
+}
+.pt10 {
+    padding-top: 10%;
+}
+.maxsize {
     height: 100%;
-    width: 100%;
+    width: 100%;  
 }
 

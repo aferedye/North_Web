@@ -27,7 +27,6 @@ class EspaceClientController extends AbstractController
         $results = null;
         $message = null;
         $usermail = $this->getUser()->getEmail();
-        dump($usermail);
 
         $em = $this->getDoctrine()->getRepository(Devis::class);
         $results = $em->searchEmail($usermail);

@@ -10,46 +10,38 @@
 {% block body %}
 <body>
     <div id="fullPage">
-        <article class="section banniere" >
-            <div class="filtre-background">
+        <article class="section article1__banniere maxsize" >
+            <div class="filtre-background maxsize">
                 <div class="pt15">
                     <p><br />Vous souhaitez nous contacter ? </p>
                     <br />
                     <p>Par téléphone au :</p>
-                    <a href="tel:+0620763448" class="tel"> 06.20.76.34.48</a>
+                    <a href="tel:+0620763448" class="formfields__police"> 06.20.76.34.48</a>
                 </div>
             </div>
         </article>
-        <article class="section bannierebleu">
-            <div class="filtre-background">
-                <p class="margetitre pt10">Une question, un avis, un besoin spécifique ? </p>
+        <article class="section article2__banniere maxsize">
+            <div class="filtre-background maxsize">
+                <p class="article2__title pt10">Une question, un avis, un besoin spécifique ? </p>
                 <br />
                 <form method="post" action="">
-                    <input class= "taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*"/>
-                    <input class= "taillechamp" type="text" name="nom" id="nom" placeholder="Nom*"/>
+                    <input class= "formfields formfields__police" type="text" name="prenom" id="pseudo" placeholder="Prénom *" spellcheck="false"/>
+                    <input class= "formfields formfields__police" type="text" name="nom" id="nom" placeholder="Nom *" spellcheck="false"/>
                     <br />
-                    <input class= "taillechamp" type="email" name="email" id="email" placeholder="Email*"/>
-                    <input class= "taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone*"/>
+                    <input class= "formfields formfields__police" type="email" name="email" id="email" placeholder="Email *" spellcheck="false"/>
+                    <input class= "formfields formfields__police" type="tel" name="telephone" id="telephone" placeholder="Téléphone" spellcheck="false"/>
                     <br />
-                    <textarea class="message" name="message" id="message" placeholder="Ici écrivez votre message :" rows="10" cols="30"></textarea>
+                    <textarea class="formfields__message formfields__police" name="message" id="message" placeholder="Ici écrivez votre message : *" spellcheck="false"></textarea>
                     <br />
-                    <input class="boutonbleu" type="submit" value="Envoyer"/>
+                    <p class="warning">Les champs de saisie marquées avec un astérisque (*) sont obligatoires !</p>
+                    <input class="btn-blue" type="submit" value="Envoyer"/>
                 </form>
             </div>
         </article>
-        <article class="section banniereagenda">
-            <div class="filtre-background">
-                <form method="post" action="">
-                    <h2 class="margetitre pt15">Vous préférez nous rencontrer ? </h2>
-                    <input class="taillechamp" type="text" name="prenom" id="pseudo" placeholder="Prénom*"/>
-                    <input class="taillechamp" type="text" name="nom" id="nom" placeholder="Nom*"/>
-                    <br />
-                    <input class="taillechamp" type="email" name="email" id="email" placeholder="Email*"/>
-                    <input class="taillechamp" type="tel" name="telephone" id="telephone" placeholder="Téléphone*"/>
-                    <br />
-                    <p class="margetitre titreespace">Renseignez vos disponibilités</p>
-                    <br />
-                </form>
+        <article class="section article3__banniere">
+            <div class="filtre-background maxsize">
+                <p class="article3__title pt10">Où venez nous rencontrez autour d'une boisson chaude !</p>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1b0xBm1BOrF_BTbCyO_dznYwQupuC6rUB" width="640" height="480" class="article3__card"></iframe>
             </div>
         </article>
     </div>

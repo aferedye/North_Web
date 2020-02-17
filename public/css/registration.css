@@ -34,7 +34,10 @@ body .authent {
 .login_title p {
     text-align: center;
     color: white;
-    font-size: 2.5rem;
+    font-size: 1rem;
+}
+.login_title h1 {
+    font-size: 1.8rem;
 }
 .login_registration {
     opacity: 1;

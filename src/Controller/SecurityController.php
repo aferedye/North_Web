@@ -192,6 +192,12 @@ class SecurityController extends AbstractController
 
             $url = $this->generateUrl('app_reset_password', array('token' => $token, 'user' => $this->getUser()), UrlGeneratorInterface::ABSOLUTE_URL);
 
+            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+                ->setUsername('testphp59150@gmail.com')
+                ->setPassword('testphp59!');
+
+            $mailer = new Swift_Mailer($transport);
+
             $mail = (new \Swift_Message('Mot de passe oublié'))
                 ->setFrom('testphp59@gmail.com')
                 ->setTo([$email])
