@@ -2,7 +2,7 @@ swiftmailer:
     url: '%env(MAILER_URL)%'
     spool: { type: 'memory' }
     delivery_addresses: ['testphp59150@gmail.com']
-    transport:  smtp
+    transport:  sendmail
     encryption: ssl
     auth_mode:  login
     host:       smtp.gmail.com
