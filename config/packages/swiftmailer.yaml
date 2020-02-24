@@ -1,14 +1,13 @@
 swiftmailer:
     url: '%env(MAILER_URL)%'
     spool: { type: 'memory' }
-    delivery_addresses: ['testphp59150@gmail.com']
     transport:  smtp
     encryption: ssl
     auth_mode:  login
-    host:       smtp.gmail.com
-    username:   testphp59150@gmail.com
-    password:   testphp59150!
-    port: 
+    host:       smtp.sendgrid.net
+    username:   apikey
+    password:   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
+    port:   465
     stream_options:
         ssl:
             allow_self_signed: true
