@@ -1,17 +1,16 @@
 swiftmailer:
-    mailer:
-    class: sfMailer
-    param:
-        logging: %SF_LOGGING_ENABLED%
-        charset: %SF_CHARSET%
-        delivery_strategy: realtime
-    transport:
-        class: Swift_SmtpTransport
-        param:
-            host: smtp.sendgrid.net
-            port: 587
+    url: '%env(MAILER_URL)%'
+    spool: { type: 'memory' }
+    transport:  smtp
     encryption: ~
+    auth_mode:  login
+    host:       smtp.sendgrid.net
     username:   app162060797@heroku.com
     password:   5hbabazj0826
-    
+    port:   587
+    stream_options:
+        ssl:
+            allow_self_signed: true
+            verify_peer: false
+            verify_peer_name: false
 
