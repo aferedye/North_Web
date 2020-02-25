@@ -89,7 +89,7 @@ class DevisController extends AbstractController
             $pdf->writeHTML($content);
             $result = $pdf->output('devis.pdf', 'S');
 
-            /* $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
                 ->setUsername('testphp59150@gmail.com')
                 ->setPassword('testphp59!');
 
@@ -110,12 +110,10 @@ class DevisController extends AbstractController
              L'équipe North Web.")
                 ->attach($attachement);
 
-            
-            $this->getMailer->send($message); */
-            
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
-
-
+            
+            $mailer->send($message); 
+            
             /*$email = (new Email())
             ->from('hello@example.com')
             ->to($email)
