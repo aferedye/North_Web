@@ -18,21 +18,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+require 'vendor/autoload.php';
 
 /**
  * Class DevisController
@@ -104,7 +90,23 @@ class DevisController extends AbstractController
             $pdf->writeHTML($content);
             $result = $pdf->output('devis.pdf', 'S');
 
-            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+            $from = new SendGrid\Email(null, "northweb@gmail.com");
+            $subject = "Hello World from the SendGrid PHP Library!";
+            $to = new SendGrid\Email(null, $email);
+            $content = new SendGrid\Content("text/plain", "Voici le récapitulatif de votre devis, celui-ci est à titre indicatif et ne constitue pas un acte de vente.
+            Si vous souhaitez travailler avec nous, veuillez contacter notre équipe afin d'établir le devis final.
+               
+            Merci pour votre compréhension,
+            Nous vous souhaitons une agréable journée.
+            L'équipe North Web.");
+            $mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+            $apiKey = getenv('SENDGRID_API_KEY');
+            $sg = new \SendGrid($apiKey);
+
+            $response = $sg->client->mail()->send()->post($mail);
+
+            /* $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
                 ->setUsername('testphp59150@gmail.com')
                 ->setPassword('testphp59!');
 
@@ -127,7 +129,7 @@ class DevisController extends AbstractController
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
 
-            $mailer->send($message);
+            $mailer->send($message); */
 
             $form->setHorstaxe($HT);
             $form->setDate($date);
