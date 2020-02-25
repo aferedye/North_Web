@@ -112,9 +112,11 @@ class DevisController extends AbstractController
              L'équipe North Web.")
                 ->attach($attachement);
 
+            
+            $this->getMailer->send($message); */
+            
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
 
-            $this->getMailer->send($message); */
 
             $email = (new Email())
             ->from('hello@example.com')
