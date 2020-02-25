@@ -31,6 +31,7 @@ class DevisController extends AbstractController
     /**
      * @Route("/", name="devis")
      * @param Request $request
+     * @param MailerInterface $mailer
      * @return RedirectResponse|Response
      * @throws Html2PdfException
      * @throws \Exception
