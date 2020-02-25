@@ -118,7 +118,7 @@ class DevisController extends AbstractController
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
 
 
-            $email = (new Email())
+            /*$email = (new Email())
             ->from('hello@example.com')
             ->to($email)
             //->cc('cc@example.com')
@@ -129,7 +129,7 @@ class DevisController extends AbstractController
             ->text('Sending emails is fun again!')
             ->html('<p>See Twig integration for better HTML integration!</p>');
 
-            $mailer->send($email);
+            $mailer->send($email);*/
 
             $form->setHorstaxe($HT);
             $form->setDate($date);
