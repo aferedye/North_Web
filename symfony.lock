@@ -308,6 +308,18 @@
     "symfony/intl": {
         "version": "v4.3.3"
     },
+    "symfony/mailer": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "15658c2a0176cda2e7dba66276a2030b52bd81b2"
+        },
+        "files": [
+            "./config/packages/mailer.yaml"
+        ]
+    },
     "symfony/maker-bundle": {
         "version": "1.0",
         "recipe": {
@@ -424,6 +436,15 @@
     },
     "symfony/security-http": {
         "version": "v4.3.3"
+    },
+    "symfony/sendgrid-mailer": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "ed69bc442325accbf79e8c93e1ae88c9abe7fd12"
+        }
     },
     "symfony/serializer": {
         "version": "v4.3.3"
