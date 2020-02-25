@@ -89,9 +89,9 @@ class DevisController extends AbstractController
             $pdf->writeHTML($content);
             $result = $pdf->output('devis.pdf', 'S');
 
-            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                ->setUsername('testphp59150@gmail.com')
-                ->setPassword('testphp59!');
+            $transport = (new Swift_SmtpTransport('smtp.sendgrid.net', 587))
+                ->setUsername('app162060797@heroku.com')
+                ->setPassword('5hbabazj0826');
 
             $mailer = new Swift_Mailer($transport);
             $attachement = new Swift_Attachment($result, 'devis.pdf', 'application/pdf');
