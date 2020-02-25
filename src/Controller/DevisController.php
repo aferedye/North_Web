@@ -18,8 +18,6 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
 
 /**
  * Class DevisController
@@ -31,12 +29,11 @@ class DevisController extends AbstractController
     /**
      * @Route("/", name="devis")
      * @param Request $request
-     * @param MailerInterface $mailer
      * @return RedirectResponse|Response
      * @throws Html2PdfException
      * @throws \Exception
      */
-    public function index(Request $request, MailerInterface $mailer)
+    public function index(Request $request)
     {
         $form = new Devis();
 
