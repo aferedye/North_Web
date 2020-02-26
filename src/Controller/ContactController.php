@@ -27,7 +27,6 @@ class ContactController extends AbstractController
         $response2 = $request->request->get("email");
         $response3 = $request->request->get("telephone");
         $response4 = $request->request->get("message");
-        dump($response, $response1, $response2, $response3, $response4);
     
         if ($response != "" && $response1 != "" && $response2 != "" && $response3 != "" && $response4 != ""){
 
