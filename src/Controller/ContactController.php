@@ -47,7 +47,7 @@ class ContactController extends AbstractController
     
         if ($response != "" && $response1 != "" && $response2 != "" && $response3 != "" && $response4 != ""){
 
-            $message = (new \Swift_Message('Vous avez des messages'))
+            /*$message = (new \Swift_Message('Vous avez des messages'))
                 ->setFrom($response2)
                 ->setTo('app162060797@heroku.com')
                 ->setBody(
@@ -56,7 +56,7 @@ class ContactController extends AbstractController
                     " . $response4
                 );
 
-            $mailer->send($message);
+            $mailer->send($message);*/
             
             return $this->render('contact/index.html.twig', [    
                 'user' => $this->getUser()
