@@ -13,9 +13,31 @@ use Swift_SmtpTransport;
 use Swift_Attachment;
 use Swift_Mailer;
 use Swift_Message;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 
 class ContactController extends AbstractController
 {
+    /**
+     * @Route("/email")
+     */
+    public function sendEmail(MailerInterface $mailer)
+    {
+        $email = (new Email())
+            ->from('hello@example.com')
+            ->to('you@example.com')
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject('Time for Symfony Mailer!')
+            ->text('Sending emails is fun again!')
+            ->html('<p>See Twig integration for better HTML integration!</p>');
+
+        $mailer->send($email);
+
+        // ...
+    }
 
     /**
      * @Route("/contact", name="contact_index")
@@ -23,23 +45,7 @@ class ContactController extends AbstractController
     public function index(Request $request, \Swift_Mailer $mailer)
     {   
 
-        $email = new \SendGrid\Mail\Mail(); 
-$email->setFrom("test@example.com", "Example User");
-$email->setSubject("Sending with SendGrid is Fun");
-$email->addTo("test@example.com", "Example User");
-$email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-$email->addContent(
-    "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-);
-$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
-try {
-    $response = $sendgrid->send($email);
-    print $response->statusCode() . "\n";
-    print_r($response->headers());
-    print $response->body() . "\n";
-} catch (Exception $e) {
-    echo 'Caught exception: '. $e->getMessage() ."\n";
-}
+        
 
 
         $response = $request->request->get("prenom");
