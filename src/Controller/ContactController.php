@@ -31,15 +31,15 @@ class ContactController extends AbstractController
     
         if ($response != "" && $response1 != "" && $response2 != "" && $response3 != "" && $response4 != ""){
 
-            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                ->setUsername('testphp59150@gmail.com')
-                ->setPassword('testphp59!');
+            $transport = (new Swift_SmtpTransport('smtp.sendgrid.net', 587))
+                ->setUsername('app162060797@heroku.com')
+                ->setPassword('5hbabazj0826');
 
             $mailer = new Swift_Mailer($transport);
 
             $message = (new \Swift_Message('Vous avez des messages'))
                 ->setFrom($response2)
-                ->setTo('testphp59150@gmail.com')
+                ->setTo('app162060797@heroku.com')
                 ->setBody(
                     "Message de : " . $response1 . " " . $response . "
                 
