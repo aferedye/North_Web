@@ -18,11 +18,13 @@ use Symfony\Component\Mime\Email;
 
 class ContactController extends AbstractController
 {
+
     /**
-     * @Route("/email")
+     * @Route("/contact", name="contact_index")
      */
-    public function sendEmail(MailerInterface $mailer)
-    {
+    public function index(Request $request, MailerInterface $mailer)
+    {   
+
         $email = (new Email())
             ->from('hello@example.com')
             ->to('you@example.com')
@@ -35,17 +37,6 @@ class ContactController extends AbstractController
             ->html('<p>See Twig integration for better HTML integration!</p>');
 
         $mailer->send($email);
-
-        // ...
-    }
-
-    /**
-     * @Route("/contact", name="contact_index")
-     */
-    public function index(Request $request, \Swift_Mailer $mailer)
-    {   
-
-        
 
 
         $response = $request->request->get("prenom");
