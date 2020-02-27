@@ -5,8 +5,6 @@ swiftmailer:
     encryption: ~
     auth_mode:  login
     host:       smtp.sendgrid.net
-    username:   app162060797@heroku.com
-    password:   5hbabazj0826
     port:   587
     stream_options:
         ssl:
