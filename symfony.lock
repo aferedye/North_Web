@@ -111,6 +111,9 @@
     "ocramius/proxy-manager": {
         "version": "2.2.2"
     },
+    "paragonie/sodium_compat": {
+        "version": "v1.12.2"
+    },
     "phenx/php-font-lib": {
         "version": "0.5.1"
     },
