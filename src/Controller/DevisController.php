@@ -18,6 +18,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mime\Email;
 
 /**
  * Class DevisController
@@ -33,7 +34,7 @@ class DevisController extends AbstractController
      * @throws Html2PdfException
      * @throws \Exception
      */
-    public function index(Request $request)
+    public function index(Request $request, MailerInterface $mailer)
     {
         $form = new Devis();
 
@@ -89,43 +90,25 @@ class DevisController extends AbstractController
             $pdf->writeHTML($content);
             $result = $pdf->output('devis.pdf', 'S');
 
-            $transport = (new Swift_SmtpTransport('smtp.sendgrid.net', 587))
-                ->setUsername('app162060797@heroku.com')
-                ->setPassword('5hbabazj0826');
-
-            $mailer = new Swift_Mailer($transport);
-            $attachement = new Swift_Attachment($result, 'devis.pdf', 'application/pdf');
-
-            $message = (new Swift_Message('Devis North Web'))
-                ->setFrom('testphp59150@gmail.com')
-                ->setReplyTo([$email])
-                ->setTo([$email])
-                ->setBody("Bonjour,
+            $email = (new Email())
+                ->from('testphp59150@gmail.com')
+                ->to($email)
+                ->subject('Devis North Web')
+                ->text("Bonjour,
             
-             Voici le récapitulatif de votre devis, celui-ci est à titre indicatif et ne constitue pas un acte de vente.
-             Si vous souhaitez travailler avec nous, veuillez contacter notre équipe afin d'établir le devis final.
-                
-             Merci pour votre compréhension,
-             Nous vous souhaitons une agréable journée.
-             L'équipe North Web.")
-                ->attach($attachement);
+            Voici le récapitulatif de votre devis, celui-ci est à titre indicatif et ne constitue pas un acte de vente.
+            Si vous souhaitez travailler avec nous, veuillez contacter notre équipe afin d'établir le devis final.
+               
+            Merci pour votre compréhension,
+            Nous vous souhaitons une agréable journée.
+            L'équipe North Web.")
+            ->attach($result, 'Devis');
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
-            $mailer->send($message); 
+            $mailer->send($email); 
             
-            /*$email = (new Email())
-            ->from('hello@example.com')
-            ->to($email)
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject('Time for Symfony Mailer!')
-            ->text('Sending emails is fun again!')
-            ->html('<p>See Twig integration for better HTML integration!</p>');
-
-            $mailer->send($email);*/
+            
 
             $form->setHorstaxe($HT);
             $form->setDate($date);
