@@ -9,10 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\Handler\ContactHandler;
-use Swift_SmtpTransport;
-use Swift_Attachment;
-use Swift_Mailer;
-use Swift_Message;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 
