@@ -99,14 +99,12 @@ class DevisController extends AbstractController
             Merci pour votre compréhension,
             Nous vous souhaitons une agréable journée.
             L'équipe North Web.")
-            ->attach($result, 'Devis');
+            // ->attach($result);
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
             $mailer->send($email); 
             
-            
-
             $form->setHorstaxe($HT);
             $form->setDate($date);
             $form->setNbrpage($nbrpage);
