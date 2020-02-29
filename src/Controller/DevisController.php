@@ -94,7 +94,7 @@ class DevisController extends AbstractController
             PDFShift::setApiKey(getenv('PDFSHIFT_API_KEY'));
 
             $data = file_get_content($content);
-            $attach = PDFShift::convertTo($data, null, 'devis.pdf');
+            PDFShift::convertTo($data, null, 'devis.pdf');
 
             $email = (new Email())
                 ->from('North Web')
@@ -108,7 +108,7 @@ class DevisController extends AbstractController
             Merci pour votre compréhension,
             Nous vous souhaitons une agréable journée.
             L'équipe North Web.")
-                ->attach($attach);
+              //  ->attach($attach);
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
