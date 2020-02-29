@@ -57,7 +57,7 @@ class DevisController extends AbstractController
 
         if ($formul->isSubmitted() && $formul->isValid()) {
 
-            /* $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
+            $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
             $formulaire = $formul->getData();
             $nbrlang = $request->request->get('a');
             $nbrpage = $request->request->get('b');
@@ -85,7 +85,7 @@ class DevisController extends AbstractController
 
             $pdf = new Html2Pdf("p", "A4", "fr");
             $pdf->writeHTML($content);
-            $result = $pdf->output('devis.pdf', 'S'); */
+            $result = $pdf->output('devis.pdf', 'S'); 
 
             $email = (new Email())
                 ->from('testphp59150@gmail.com')
@@ -98,14 +98,14 @@ class DevisController extends AbstractController
                
             Merci pour votre compréhension,
             Nous vous souhaitons une agréable journée.
-            L'équipe North Web.");
-            // ->attach($result);
+            L'équipe North Web.")
+                ->attach($result);
 
-            // $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
+            $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
             $mailer->send($email); 
             
-            /* $form->setHorstaxe($HT);
+            $form->setHorstaxe($HT);
             $form->setDate($date);
             $form->setNbrpage($nbrpage);
             $form->setNbrlangue($nbrlang);
@@ -113,7 +113,7 @@ class DevisController extends AbstractController
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($form);
-            $entityManager->flush(); */
+            $entityManager->flush();
 
 
             //return $this->redirectToRoute('task_succes', array(
