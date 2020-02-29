@@ -64,7 +64,7 @@ class DevisController extends AbstractController
             $nbrdevis = $request->request->get('c');
             $email = $formulaire->getEmail();
 
-            /* $content = $this->renderView('devis/pdf.html.twig', [
+            $content = $this->renderView('devis/pdf.html.twig', [
                 'maquette' => $formulaire->getMaquette(),
                 'lvlgraphisme' => $formulaire->getLvlgraphisme(),
                 'nbrpage' => $nbrpage,
@@ -98,12 +98,12 @@ class DevisController extends AbstractController
                
             Merci pour votre compréhension,
             Nous vous souhaitons une agréable journée.
-            L'équipe North Web.")
-                ->attach($result); */
+            L'équipe North Web.");
+                //->attach($result)
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
-            // $mailer->send($email); 
+            $mailer->send($email); 
             
             $form->setHorstaxe($HT);
             $form->setDate($date);
@@ -115,14 +115,9 @@ class DevisController extends AbstractController
             $entityManager->persist($form);
             $entityManager->flush();
 
-
             //return $this->redirectToRoute('task_succes', array(
               //'ttc' => $ttc
            // ));
-           return $this->render('devis/index.html.twig', [
-            'form_devis' => $formul->createView(),
-            'user' => $this->getUser()
-        ]);
         }
 
         return $this->render('devis/index.html.twig', [
