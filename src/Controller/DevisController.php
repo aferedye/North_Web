@@ -89,7 +89,7 @@ class DevisController extends AbstractController
 
             $email = (new Email())
                 ->from('testphp59150@gmail.com')
-                ->to($email)
+                ->to('aferedye@gmail.com')
                 ->subject('Devis North Web')
                 ->text("Bonjour,
             
