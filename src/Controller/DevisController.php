@@ -57,7 +57,7 @@ class DevisController extends AbstractController
 
         if ($formul->isSubmitted() && $formul->isValid()) {
 
-            $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
+            /* $date = new \DateTime('now', new \DateTimeZone('europe/paris'));
             $formulaire = $formul->getData();
             $nbrlang = $request->request->get('a');
             $nbrpage = $request->request->get('b');
@@ -65,7 +65,7 @@ class DevisController extends AbstractController
             $email = $formulaire->getEmail();
 
             $content = $this->renderView('devis/pdf.html.twig', [
-                'maquette' => $maquette = $formulaire->getMaquette(),
+                'maquette' => $formulaire->getMaquette(),
                 'lvlgraphisme' => $formulaire->getLvlgraphisme(),
                 'nbrpage' => $nbrpage,
                 'nbrlangue' => $nbrlang,
@@ -85,7 +85,7 @@ class DevisController extends AbstractController
 
             $pdf = new Html2Pdf("p", "A4", "fr");
             $pdf->writeHTML($content);
-            $result = $pdf->output('devis.pdf', 'S');
+            $result = $pdf->output('devis.pdf', 'S'); */
 
             $email = (new Email())
                 ->from('testphp59150@gmail.com')
@@ -101,7 +101,7 @@ class DevisController extends AbstractController
             L'équipe North Web.");
             // ->attach($result);
 
-            $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
+            // $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
             $mailer->send($email); 
             
@@ -119,6 +119,10 @@ class DevisController extends AbstractController
             //return $this->redirectToRoute('task_succes', array(
               //'ttc' => $ttc
            // ));
+           return $this->render('devis/index.html.twig', [
+            'form_devis' => $formul->createView(),
+            'user' => $this->getUser()
+        ]);
         }
 
         return $this->render('devis/index.html.twig', [
