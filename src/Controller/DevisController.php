@@ -86,9 +86,9 @@ class DevisController extends AbstractController
                 'tel' => $formulaire->getTelephone(),
             ]);
 
-            $pdf = new Html2Pdf("p", "A4", "fr");
+            /* $pdf = new Html2Pdf("p", "A4", "fr");
             $pdf->writeHTML($content);
-            $result = $pdf->output('devis.pdf', 'S'); 
+            $result = $pdf->output('devis.pdf', 'S'); */
 
             $email = (new Email())
                 ->from('testphp59150@gmail.com')
