@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL); 
+
 use App\Entity\Devis;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Html2Pdf;
