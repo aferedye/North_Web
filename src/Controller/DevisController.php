@@ -105,7 +105,7 @@ class DevisController extends AbstractController
             
             $mailer->send($email); 
             
-            $form->setHorstaxe($HT);
+            /* $form->setHorstaxe($HT);
             $form->setDate($date);
             $form->setNbrpage($nbrpage);
             $form->setNbrlangue($nbrlang);
@@ -113,7 +113,7 @@ class DevisController extends AbstractController
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($form);
-            $entityManager->flush();
+            $entityManager->flush(); */
 
 
             //return $this->redirectToRoute('task_succes', array(
