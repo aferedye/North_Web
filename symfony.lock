@@ -114,6 +114,9 @@
     "paragonie/sodium_compat": {
         "version": "v1.12.2"
     },
+    "pdfshift/pdfshift-php": {
+        "version": "v1.0.9"
+    },
     "phenx/php-font-lib": {
         "version": "0.5.1"
     },

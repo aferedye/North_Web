@@ -19,6 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
+use \PDFShift\PDFShift;
 
 /**
  * Class DevisController
@@ -90,8 +91,13 @@ class DevisController extends AbstractController
             $pdf->writeHTML($content);
             $result = $pdf->output('devis.pdf', 'S'); */
 
+            PDFShift::setApiKey(getenv('PDFSHIFT_API_KEY'));
+
+            $data = file_get_content($content);
+            $attach = PDFShift::convertTo($data, null, 'devis.pdf');
+
             $email = (new Email())
-                ->from('testphp59150@gmail.com')
+                ->from('North Web')
                 ->to('aferedye@gmail.com')
                 ->subject('Devis North Web')
                 ->text("Bonjour,
@@ -101,8 +107,8 @@ class DevisController extends AbstractController
                
             Merci pour votre compréhension,
             Nous vous souhaitons une agréable journée.
-            L'équipe North Web.");
-                //->attach($result)
+            L'équipe North Web.")
+                ->attach($attach);
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
