@@ -35,9 +35,9 @@
     .border-r { border-right: 1px solid #D3D3D3; padding: 10px; }
     .floatl { float: left }
     .abs { position: absolute; top: 137px; left: 460px; }
-    .30p { width: 235px; }
-    .75p { width: 75%; }
-    .50p { width: 49.5%; }
+    .w30p { width: 235px; }
+    .w75p { width: 75%; }
+    .w50p { width: 49.5%; }
     .m-l { margin-left: 30px;}
     .m-t { margin-top: 25px; }
     .designation { width: 387px;}
@@ -56,13 +56,13 @@
     <img src="C:\wamp64\www\North_Web\public\img\logo.png" alt="Logo North Web" width="100" class="floatl m-l">
     <h1 class="txt-center">Devis</h1>
     <p class="txt-center">Ce devis est à titre indicatif et ne constitue en aucun cas un acte de vente.<br/> Veuillez vous rapprochez de nos équipes afin d'obtenir un devis final.</p>
-    <div class="border 30p m-l m-t">
+    <div class="border w30p m-l m-t">
         <strong>Détails de l'entreprise :</strong><br /><br />
         Société North Web<br />
         06.20.76.34.48<br />
         contact.northweb@gmail.com
     </div>
-    <div class="border abs 30p m-t">
+    <div class="border abs w30p m-t">
         <strong>Coordonnées du client :</strong><br /><br />
         {{ nom | capitalize }} {{ prenom | capitalize }}<br />
         {{ tel }}<br />

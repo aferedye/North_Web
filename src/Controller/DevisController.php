@@ -2,9 +2,6 @@
 
 namespace App\Controller;
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL); 
-
 use App\Entity\Devis;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Html2Pdf;
@@ -19,7 +16,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
-use \PDFShift\PDFShift;
 
 /**
  * Class DevisController
@@ -87,14 +83,9 @@ class DevisController extends AbstractController
                 'tel' => $formulaire->getTelephone(),
             ]);
 
-            /* $pdf = new Html2Pdf("p", "A4", "fr");
+            $pdf = new Html2Pdf("p", "A4", "fr");
             $pdf->writeHTML($content);
-            $result = $pdf->output('devis.pdf', 'S'); */
-
-            PDFShift::setApiKey(getenv('PDFSHIFT_API_KEY'));
-
-            $data = file_get_content($content);
-            PDFShift::convertTo($data, null, 'devis.pdf');
+            $result = $pdf->output('devis.pdf', 'S');
 
             $email = (new Email())
                 ->from('North Web')
@@ -107,8 +98,8 @@ class DevisController extends AbstractController
                
             Merci pour votre compréhension,
             Nous vous souhaitons une agréable journée.
-            L'équipe North Web.");
-              //  ->attach($attach)
+            L'équipe North Web.")
+                ->attach($result, sprintf('devis.pdf'));
 
             $HT = $this->calculHT($formulaire, $nbrpage, $nbrlang, $nbrdevis);
             
