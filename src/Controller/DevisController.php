@@ -85,7 +85,7 @@ class DevisController extends AbstractController
 
             $pdf = new Html2Pdf("p", "A4", "fr");
             $pdf->writeHTML($content);
-            $result = $pdf->output('devis.pdf', 'S');
+            $result = $pdf->output('devis.pdf', 'D');
 
             $email = (new Email())
                 ->from('North Web')
